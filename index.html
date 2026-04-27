@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Piramide aiuta aziende e negozi in Italia con volantinaggio mirato, grafica pubblicitaria e social media marketing.">
+    <meta name="keywords" content="volantinaggio Italia, grafica pubblicitaria, social media marketing, pubblicita locale, La Piramide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="La Piramide | Volantinaggio, grafica e social media marketing">
+    <meta property="og:description" content="Campagne locali e digitali per aziende che vogliono piu visibilita, fiducia e clienti reali.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/logo piramide.png">
+    <title>La Piramide | Marketing locale premium</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "La Piramide",
+        "description": "Agenzia marketing specializzata in volantinaggio mirato, grafica pubblicitaria e social media marketing per aziende in Italia.",
+        "areaServed": "IT",
+        "telephone": "+393457340981",
+        "sameAs": ["https://wa.me/393457340981"],
+        "serviceType": ["Volantinaggio mirato", "Grafica pubblicitaria", "Social media marketing"]
+    }
+    </script>
+
+    <style>
+        :root {
+            --black: #030303;
+            --panel: rgba(12, 10, 7, 0.82);
+            --panel-2: rgba(5, 4, 3, 0.72);
+            --gold: #d7b35a;
+            --gold-light: #ffdf87;
+            --gold-dark: #8d6b25;
+            --cream: #fff7df;
+            --muted: #cbbd98;
+            --line: rgba(255, 218, 132, 0.28);
+            --line-strong: rgba(255, 218, 132, 0.58);
+            --shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
+            --radius: 28px;
+            --ease: cubic-bezier(.2, .8, .2, 1);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            color: var(--cream);
+            font-family: 'Montserrat', sans-serif;
+            background:
+                radial-gradient(circle at 16% 10%, rgba(215, 179, 90, 0.22), transparent 26%),
+                radial-gradient(circle at 82% 6%, rgba(255, 223, 135, 0.12), transparent 30%),
+                radial-gradient(circle at 50% 62%, rgba(141, 107, 37, 0.16), transparent 38%),
+                linear-gradient(180deg, #020202 0%, #0a0805 45%, #030303 100%);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 54px 54px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,0.78), transparent 78%);
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            pointer-events: none;
+            background:
+                linear-gradient(115deg, transparent 0 42%, rgba(255, 223, 135, 0.08) 47%, transparent 52% 100%),
+                radial-gradient(circle at 50% -10%, rgba(255, 244, 200, 0.08), transparent 34%);
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            pointer-events: none;
+            opacity: 0.13;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            width: min(1180px, calc(100% - 32px));
+            margin: 18px auto 0;
+            padding: 12px 14px 12px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(3, 3, 3, 0.66);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 18px 54px rgba(0, 0, 0, 0.35);
+            animation: navDrop 900ms var(--ease) both;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 16px rgba(255, 223, 135, 0.24));
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-links a {
+            padding: 10px 13px;
+            border-radius: 999px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            transition: 280ms var(--ease);
+        }
+
+        .nav-links a:hover {
+            color: var(--cream);
+            background: rgba(255, 223, 135, 0.1);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 14px 24px;
+            border: 0;
+            border-radius: 999px;
+            color: #080704;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            background: linear-gradient(135deg, #fff0b7 0%, var(--gold) 48%, var(--gold-dark) 100%);
+            box-shadow: 0 16px 38px rgba(215, 179, 90, 0.26), inset 0 1px 0 rgba(255,255,255,0.45);
+            transition: transform 300ms var(--ease), box-shadow 300ms var(--ease), filter 300ms var(--ease);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            filter: saturate(1.08);
+            box-shadow: 0 24px 54px rgba(215, 179, 90, 0.38), 0 0 0 1px rgba(255,255,255,0.16) inset;
+        }
+
+        .btn.secondary {
+            color: var(--cream);
+            border: 1px solid var(--line);
+            background: rgba(255, 223, 135, 0.08);
+            box-shadow: none;
+        }
+
+        /* HERO PREMIUM TECH */
+        .hero {
+            position: relative;
+            width: min(1220px, calc(100% - 32px));
+            min-height: 760px;
+            margin: 18px auto 80px;
+            padding: 82px 34px 34px;
+            display: grid;
+            grid-template-columns: 1.04fr 0.96fr;
+            gap: 34px;
+            align-items: center;
+            isolation: isolate;
+            overflow: hidden;
+            border-radius: 34px;
+            background:
+                radial-gradient(circle at 74% 42%, rgba(255, 214, 117, 0.16), transparent 31%),
+                radial-gradient(circle at 14% 8%, rgba(22, 42, 68, 0.72), transparent 34%),
+                linear-gradient(145deg, rgba(4, 7, 13, 0.96), rgba(0, 0, 0, 0.34) 46%, rgba(9, 7, 3, 0.72));
+            box-shadow: inset 0 0 0 1px rgba(255, 223, 135, 0.08), 0 34px 100px rgba(0, 0, 0, 0.52);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 54px 0 auto 56%;
+            width: 620px;
+            height: 620px;
+            z-index: -1;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background:
+                radial-gradient(circle, rgba(255, 240, 185, 0.18), transparent 16%),
+                radial-gradient(circle, rgba(255, 211, 96, 0.28), transparent 58%);
+            filter: blur(4px);
+            animation: haloPulse 4.5s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-image:
+                radial-gradient(circle, rgba(255, 231, 158, 0.78) 0 1px, transparent 1.8px),
+                radial-gradient(circle, rgba(98, 129, 168, 0.58) 0 1px, transparent 1.7px);
+            background-position: 12% 22%, 78% 14%;
+            background-size: 88px 88px, 132px 132px;
+            opacity: 0.24;
+            animation: particleDrift 18s linear infinite;
+        }
+
+        .kicker,
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--gold-light);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+        }
+
+        .kicker::before,
+        .section-kicker::before,
+        .section-kicker::after {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-light));
+        }
+
+        .section-kicker::after {
+            background: linear-gradient(90deg, var(--gold-light), transparent);
+        }
+
+        h1, h2, h3 { margin-top: 0; }
+
+        .hero h1 {
+            max-width: 780px;
+            margin-bottom: 24px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(44px, 7vw, 94px);
+            line-height: 0.98;
+            letter-spacing: -1.6px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span,
+        .gold-text {
+            color: transparent;
+            background: linear-gradient(120deg, #fff8dc 0%, var(--gold-light) 36%, #a9822e 76%, #fff1b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .hero h1 span { display: block; }
+
+        .hero-lead {
+            max-width: 640px;
+            margin: 0 0 24px;
+            color: #e8dcc1;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(22px, 2.4vw, 31px);
+            line-height: 1.42;
+        }
+
+        .section-copy,
+        .hero-text {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .hero-text {
+            max-width: 620px;
+            margin: 0 0 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hero-stage {
+            position: relative;
+            min-height: 560px;
+            display: grid;
+            place-items: center;
+            perspective: 900px;
+        }
+
+        /* Composizione centrale: logo originale, orbite sottili e particelle leggere */
+        .logo-orbit {
+            position: relative;
+            width: min(520px, 88vw);
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 223, 135, 0.12);
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 50% 52%, rgba(255, 223, 135, 0.18), transparent 31%),
+                radial-gradient(circle, rgba(6, 14, 27, 0.72), transparent 63%),
+                linear-gradient(145deg, rgba(255, 255, 255, 0.06), transparent 46%);
+            box-shadow:
+                inset 0 0 90px rgba(255, 223, 135, 0.09),
+                0 0 120px rgba(215, 179, 90, 0.17),
+                0 0 180px rgba(14, 30, 54, 0.44);
+            transform-style: preserve-3d;
+            animation: floatLogo 5s ease-in-out infinite;
+        }
+
+        .logo-orbit::before,
+        .logo-orbit::after {
+            content: "";
+            position: absolute;
+            inset: 24px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 223, 135, 0.24);
+            border-top-color: rgba(255, 255, 255, 0.72);
+            border-left-color: rgba(255, 223, 135, 0.04);
+            --ring-tilt: 68deg;
+            --ring-angle: 0deg;
+            transform: rotateX(var(--ring-tilt)) rotateZ(var(--ring-angle));
+            animation: rotateRing 18s linear infinite;
+        }
+
+        .logo-orbit::after {
+            inset: 82px;
+            border-color: rgba(255, 223, 135, 0.13);
+            border-bottom-color: rgba(255, 223, 135, 0.62);
+            border-right-color: rgba(255, 250, 210, 0.58);
+            --ring-tilt: 62deg;
+            --ring-angle: 34deg;
+            transform: rotateX(var(--ring-tilt)) rotateZ(var(--ring-angle));
+            animation-duration: 13s;
+            animation-direction: reverse;
+        }
+
+        .logo-orbit img {
+            position: relative;
+            z-index: 4;
+            width: 68%;
+            filter:
+                drop-shadow(0 28px 60px rgba(0,0,0,0.54))
+                drop-shadow(0 0 24px rgba(255,223,135,0.34))
+                drop-shadow(0 0 58px rgba(215,179,90,0.24));
+            animation: logoGlow 4.2s ease-in-out infinite;
+        }
+
+        .orbit-ring,
+        .orbit-dot,
+        .tech-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .orbit-ring {
+            inset: var(--ring-inset);
+            border: 1px solid rgba(255, 223, 135, var(--ring-alpha));
+            border-radius: 50%;
+            transform: rotateX(var(--ring-tilt)) rotateZ(var(--ring-angle));
+            animation: rotateRing var(--ring-speed) linear infinite;
+        }
+
+        .orbit-ring::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            box-shadow: 0 0 16px rgba(255, 223, 135, 0.9);
+        }
+
+        .orbit-ring.slow {
+            --ring-inset: 4px;
+            --ring-alpha: 0.18;
+            --ring-tilt: 74deg;
+            --ring-angle: -18deg;
+            --ring-speed: 24s;
+        }
+
+        .orbit-ring.medium {
+            --ring-inset: 54px;
+            --ring-alpha: 0.24;
+            --ring-tilt: 58deg;
+            --ring-angle: 18deg;
+            --ring-speed: 17s;
+            animation-direction: reverse;
+        }
+
+        .orbit-ring.fast {
+            --ring-inset: 132px;
+            --ring-alpha: 0.2;
+            --ring-tilt: 68deg;
+            --ring-angle: 64deg;
+            --ring-speed: 11s;
+        }
+
+        .orbit-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #fff4c2;
+            box-shadow: 0 0 18px rgba(255, 223, 135, 0.95);
+            animation: blinkGold 2.8s ease-in-out infinite;
+        }
+
+        .orbit-dot.one { left: 14%; top: 35%; animation-delay: 400ms; }
+        .orbit-dot.two { right: 16%; top: 28%; animation-delay: 900ms; }
+        .orbit-dot.three { right: 27%; bottom: 16%; animation-delay: 1400ms; }
+
+        .tech-particle {
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background: rgba(255, 234, 169, 0.84);
+            box-shadow: 0 0 12px rgba(255, 223, 135, 0.7);
+            animation: particleFloat var(--particle-speed) ease-in-out infinite;
+        }
+
+        .tech-particle.p1 { left: 8%; top: 18%; --particle-speed: 6s; }
+        .tech-particle.p2 { left: 19%; bottom: 22%; --particle-speed: 7.5s; animation-delay: 1s; }
+        .tech-particle.p3 { right: 8%; top: 42%; --particle-speed: 5.8s; animation-delay: .4s; }
+        .tech-particle.p4 { right: 24%; bottom: 8%; --particle-speed: 8s; animation-delay: 1.6s; }
+        }
+
+        .metric-card {
+            position: absolute;
+            z-index: 4;
+            width: 190px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            background: rgba(5, 4, 3, 0.72);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.42);
+            animation: cardReveal 900ms var(--ease) both;
+        }
+
+        .metric-card strong {
+            display: block;
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+        }
+
+        .metric-card span {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.45;
+            text-transform: uppercase;
+        }
+
+        .metric-card.one { top: 54px; right: 2px; animation-delay: 500ms; }
+        .metric-card.two { bottom: 72px; left: 4px; animation-delay: 700ms; }
+        .metric-card.three { right: 24px; bottom: 12px; animation-delay: 900ms; }
+
+        .section {
+            position: relative;
+            width: min(1180px, calc(100% - 32px));
+            margin: 96px auto;
+        }
+
+        .lux-panel {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background:
+                linear-gradient(135deg, rgba(255, 223, 135, 0.12), transparent 36%),
+                linear-gradient(180deg, rgba(15, 12, 9, 0.86), rgba(4, 4, 4, 0.88));
+            box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.08);
+            overflow: hidden;
+        }
+
+        .presentation,
+        .conversion,
+        .trust {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 34px;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .presentation img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            box-shadow: 0 28px 70px rgba(0,0,0,0.46);
+            transition: transform 600ms var(--ease), filter 600ms var(--ease);
+        }
+
+        .presentation:hover img {
+            transform: scale(1.025);
+            filter: contrast(1.05) brightness(1.08);
+        }
+
+        .section-title {
+            margin-bottom: 18px;
+            color: var(--cream);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(32px, 4.8vw, 58px);
+            line-height: 1.05;
+        }
+
+        .text-center { text-align: center; }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        .card {
+            position: relative;
+            min-height: 230px;
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background:
+                linear-gradient(160deg, rgba(255, 223, 135, 0.09), transparent 45%),
+                rgba(9, 8, 6, 0.84);
+            box-shadow: 0 22px 60px rgba(0,0,0,0.36);
+            overflow: hidden;
+            transition: transform 420ms var(--ease), border-color 420ms var(--ease), box-shadow 420ms var(--ease);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 20%), rgba(255, 223, 135, 0.22), transparent 34%);
+            transition: opacity 350ms var(--ease);
+        }
+
+        .card:hover {
+            transform: translateY(-9px);
+            border-color: var(--line-strong);
+            box-shadow: 0 34px 74px rgba(0,0,0,0.54), 0 0 42px rgba(215, 179, 90, 0.13);
+        }
+
+        .card:hover::before { opacity: 1; }
+
+        .card-number {
+            display: inline-grid;
+            place-items: center;
+            width: 46px;
+            height: 46px;
+            margin-bottom: 22px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            background: rgba(255, 223, 135, 0.07);
+        }
+
+        .card h3 {
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--cream);
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+        }
+
+        .card p {
+            position: relative;
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.72;
+        }
+
+        /* SERVIZI INTERATTIVI */
+        .service-card {
+            cursor: pointer;
+            min-height: 255px;
+        }
+
+        .service-card.is-active {
+            border-color: rgba(255, 223, 135, 0.74);
+            box-shadow: 0 30px 82px rgba(0,0,0,0.5), 0 0 42px rgba(215, 179, 90, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service-card.is-active .card-number {
+            color: #090704;
+            background: linear-gradient(135deg, #fff1b8, var(--gold));
+            box-shadow: 0 0 28px rgba(255, 223, 135, 0.32);
+        }
+
+        .detail-box {
+            margin-top: 22px;
+            padding: 34px;
+            border: 1px solid rgba(255, 223, 135, 0.48);
+            border-radius: 24px;
+            background:
+                radial-gradient(circle at 18% 0%, rgba(255, 223, 135, 0.14), transparent 34%),
+                linear-gradient(145deg, rgba(8, 15, 28, 0.82), rgba(4, 4, 4, 0.92));
+            box-shadow: 0 24px 70px rgba(0,0,0,0.36), inset 0 1px 0 rgba(255,255,255,0.08);
+            transition: opacity 350ms var(--ease), transform 350ms var(--ease);
+        }
+
+        .detail-box.switching {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        .detail-box h3 {
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 30px;
+        }
+
+        .detail-box p,
+        .service-detail-list li {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .service-detail-label {
+            display: inline-flex;
+            margin-bottom: 16px;
+            color: var(--gold-light);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .service-detail-list {
+            display: grid;
+            gap: 12px;
+            margin: 8px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .service-detail-list li {
+            position: relative;
+            padding: 13px 16px 13px 34px;
+            border: 1px solid rgba(255, 223, 135, 0.17);
+            border-radius: 16px;
+            background: rgba(255, 223, 135, 0.055);
+        }
+
+        .service-detail-list li::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 23px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            box-shadow: 0 0 14px rgba(255, 223, 135, 0.72);
+        }
+
+        .method { padding: 48px; }
+        .method .card b {
+            display: block;
+            margin-bottom: 44px;
+            color: rgba(255, 223, 135, 0.2);
+            font-family: 'Cinzel', serif;
+            font-size: 74px;
+            line-height: 0.8;
+        }
+
+        .conversion {
+            grid-template-columns: 1fr 0.86fr;
+            padding: 42px;
+        }
+
+        .points {
+            display: grid;
+            gap: 12px;
+        }
+
+        .points span {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 18px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--cream);
+            background: rgba(255, 223, 135, 0.07);
+            font-weight: 700;
+        }
+
+        .points span::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            box-shadow: 0 0 18px rgba(255, 223, 135, 0.75);
+        }
+
+        .statement {
+            width: min(980px, calc(100% - 32px));
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .statement p {
+            margin: 0 auto 18px;
+            color: #e9dcc0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(25px, 4vw, 46px);
+            line-height: 1.25;
+        }
+
+        .extra-head {
+            padding: 42px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .extra-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 520ms var(--ease);
+        }
+
+        .extra-content.open { grid-template-rows: 1fr; }
+        .extra-inner { overflow: hidden; }
+
+        .extra-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 34px 34px;
+        }
+
+        .extra-text {
+            width: min(840px, calc(100% - 40px));
+            margin: 0 auto 38px;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            background: rgba(0,0,0,0.28);
+            color: var(--muted);
+            line-height: 1.8;
+            transition: 260ms var(--ease);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            overflow: hidden;
+            background: #050505;
+            box-shadow: 0 18px 44px rgba(0,0,0,0.35);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.04);
+            transition: transform 600ms var(--ease), filter 600ms var(--ease);
+        }
+
+        .gallery-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            background: linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.36));
+            transition: opacity 350ms var(--ease);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.13);
+            filter: brightness(1.13) contrast(1.05);
+        }
+
+        .gallery-item:hover::after { opacity: 1; }
+
+        .video-panel { padding: 36px; }
+
+        .video-panel video {
+            width: 100%;
+            max-height: 660px;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: #000;
+            box-shadow: 0 28px 80px rgba(0,0,0,0.5);
+        }
+
+        .slider {
+            position: relative;
+            height: min(680px, 70vw);
+            min-height: 360px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            overflow: hidden;
+            background: #050505;
+            box-shadow: var(--shadow);
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 18px;
+            opacity: 0;
+            transform: scale(1.06);
+            filter: blur(10px) brightness(0.7);
+            transition: opacity 900ms var(--ease), transform 1400ms var(--ease), filter 900ms var(--ease);
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0) brightness(1);
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .dots button {
+            width: 9px;
+            height: 9px;
+            min-height: 0;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.28);
+            cursor: pointer;
+            transition: 280ms var(--ease);
+        }
+
+        .dots button.active {
+            width: 34px;
+            border-radius: 99px;
+            background: var(--gold-light);
+        }
+
+        .trust {
+            grid-template-columns: 360px 1fr;
+            padding: 34px;
+        }
+
+        .portrait {
+            aspect-ratio: 3 / 4;
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            overflow: hidden;
+            box-shadow: 0 28px 80px rgba(0,0,0,0.48);
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 800ms var(--ease);
+        }
+
+        .trust:hover .portrait img { transform: scale(1.045); }
+
+        .signature {
+            display: block;
+            margin-top: 18px;
+            color: var(--gold-light);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-style: italic;
+        }
+
+        .final-cta {
+            padding: 68px 34px;
+            text-align: center;
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 30;
+            width: 62px;
+            height: 62px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            color: #061006;
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff0b7, var(--gold));
+            box-shadow: 0 20px 48px rgba(215, 179, 90, 0.28);
+            animation: whatsappPulse 2.2s ease-in-out infinite;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(42px) scale(0.985);
+            filter: blur(8px);
+            transition: opacity 850ms var(--ease), transform 850ms var(--ease), filter 850ms var(--ease);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        .stagger > * {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 720ms var(--ease), transform 720ms var(--ease);
+        }
+
+        .visible .stagger > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .visible .stagger > *:nth-child(2) { transition-delay: 100ms; }
+        .visible .stagger > *:nth-child(3) { transition-delay: 200ms; }
+        .visible .stagger > *:nth-child(4) { transition-delay: 300ms; }
+        .visible .stagger > *:nth-child(5) { transition-delay: 400ms; }
+        .visible .stagger > *:nth-child(6) { transition-delay: 500ms; }
+        .visible .stagger > *:nth-child(7) { transition-delay: 600ms; }
+        .visible .stagger > *:nth-child(8) { transition-delay: 700ms; }
+        .visible .stagger > *:nth-child(9) { transition-delay: 800ms; }
+        .visible .stagger > *:nth-child(10) { transition-delay: 900ms; }
+        .visible .stagger > *:nth-child(11) { transition-delay: 1000ms; }
+        .visible .stagger > *:nth-child(12) { transition-delay: 1100ms; }
+        .visible .stagger > *:nth-child(13) { transition-delay: 1200ms; }
+        .visible .stagger > *:nth-child(14) { transition-delay: 1300ms; }
+
+        @keyframes navDrop {
+            from { opacity: 0; transform: translateY(-18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes rotateRing {
+            to { transform: rotateX(var(--ring-tilt, 0deg)) rotateZ(calc(var(--ring-angle, 0deg) + 360deg)); }
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-16px); }
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { filter: drop-shadow(0 28px 60px rgba(0,0,0,0.54)) drop-shadow(0 0 24px rgba(255,223,135,0.3)) drop-shadow(0 0 58px rgba(215,179,90,0.2)); }
+            50% { filter: drop-shadow(0 32px 70px rgba(0,0,0,0.58)) drop-shadow(0 0 34px rgba(255,223,135,0.48)) drop-shadow(0 0 82px rgba(215,179,90,0.32)); }
+        }
+
+        @keyframes blinkGold {
+            0%, 100% { opacity: .35; transform: scale(.82); }
+            50% { opacity: 1; transform: scale(1.28); }
+        }
+
+        @keyframes particleDrift {
+            to { background-position: 12% 120%, 78% -90%; }
+        }
+
+        @keyframes particleFloat {
+            0%, 100% { opacity: .28; transform: translate3d(0, 0, 0); }
+            50% { opacity: .95; transform: translate3d(10px, -18px, 0); }
+        }
+
+        @keyframes haloPulse {
+            0%, 100% { opacity: .65; transform: translateX(-50%) scale(1); }
+            50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+        }
+
+        @keyframes cardReveal {
+            from { opacity: 0; transform: translateY(22px) scale(.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% { transform: translateY(0); box-shadow: 0 20px 48px rgba(215, 179, 90, 0.28); }
+            50% { transform: translateY(-5px); box-shadow: 0 26px 60px rgba(215, 179, 90, 0.42); }
+        }
+
+        @media (max-width: 980px) {
+            .nav-links { display: none; }
+            .hero, .presentation, .conversion, .trust { grid-template-columns: 1fr; }
+            .hero { min-height: auto; padding-top: 56px; }
+            .hero-stage { min-height: 500px; }
+            .service-detail-grid { grid-template-columns: 1fr; }
+            .grid-3, .grid-4, .gallery { grid-template-columns: repeat(2, 1fr); }
+            .trust { text-align: center; }
+            .portrait { max-width: 330px; margin: auto; }
+        }
+
+        @media (max-width: 640px) {
+            .nav {
+                width: calc(100% - 20px);
+                margin-top: 10px;
+                padding: 10px 10px 10px 14px;
+            }
+
+            .brand span { display: none; }
+            .nav .btn { padding: 12px 15px; font-size: 11px; }
+            .hero, .section { width: calc(100% - 20px); }
+            .hero { margin-top: 6px; padding: 44px 14px 22px; }
+            .hero h1 { font-size: clamp(38px, 14vw, 58px); }
+            .hero-actions, .extra-actions { flex-direction: column; }
+            .btn { width: 100%; }
+            .hero-stage { min-height: 390px; }
+            .logo-orbit { width: min(340px, 90vw); }
+            .orbit-ring.fast { display: none; }
+            .metric-card { width: 145px; padding: 14px; }
+            .metric-card strong { font-size: 22px; }
+            .metric-card span { font-size: 10px; }
+            .metric-card.one { top: 8px; right: 0; }
+            .metric-card.two { bottom: 44px; left: 0; }
+            .metric-card.three { right: 4px; bottom: 0; }
+            .presentation, .method, .conversion, .video-panel, .trust, .final-cta { padding: 22px; }
+            .presentation img { height: 300px; }
+            .grid-3, .grid-4, .gallery { grid-template-columns: 1fr; }
+            .detail-box { padding: 24px; }
+            .slider { min-height: 420px; height: 520px; }
+            .whatsapp { width: 54px; height: 54px; right: 14px; bottom: 14px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 1ms !important;
+                scroll-behavior: auto !important;
+                transition-duration: 1ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Navigazione principale">
+        <a class="brand" href="#top" aria-label="La Piramide homepage">
+            <img src="img/logo piramide.png" alt="Logo La Piramide">
+            <span>La Piramide</span>
+        </a>
+        <div class="nav-links">
+            <a href="#servizi">Servizi</a>
+            <a href="#metodo">Metodo</a>
+            <a href="#distribuzioni">Distribuzioni</a>
+            <a href="#lavori">Lavori</a>
+            <a href="#fiducia">Fiducia</a>
+        </div>
+        <a class="btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20per%20pubblicita%20e%20distribuzione%20volantini">Preventivo</a>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="hero-copy reveal visible">
+            <span class="kicker">Marketing locale premium</span>
+            <h1>La pubblicita diventa <span>presenza elegante.</span></h1>
+            <p class="hero-lead">Volantinaggio mirato, grafica pubblicitaria e social media marketing per aziende che vogliono farsi notare con classe.</p>
+            <p class="hero-text">Costruiamo campagne coordinate tra territorio e digitale: messaggio chiaro, immagine raffinata, distribuzione controllata e contatti reali.</p>
+            <div class="hero-actions">
+                <a class="btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20una%20strategia%20gratuita%20per%20la%20mia%20attivita">Richiedi una strategia</a>
+                <a class="btn secondary" href="#servizi">Scopri i servizi</a>
+            </div>
+        </div>
+
+        <!-- Composizione premium animata costruita in CSS, mantenendo il logo immagine originale. -->
+        <div class="hero-stage" aria-hidden="true">
+            <div class="logo-orbit">
+                <span class="orbit-ring slow"></span>
+                <span class="orbit-ring medium"></span>
+                <span class="orbit-ring fast"></span>
+                <span class="orbit-dot one"></span>
+                <span class="orbit-dot two"></span>
+                <span class="orbit-dot three"></span>
+                <span class="tech-particle p1"></span>
+                <span class="tech-particle p2"></span>
+                <span class="tech-particle p3"></span>
+                <span class="tech-particle p4"></span>
+                <img src="img/logo piramide.png" alt="">
+            </div>
+            <div class="metric-card one"><strong>01</strong><span>Zone scelte con criterio</span></div>
+            <div class="metric-card two"><strong>02</strong><span>Grafica curata e riconoscibile</span></div>
+            <div class="metric-card three"><strong>03</strong><span>Contatti e fiducia reale</span></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section presentation lux-panel reveal">
+            <div><img src="img/img1.jpeg" alt="Presentazione La Piramide"></div>
+            <div>
+                <span class="section-kicker">Presentazione</span>
+                <h2 class="section-title gold-text">Un primo sguardo al nostro metodo.</h2>
+                <p class="section-copy">Scopri nel dettaglio i servizi, l'approccio operativo e il modo in cui trasformiamo una semplice campagna pubblicitaria in un percorso ordinato, visibile e misurabile.</p>
+                <a class="btn" href="pdf/presentazione.pdf" target="_blank" rel="noopener">Apri la presentazione</a>
+            </div>
+        </section>
+
+        <!-- Card servizi cliccabili con pannello tecnico dettagliato. -->
+        <section class="section reveal" id="servizi">
+            <span class="section-kicker">Servizi</span>
+            <h2 class="section-title">Quattro leve per trovare nuovi clienti.</h2>
+            <p class="section-copy">Scegli un servizio per aprire il pannello tecnico: strategia, output e vantaggi appaiono con una transizione elegante.</p>
+
+            <div class="grid grid-4 stagger">
+                <article class="card service-card is-active" data-service="volantinaggio" tabindex="0" role="button" aria-controls="detailBox">
+                    <span class="card-number">01</span>
+                    <h3>Volantinaggio mirato</h3>
+                    <p>Distribuzione in zone selezionate per negozi, locali e aziende che vogliono aumentare presenza sul territorio.</p>
+                </article>
+                <article class="card service-card" data-service="grafica" tabindex="0" role="button" aria-controls="detailBox">
+                    <span class="card-number">02</span>
+                    <h3>Grafica pubblicitaria</h3>
+                    <p>Volantini, locandine e contenuti promozionali pensati per farsi notare e comunicare valore con eleganza.</p>
+                </article>
+                <article class="card service-card" data-service="social" tabindex="0" role="button" aria-controls="detailBox">
+                    <span class="card-number">03</span>
+                    <h3>Pubblicita social</h3>
+                    <p>Campagne su Facebook, Instagram e TikTok per unire il contatto locale alla forza del digitale.</p>
+                </article>
+                <article class="card service-card" data-service="siti" tabindex="0" role="button" aria-controls="detailBox">
+                    <span class="card-number">04</span>
+                    <h3>Creazione siti web</h3>
+                    <p>Siti moderni, veloci e chiari per presentare il brand e trasformare visite in contatti concreti.</p>
+                </article>
+            </div>
+
+            <div class="detail-box" id="detailBox">
+                <div class="service-detail-grid">
+                    <div>
+                        <span class="service-detail-label">Sistema operativo</span>
+                        <h3>Distribuzione strategica</h3>
+                        <p>Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio diventa un'azione controllata, coordinata con la grafica e pensata per generare richieste reali.</p>
+                    </div>
+                    <ul class="service-detail-list">
+                        <li>Mappatura delle aree piu utili per la tua attivita.</li>
+                        <li>Messaggio chiaro, leggibile e coerente con il brand.</li>
+                        <li>Controllo operativo con materiali foto e video dove previsto.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section method lux-panel reveal" id="metodo">
+            <span class="section-kicker">Metodo La Piramide</span>
+            <h2 class="section-title gold-text">Una campagna efficace nasce prima della distribuzione.</h2>
+            <p class="section-copy">Studiamo pubblico, messaggio e zone piu adatte prima di muoverci sul territorio. Cosi ogni azione ha una logica precisa.</p>
+            <div class="grid grid-4 stagger">
+                <article class="card"><b>1</b><h3>Analisi</h3><p>Capire attivita, obiettivi, zona e clienti ideali prima di proporre qualsiasi soluzione.</p></article>
+                <article class="card"><b>2</b><h3>Strategia</h3><p>Costruire un messaggio chiaro e scegliere i canali piu efficaci tra territorio e digitale.</p></article>
+                <article class="card"><b>3</b><h3>Esecuzione</h3><p>Gestire distribuzione, grafica e comunicazione con ordine, presenza e controllo operativo.</p></article>
+                <article class="card"><b>4</b><h3>Fiducia</h3><p>Mostrare il lavoro svolto con foto, video e controlli per dare sicurezza al cliente.</p></article>
+            </div>
+        </section>
+
+        <section class="section text-center reveal" id="clienti">
+            <span class="section-kicker">A chi ci rivolgiamo</span>
+            <h2 class="section-title">Marketing locale per aziende, negozi e professionisti.</h2>
+            <p class="section-copy">Se vuoi aumentare clienti nella tua zona, La Piramide ti aiuta con volantinaggio mirato, grafica pubblicitaria e social media marketing coordinati.</p>
+            <div class="grid grid-4 stagger">
+                <article class="card"><h3>Negozi e retail</h3><p>Promozioni, aperture, offerte stagionali e campagne per portare piu persone in negozio.</p></article>
+                <article class="card"><h3>Ristoranti e locali</h3><p>Menu, eventi, nuove aperture e comunicazione social per aumentare prenotazioni.</p></article>
+                <article class="card"><h3>Professionisti</h3><p>Comunicazione chiara per studi, consulenti e attivita che vogliono farsi conoscere.</p></article>
+                <article class="card"><h3>Aziende locali</h3><p>Campagne integrate tra territorio e digitale per rafforzare il brand.</p></article>
+            </div>
+        </section>
+
+        <section class="section conversion lux-panel reveal">
+            <div>
+                <span class="section-kicker">Perche funziona</span>
+                <h2 class="section-title gold-text">Piu chiarezza, piu fiducia, piu possibilita di contatto.</h2>
+                <p class="section-copy">Le persone scelgono un'azienda quando capiscono subito cosa offre, perche fidarsi e come contattarla.</p>
+            </div>
+            <div class="points stagger">
+                <span>Comunicazione professionale e riconoscibile</span>
+                <span>Distribuzione mirata nelle zone piu utili</span>
+                <span>Materiali pensati per generare richieste</span>
+                <span>Preventivo rapido su WhatsApp</span>
+            </div>
+        </section>
+
+        <section class="statement reveal">
+            <p>Oggi non basta distribuire volantini: serve una <span class="gold-text">strategia completa</span>.</p>
+            <p>Territorio, grafica, social e presenza online devono parlare la stessa lingua.</p>
+        </section>
+
+        <section class="section lux-panel reveal" id="extra">
+            <div class="extra-head" id="extraToggle">
+                <span class="section-kicker">Extra e novita</span>
+                <h2 class="section-title gold-text">Nuove evoluzioni per un servizio ancora piu completo.</h2>
+                <p class="section-copy">Clicca qui per aprire o chiudere le novita di La Piramide.</p>
+            </div>
+            <div class="extra-content" id="extraContent">
+                <div class="extra-inner">
+                    <div class="extra-actions">
+                        <button class="btn secondary" data-extra="social">Social Media Marketing</button>
+                        <button class="btn secondary" data-extra="siti">Creazione siti web</button>
+                        <button class="btn secondary" data-extra="app">App La Piramide</button>
+                    </div>
+                    <div class="extra-text" id="extraText">
+                        <h3>Seleziona una novita</h3>
+                        <p>Qui appariranno i dettagli con un effetto morbido di comparsa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="distribuzioni">
+            <span class="section-kicker">Sul territorio</span>
+            <h2 class="section-title">Le nostre distribuzioni.</h2>
+            <p class="section-copy">Alcuni momenti delle distribuzioni realizzate con metodo, presenza e attenzione alle zone scelte.</p>
+            <div class="gallery stagger">
+                <div class="gallery-item"><img src="img/distribuzione (1).jpeg" alt="Distribuzione La Piramide 1"></div>
+                <div class="gallery-item"><img src="img/distribuzione (2).jpeg" alt="Distribuzione La Piramide 2"></div>
+                <div class="gallery-item"><img src="img/distribuzione (3).jpeg" alt="Distribuzione La Piramide 3"></div>
+                <div class="gallery-item"><img src="img/distribuzione (4).jpeg" alt="Distribuzione La Piramide 4"></div>
+                <div class="gallery-item"><img src="img/distribuzione (5).jpeg" alt="Distribuzione La Piramide 5"></div>
+                <div class="gallery-item"><img src="img/distribuzione (6).jpeg" alt="Distribuzione La Piramide 6"></div>
+                <div class="gallery-item"><img src="img/distribuzione (7).jpeg" alt="Distribuzione La Piramide 7"></div>
+                <div class="gallery-item"><img src="img/distribuzione (8).jpeg" alt="Distribuzione La Piramide 8"></div>
+                <div class="gallery-item"><img src="img/distribuzione (9).jpeg" alt="Distribuzione La Piramide 9"></div>
+                <div class="gallery-item"><img src="img/distribuzione (10).jpeg" alt="Distribuzione La Piramide 10"></div>
+                <div class="gallery-item"><img src="img/distribuzione (11).jpeg" alt="Distribuzione La Piramide 11"></div>
+                <div class="gallery-item"><img src="img/distribuzione (12).jpeg" alt="Distribuzione La Piramide 12"></div>
+                <div class="gallery-item"><img src="img/distribuzione (13).jpeg" alt="Distribuzione La Piramide 13"></div>
+                <div class="gallery-item"><img src="img/distribuzione (14).jpeg" alt="Distribuzione La Piramide 14"></div>
+            </div>
+        </section>
+
+        <section class="section video-panel lux-panel reveal">
+            <span class="section-kicker">Controlli</span>
+            <h2 class="section-title gold-text">Trasparenza nella distribuzione.</h2>
+            <p class="section-copy">Verifichiamo il lavoro sul territorio con attenzione, per offrire un servizio ordinato, concreto e controllabile.</p>
+            <video controls preload="metadata">
+                <source src="video/controlli1.mp4" type="video/mp4">
+                Il tuo browser non supporta la riproduzione del video.
+            </video>
+        </section>
+
+        <section class="section reveal" id="lavori">
+            <span class="section-kicker">Grafica</span>
+            <h2 class="section-title">Alcuni nostri lavori.</h2>
+            <div class="slider" id="workSlider">
+                <img src="img/lavoro1.jpeg" class="slide active" alt="Lavoro grafico La Piramide 1">
+                <img src="img/lavoro2.jpeg" class="slide" alt="Lavoro grafico La Piramide 2">
+                <img src="img/lavoro3.jpeg" class="slide" alt="Lavoro grafico La Piramide 3">
+                <img src="img/lavoro4.jpeg" class="slide" alt="Lavoro grafico La Piramide 4">
+                <img src="img/lavoro5.jpeg" class="slide" alt="Lavoro grafico La Piramide 5">
+                <img src="img/lavoro6.jpeg" class="slide" alt="Lavoro grafico La Piramide 6">
+                <img src="img/lavoro7.jpeg" class="slide" alt="Lavoro grafico La Piramide 7">
+                <img src="img/lavoro8.jpeg" class="slide" alt="Lavoro grafico La Piramide 8">
+            </div>
+            <div class="dots" id="sliderDots" aria-label="Seleziona slide"></div>
+        </section>
+
+        <section class="section reveal">
+            <span class="section-kicker">Perche scegliere noi</span>
+            <h2 class="section-title">Metodo, precisione e visione moderna.</h2>
+            <div class="grid grid-4 stagger">
+                <article class="card"><h3>Precisione sul territorio</h3><p>Non distribuiamo a caso: ogni zona viene scelta con criterio per massimizzare l'impatto.</p></article>
+                <article class="card"><h3>Organizzazione reale</h3><p>Lavoriamo con metodo e controllo, garantendo una distribuzione ordinata e verificabile.</p></article>
+                <article class="card"><h3>Approccio pratico</h3><p>Niente teoria inutile: puntiamo su azioni concrete che portano risultati visibili.</p></article>
+                <article class="card"><h3>Visione moderna</h3><p>Unione tra pubblicita tradizionale e digitale per una comunicazione completa.</p></article>
+            </div>
+        </section>
+
+        <section class="section trust lux-panel reveal" id="fiducia">
+            <div class="portrait"><img src="img/imgio1.jpeg" alt="Responsabile La Piramide"></div>
+            <div>
+                <span class="section-kicker">Fiducia</span>
+                <h2 class="section-title gold-text">Dietro La Piramide ci sono persone vere.</h2>
+                <p class="section-copy">Affidare la propria pubblicita significa mettere nelle mani di qualcuno la visibilita della propria attivita. Per questo ci mettiamo la faccia: ogni distribuzione viene seguita con attenzione, organizzazione e responsabilita.</p>
+                <p class="section-copy">Il nostro lavoro non e semplicemente consegnare volantini, ma creare fiducia, presenza sul territorio e risultati concreti.</p>
+                <span class="signature">La Piramide</span>
+            </div>
+        </section>
+
+        <section class="section final-cta lux-panel reveal">
+            <span class="section-kicker">Iniziamo</span>
+            <h2 class="section-title gold-text">Vuoi nuovi clienti per la tua attivita?</h2>
+            <p class="section-copy">Scrivici su WhatsApp e raccontaci cosa fai. Ti aiutiamo a capire se conviene partire da volantinaggio, grafica, social marketing o da una strategia completa.</p>
+            <a class="btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20per%20pubblicita%20e%20distribuzione%20volantini">Richiedi una strategia gratuita</a>
+        </section>
+    </main>
+
+    <a class="whatsapp" href="https://wa.me/393457340981?text=Salve,%20vorrei%20informazioni%20su%20La%20Piramide" aria-label="Contatta La Piramide su WhatsApp">W</a>
+
+    <script>
+        const revealItems = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealItems.forEach((item) => revealObserver.observe(item));
+
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('pointermove', (event) => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--x', `${event.clientX - rect.left}px`);
+                card.style.setProperty('--y', `${event.clientY - rect.top}px`);
+            });
+        });
+
+        // Contenuti tecnici mostrati nel pannello servizi.
+        const serviceTexts = {
+            volantinaggio: {
+                title: 'Distribuzione strategica',
+                label: 'Sistema operativo',
+                body: 'Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio diventa un azione controllata, coordinata con la grafica e pensata per generare richieste reali.',
+                points: [
+                    'Mappatura delle aree piu utili per la tua attivita.',
+                    'Messaggio chiaro, leggibile e coerente con il brand.',
+                    'Controllo operativo con materiali foto e video dove previsto.'
+                ]
+            },
+            grafica: {
+                title: 'Grafica pubblicitaria che vende',
+                label: 'Identita visiva',
+                body: 'Realizziamo materiali chiari, eleganti e orientati alla vendita: volantini, locandine, contenuti social e comunicazioni promozionali con gerarchia, contrasto e chiamata all azione.',
+                points: [
+                    'Layout premium coerente con settore, offerta e target.',
+                    'Testi sintetici per far capire subito il valore.',
+                    'Formati pronti per stampa, social e campagne locali.'
+                ]
+            },
+            social: {
+                title: 'Pubblicita social e presenza online',
+                label: 'Amplificazione digitale',
+                body: 'Aiutiamo le attivita a farsi trovare e ricordare online con contenuti e campagne su Facebook, Instagram e TikTok, collegando presenza locale e fiducia digitale.',
+                points: [
+                    'Creativita coordinate con volantini e offerte attive.',
+                    'Campagne pensate per visibilita, messaggi e contatti.',
+                    'Comunicazione piu riconoscibile nel tempo.'
+                ]
+            },
+            siti: {
+                title: 'Creazione siti web premium',
+                label: 'Base digitale',
+                body: 'Costruiamo siti moderni, responsive e orientati al contatto: una pagina chiara dove raccontare servizi, mostrare lavori e portare il cliente verso WhatsApp o richiesta preventivo.',
+                points: [
+                    'Struttura veloce da consultare su telefono e desktop.',
+                    'Design coerente con immagine, settore e obiettivo.',
+                    'Percorsi semplici verso contatto, preventivo e fiducia.'
+                ]
+            }
+        };
+
+        const detailBox = document.getElementById('detailBox');
+        const serviceCards = document.querySelectorAll('[data-service]');
+
+        // Aggiorna stato attivo e dettaglio con animazione fade/slide.
+        function renderServiceDetail(button) {
+            const data = serviceTexts[button.dataset.service];
+            if (!data) return;
+
+            serviceCards.forEach((card) => card.classList.remove('is-active'));
+            button.classList.add('is-active');
+            detailBox.classList.add('switching');
+
+            setTimeout(() => {
+                detailBox.innerHTML = `
+                    <div class="service-detail-grid">
+                        <div>
+                            <span class="service-detail-label">${data.label}</span>
+                            <h3>${data.title}</h3>
+                            <p>${data.body}</p>
+                        </div>
+                        <ul class="service-detail-list">
+                            ${data.points.map((point) => `<li>${point}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                detailBox.classList.remove('switching');
+                detailBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 220);
+        }
+
+        serviceCards.forEach((button) => {
+            button.addEventListener('click', () => renderServiceDetail(button));
+            button.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    renderServiceDetail(button);
+                }
+            });
+        });
+
+        const extraToggle = document.getElementById('extraToggle');
+        const extraContent = document.getElementById('extraContent');
+        const extraText = document.getElementById('extraText');
+        const extraTexts = {
+            social: '<h3>Social Media Marketing</h3><p>Costruiamo una presenza social piu professionale, coerente e utile a generare interesse verso la tua attivita con contenuti e campagne coordinate.</p>',
+            siti: '<h3>Creazione siti web</h3><p>Realizziamo pagine moderne e chiare, pensate per presentare al meglio il tuo servizio e trasformare i visitatori in contatti.</p>',
+            app: '<h3>App La Piramide</h3><p>Stiamo lavorando a strumenti per rendere i controlli ancora piu trasparenti, con foto, zone coperte e aggiornamenti consultabili dai clienti.</p>'
+        };
+
+        extraToggle.addEventListener('click', () => extraContent.classList.toggle('open'));
+
+        document.querySelectorAll('[data-extra]').forEach((button) => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation();
+                extraContent.classList.add('open');
+                extraText.style.opacity = '0';
+                extraText.style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    extraText.innerHTML = extraTexts[button.dataset.extra];
+                    extraText.style.opacity = '1';
+                    extraText.style.transform = 'translateY(0)';
+                }, 180);
+            });
+        });
+
+        const slides = [...document.querySelectorAll('.slide')];
+        const dotsWrap = document.getElementById('sliderDots');
+        let currentSlide = 0;
+
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.setAttribute('aria-label', `Vai alla slide ${index + 1}`);
+            dot.addEventListener('click', () => showSlide(index));
+            dotsWrap.appendChild(dot);
+        });
+
+        const dots = [...dotsWrap.querySelectorAll('button')];
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide((currentSlide + 1) % slides.length);
+        }
+
+        showSlide(0);
+        setInterval(nextSlide, 3600);
+    </script>
+</body>
+</html>
