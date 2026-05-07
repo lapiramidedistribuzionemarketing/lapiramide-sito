@@ -163,6 +163,79 @@
             background: rgba(255, 223, 135, 0.1);
         }
 
+        .nav-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            color: var(--gold-light);
+            background: rgba(255, 223, 135, 0.08);
+            cursor: pointer;
+        }
+
+        .nav-toggle span,
+        .nav-toggle::before,
+        .nav-toggle::after {
+            content: "";
+            width: 18px;
+            height: 2px;
+            border-radius: 999px;
+            background: currentColor;
+            transition: transform 260ms var(--ease), opacity 260ms var(--ease);
+        }
+
+        .nav-toggle {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .nav.is-open .nav-toggle::before {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav.is-open .nav-toggle span {
+            opacity: 0;
+        }
+
+        .nav.is-open .nav-toggle::after {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 16px;
+            right: 16px;
+            z-index: 19;
+            padding: 12px;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            background: rgba(3, 3, 3, 0.94);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 24px 72px rgba(0, 0, 0, 0.55);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 14px 16px;
+            border-radius: 14px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--cream);
+            background: rgba(255, 223, 135, 0.1);
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -807,11 +880,7 @@
 
         .video-panel video {
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            display: block;
-            margin: 0 auto;
+            max-height: 660px;
             border: 1px solid var(--line);
             border-radius: 24px;
             background: #000;
@@ -1090,6 +1159,59 @@
             padding: 34px;
         }
 
+        .human-trust {
+            position: relative;
+            grid-template-columns: minmax(230px, 310px) 1fr;
+            gap: 30px;
+            margin-top: 72px;
+            margin-bottom: 58px;
+            padding: 28px;
+            isolation: isolate;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255, 223, 135, 0.16), transparent 34%),
+                linear-gradient(135deg, rgba(255, 223, 135, 0.1), transparent 42%),
+                linear-gradient(180deg, rgba(12, 9, 5, 0.92), rgba(2, 2, 2, 0.94));
+        }
+
+        .human-trust::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            z-index: -1;
+            border-radius: calc(var(--radius) - 1px);
+            pointer-events: none;
+            background:
+                linear-gradient(110deg, transparent 0 48%, rgba(255, 223, 135, 0.08) 52%, transparent 60% 100%),
+                radial-gradient(circle at 78% 22%, rgba(255, 223, 135, 0.12), transparent 32%);
+        }
+
+        .human-trust .section-kicker {
+            margin-bottom: 14px;
+        }
+
+        .human-trust .section-title {
+            margin-bottom: 12px;
+            font-size: clamp(26px, 3.4vw, 42px);
+        }
+
+        .trust-message {
+            max-width: 760px;
+        }
+
+        .trust-quote {
+            margin: 0 0 18px;
+            color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(27px, 3.1vw, 43px);
+            font-weight: 600;
+            line-height: 1.18;
+        }
+
+        .trust-note {
+            max-width: 640px;
+            margin-bottom: 0;
+        }
+
         .portrait {
             aspect-ratio: 3 / 4;
             border: 1px solid var(--line);
@@ -1105,6 +1227,16 @@
             transition: transform 800ms var(--ease);
         }
 
+        .human-trust .portrait {
+            aspect-ratio: 4 / 5;
+            max-height: 350px;
+            border-radius: 24px;
+        }
+
+        .human-trust .portrait img {
+            object-position: 50% 24%;
+        }
+
         .trust:hover .portrait img {
             transform: scale(1.045);
         }
@@ -1116,6 +1248,11 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 42px;
             font-style: italic;
+        }
+
+        .human-trust .signature {
+            margin-top: 12px;
+            font-size: 31px;
         }
 
         .final-cta {
@@ -1177,9 +1314,20 @@
                 text-align: center;
             }
 
+            .human-trust {
+                gap: 24px;
+                padding: 26px;
+                text-align: left;
+            }
+
             .portrait {
                 max-width: 330px;
                 margin: auto;
+            }
+
+            .human-trust .portrait {
+                width: min(100%, 280px);
+                max-height: 315px;
             }
         }
 
@@ -1282,6 +1430,44 @@
 
             .review-section {
                 padding: 22px;
+            }
+
+            .human-trust {
+                margin-top: 56px;
+                margin-bottom: 42px;
+                padding: 18px;
+                gap: 18px;
+                border-radius: 24px;
+            }
+
+            .human-trust .section-kicker {
+                margin-bottom: 10px;
+            }
+
+            .human-trust .section-title {
+                margin-bottom: 8px;
+                font-size: 26px;
+            }
+
+            .trust-quote {
+                margin-bottom: 12px;
+                font-size: 25px;
+                line-height: 1.15;
+            }
+
+            .trust-note {
+                font-size: 14px;
+                line-height: 1.65;
+            }
+
+            .human-trust .portrait {
+                width: min(100%, 220px);
+                max-height: 250px;
+                border-radius: 20px;
+            }
+
+            .human-trust .signature {
+                font-size: 26px;
             }
 
             .review-slider {
@@ -1603,12 +1789,48 @@ scroll-behavior: auto !important;
 }
 
 @media (max-width: 980px) {
+    .nav {
+        position: sticky;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav.is-open + .mobile-menu {
+        display: block;
+    }
+
   .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
+  .mobile-menu {
+    top: 70px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .section {
+    margin: 42px auto;
+  }
+
+  .section-copy {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .premium-tracking {
+    padding: 42px 16px;
+  }
+
+  .premium-grid {
+    gap: 14px;
+    margin: 26px 0;
+  }
+
   .service-grid {
     grid-template-columns: 1fr;
   }
@@ -1842,21 +2064,35 @@ body::after {
         scroll-behavior: auto !important;
     }
 
+    body .reveal,
     body .reveal.show {
         opacity: 1 !important;
         transform: none !important;
         filter: none !important;
     }
-    @media (max-width: 768px) {
-        .video-panel {
-            padding: 20px;
-        }
-        .video-panel video {
-            width: 100%;
-            border-radius: 18px;
-        }
+}
+
+@media (max-width: 768px) {
+    body .reveal,
+    body .reveal.show {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition-duration: 1ms !important;
     }
-    
+
+    .hero {
+        margin-bottom: 44px;
+    }
+
+    .hero-text {
+        margin-top: 10px;
+    }
+
+    .gallery {
+        gap: 14px;
+    }
+}
 </style>
 </head>
 
@@ -1869,23 +2105,34 @@ body::after {
             <span>La Piramide</span>
         </a>
         <div class="nav-links">
+            <a href="#top">Home</a>
+            <a href="#chi-siamo">Chi siamo</a>
             <a href="#servizi">Servizi</a>
-            <a href="#metodo">Metodo</a>
             <a href="#distribuzioni">Distribuzioni</a>
-            <a href="#lavori">Lavori</a>
-            <a href="#fiducia">Fiducia</a>
+            <a href="#recensioni">Recensioni</a>
+            <a href="#contatti">Contatti</a>
         </div>
+        <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
+            <span></span>
+        </button>
         <a class="btn"
             href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20per%20pubblicita%20e%20distribuzione%20volantini">Preventivo</a>
     </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#top">Home</a>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#distribuzioni">Distribuzioni</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#contatti">Contatti</a>
+    </div>
 
     <!-- HERO -->
     <header class="hero" id="top">
         <div class="hero-copy reveal">
             <span class="kicker">Marketing locale premium</span>
-            <h1>Portiamo clienti reali al tuo negozio, <span>partendo dal tuo territorio.</span></h1>
-            <p class="hero-lead">Volantinaggio mirato + grafica + marketing per aumentare la visibilit&agrave;
-                della tua attivit&agrave;.</p>
+            <h1>Portiamo clienti reali nel tuo negozio, <span>partendo dal tuo territorio.</span></h1>
+            <p class="hero-lead">Distribuzione volantini, grafica pubblicitaria, social media e siti web per attivit&agrave; e aziende.</p>
             <p class="hero-text">Costruiamo campagne coordinate tra territorio e digitale: messaggio chiaro,
                 immagine raffinata, distribuzione controllata e contatti reali.</p>
             <div class="hero-actions">
@@ -1907,42 +2154,11 @@ body::after {
     </header>
 
     <main>
-        <!-- FIDUCIA OPERATIVA -->
-        <section class="section proof-section lux-panel reveal">
-            <span class="section-kicker">Fiducia operativa</span>
-            <h2 class="section-title gold-text">Un servizio concreto, controllato e pensato per il territorio.</h2>
-            <p class="section-copy">Ogni campagna viene costruita con metodo: scegliamo le zone, coordiniamo i materiali
-                e verifichiamo la distribuzione con attenzione reale.</p>
-            <div class="proof-list">
-                <div class="proof-item">
-                    <span class="proof-icon">1</span>
-                    <strong>5000+ volantini distribuiti per campagna</strong>
-                    <span>Volumi adatti a creare presenza, riconoscibilit&agrave; e copertura locale.</span>
-                </div>
-                <div class="proof-item">
-                    <span class="proof-icon">2</span>
-                    <strong>Zone selezionate insieme al cliente</strong>
-                    <span>Definiamo aree, priorit&agrave; e obiettivi in base alla tua attivit&agrave;.</span>
-                </div>
-                <div class="proof-item">
-                    <span class="proof-icon">3</span>
-                    <strong>Controllo e verifica reale della distribuzione</strong>
-                    <span>Seguiamo il lavoro sul campo per darti pi&ugrave; sicurezza e trasparenza.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRESENTAZIONE -->
-        <section class="section presentation lux-panel reveal">
-            <div><img src="img/img1.jpeg" alt="Presentazione La Piramide"></div>
-            <div>
-                <span class="section-kicker">Presentazione</span>
-                <h2 class="section-title gold-text">Un primo sguardo al nostro metodo.</h2>
-                <p class="section-copy">Scopri nel dettaglio i servizi, l'approccio operativo e il modo in cui
-                    trasformiamo una semplice campagna pubblicitaria in un percorso ordinato, visibile e misurabile.</p>
-                <a class="btn" href="pdf/presentazione.pdf" target="_blank" rel="noopener">Apri la
-                    presentazione</a>
-            </div>
+        <!-- CHI SIAMO -->
+        <section class="section lux-panel reveal" id="chi-siamo">
+            <span class="section-kicker">Chi siamo</span>
+            <h2 class="section-title gold-text">CHI SIAMO</h2>
+            <p class="section-copy">La Piramide nasce per aiutare attivit&agrave; e aziende a farsi conoscere realmente sul territorio. Seguiamo ogni fase del lavoro: grafica, stampa, distribuzione, promozione social e presenza online.</p>
         </section>
 
         <!-- Card servizi cliccabili con pannello tecnico dettagliato. -->
@@ -1953,7 +2169,7 @@ body::after {
                 <h2>i nostri servizi</h2>
                 <p class="section-copy">
                     scegli il servizio di cui hai bisogno e compila la richiesta guidata:
-                    riceveremo direttamente tutti i dettagli su Whatsapp per prepararti un preventivo gratuito.
+                    riceveremo direttamente tutti i dettagli su WhatsApp per prepararti un preventivo gratuito.
                 </p>
                 <div class="grid service-grid">
                 <article class="card service-card reveal is-active" data-service="volantinaggio" tabindex="0" role="button" aria-controls="detailBox">
@@ -1993,46 +2209,6 @@ body::after {
                 </article>
                 </div>
             </section>
-
-            <!-- TRACCIAMENTO PREMIUM -->
-            <section class="premium-tracking reveal" id="tracciamento-premium">
-  <div class="premium-content">
-    <span class="premium-label">Servizio premium</span>
-
-    <h2>Distribuzione tracciata e verificata</h2>
-
-    <p>
-      Oltre alla distribuzione classica, La Piramide offre un servizio avanzato
-      di tracciamento per chi desidera il massimo controllo sul lavoro svolto.
-    </p>
-
-    <div class="premium-grid">
-      <div class="premium-card reveal">
-        <h3>Foto geolocalizzate</h3>
-        <p>Possibilità di ricevere foto con posizione reale della distribuzione.</p>
-      </div>
-
-      <div class="premium-card reveal">
-        <h3>Data e ora</h3>
-        <p>Ogni prova può mostrare quando e dove è stata effettuata l'attività.</p>
-      </div>
-
-      <div class="premium-card reveal">
-        <h3>Controllo qualità</h3>
-        <p>Un livello extra di trasparenza per clienti che vogliono più sicurezza.</p>
-      </div>
-    </div>
-
-    <p class="premium-note">
-      Il servizio di distribuzione tracciata è disponibile su richiesta e viene valutato
-      in fase di preventivo.
-    </p>
-
-    <button class="premium-button" onclick="openQuoteForm('volantinaggio')">
-      Richiedi distribuzione tracciata
-    </button>
-  </div>
-</section>
 
             <div class="detail-box" id="detailBox">
             <div class="service-detail-grid reveal">
@@ -2075,72 +2251,46 @@ body::after {
             </div>
         </section>
 
-        <!-- CLIENTI -->
-        <section class="section text-center reveal" id="clienti">
-            <span class="section-kicker">A chi ci rivolgiamo</span>
-            <h2 class="section-title">Marketing locale per aziende, negozi e professionisti.</h2>
-            <p class="section-copy">Se vuoi aumentare clienti nella tua zona, La Piramide ti aiuta con volantinaggio mirato, grafica pubblicitaria e social media marketing coordinati.</p>
-            <div class="grid grid-4">
-                <article class="card">
-                    <h3>Negozi e retail</h3>
-                    <p>Promozioni, aperture, offerte stagionali e campagne per portare pi&ugrave; persone in negozio.</p>
-                </article>
-                <article class="card">
-                    <h3>Ristoranti e locali</h3>
-                    <p>Menu, eventi, nuove aperture e comunicazione social per aumentare prenotazioni.</p>
-                </article>
-                <article class="card">
-                    <h3>Professionisti</h3>
-                    <p>Comunicazione chiara per studi, consulenti e attivit&agrave; che vogliono farsi conoscere.</p>
-                </article>
-                <article class="card">
-                    <h3>Aziende locali</h3>
-                    <p>Campagne integrate tra territorio e digitale per rafforzare il brand.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- CONVERSIONE -->
-        <section class="section conversion lux-panel reveal">
-            <div>
-                <span class="section-kicker">Perch&eacute; funziona</span>
-                <h2 class="section-title gold-text">Pi&ugrave; chiarezza, pi&ugrave; fiducia, pi&ugrave; possibilit&agrave; di contatto.</h2>
-                <p class="section-copy">Le persone scelgono un'azienda quando capiscono subito cosa offre, perch&eacute; fidarsi e come contattarla.</p>
-            </div>
-            <div class="points">
-                <span>Comunicazione professionale e riconoscibile</span>
-                <span>Distribuzione mirata nelle zone pi&ugrave; utili</span>
-                <span>Materiali pensati per generare richieste</span>
-                <span>Preventivo rapido su WhatsApp</span>
-            </div>
-        </section>
-
-        <!-- STATEMENT -->
-        <section class="statement reveal">
-            <p>Oggi non basta distribuire volantini: serve una <span class="gold-text">strategia completa</span>.</p>
-            <p>Territorio, grafica, social e presenza online devono parlare la stessa lingua.</p>
-        </section>
-
-        <!-- EXTRA -->
-        <section class="section lux-panel reveal" id="extra">
-            <div class="extra-head" id="extraToggle">
-                <span class="section-kicker">Extra e novit&agrave;</span>
-                <h2 class="section-title gold-text">Nuove evoluzioni per un servizio ancora pi&ugrave; completo.</h2>
-                <p class="section-copy">Clicca qui per aprire o chiudere le novit&agrave; di La Piramide.</p>
-            </div>
-            <div class="extra-content" id="extraContent">
-                <div class="extra-inner">
-                    <div class="extra-actions">
-                        <button class="btn secondary" data-extra="social">Social Media Marketing</button>
-                        <button class="btn secondary" data-extra="siti">Creazione siti web</button>
-                        <button class="btn secondary" data-extra="app">App La Piramide</button>
+        <!-- TRACCIAMENTO PREMIUM -->
+        <section class="premium-tracking reveal" id="tracciamento-premium">
+            <div class="premium-content">
+                <span class="premium-label">Servizio premium</span>
+                <h2>Distribuzione tracciata e verificata</h2>
+                <p>Oltre alla distribuzione classica, La Piramide offre un servizio avanzato di tracciamento per chi desidera il massimo controllo sul lavoro svolto.</p>
+                <div class="premium-grid">
+                    <div class="premium-card reveal">
+                        <h3>Foto geolocalizzate</h3>
+                        <p>Possibilit&agrave; di ricevere foto con posizione reale della distribuzione.</p>
                     </div>
-                    <div class="extra-text" id="extraText">
-                        <h3>Seleziona una novit&agrave;</h3>
-                        <p>Qui appariranno i dettagli con un effetto morbido di comparsa.</p>
+                    <div class="premium-card reveal">
+                        <h3>Data e ora</h3>
+                        <p>Ogni prova pu&ograve; mostrare quando e dove &egrave; stata effettuata l'attivit&agrave;.</p>
+                    </div>
+                    <div class="premium-card reveal">
+                        <h3>Controllo qualit&agrave;</h3>
+                        <p>Un livello extra di trasparenza per clienti che vogliono pi&ugrave; sicurezza.</p>
                     </div>
                 </div>
+                <p class="premium-note">Il servizio di distribuzione tracciata &egrave; disponibile su richiesta e viene valutato in fase di preventivo.</p>
+                <button class="premium-button" onclick="openQuoteForm('volantinaggio')">Richiedi distribuzione tracciata</button>
             </div>
+        </section>
+
+        <section class="section reveal" id="lavori">
+            <span class="section-kicker">Lavori e grafiche</span>
+            <h2 class="section-title">I nostri lavori sul territorio</h2>
+            <p class="section-copy">Una selezione di grafiche e materiali realizzati per campagne locali.</p>
+            <div class="slider" id="workSlider">
+                <img src="img/lavoro1.jpeg" class="slide active" alt="Lavoro grafico La Piramide 1">
+                <img src="img/lavoro2.jpeg" class="slide" alt="Lavoro grafico La Piramide 2">
+                <img src="img/lavoro3.jpeg" class="slide" alt="Lavoro grafico La Piramide 3">
+                <img src="img/lavoro4.jpeg" class="slide" alt="Lavoro grafico La Piramide 4">
+                <img src="img/lavoro5.jpeg" class="slide" alt="Lavoro grafico La Piramide 5">
+                <img src="img/lavoro6.jpeg" class="slide" alt="Lavoro grafico La Piramide 6">
+                <img src="img/lavoro7.jpeg" class="slide" alt="Lavoro grafico La Piramide 7">
+                <img src="img/lavoro8.jpeg" class="slide" alt="Lavoro grafico La Piramide 8">
+            </div>
+            <div class="dots" id="sliderDots" aria-label="Seleziona slide"></div>
         </section>
 
         <!-- DISTRIBUZIONI -->
@@ -2177,7 +2327,7 @@ body::after {
             <h2 class="section-title gold-text">Trasparenza nella distribuzione.</h2>
             <p class="section-copy">Verifichiamo il lavoro sul territorio con attenzione, per offrire un servizio ordinato, concreto e controllabile.</p>
             <video controls preload="metadata">
-                <source src="controlli1.mp4" type="video/mp4">
+                <source src="video/controlli1.mp4" type="video/mp4">
                 Il tuo browser non supporta la riproduzione del video.
             </video>
         </section>
@@ -2202,7 +2352,7 @@ body::after {
                         <article class="review-card">
                             <div class="review-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;
                             </div>
-                            <p>"Serietà, cortesia e professionalità. Consiglio vivamente."</p>
+                            <p>"Seriet�, cortesia e professionalit�. Consiglio vivamente."</p>
                             <span class="review-author ">Davide Temperoni</span>
                         </article>
                     </div>
@@ -2213,78 +2363,24 @@ body::after {
             </div>
         </section>
 
-        <!-- TESTIMONIANZE -->
-        <section class="section testimonials lux-panel reveal">
-            <span class="section-kicker">Testimonianze</span>
-            <h2 class="section-title gold-text">La fiducia nasce dai risultati.</h2>
-            <div class="testimonial-grid">
-                <article class="testimonial-card">
-                    <p>"Abbiamo aumentato il flusso di clienti nel negozio dopo la distribuzione."</p>
-                    <span>Cliente retail</span>
-                </article>
-                <article class="testimonial-card">
-                    <p>"Servizio preciso e professionale, finalmente qualcuno di affidabile."</p>
-                    <span>Attività locale</span>
-                </article>
+        <!-- FIDUCIA: chiusura umana prima del contatto finale -->
+        <section class="section human-trust trust lux-panel reveal" aria-labelledby="fiducia-title">
+            <div class="portrait">
+                <img src="img/imgio1.jpeg" alt="Foto personale del fondatore de La Piramide">
             </div>
-        </section>
-
-        <section class="section reveal" id="lavori">
-            <span class="section-kicker">Grafica</span>
-            <h2 class="section-title">I nostri lavori sul territorio</h2>
-            <p class="section-copy">Risultati reali, non parole.</p>
-            <div class="slider" id="workSlider">
-                <img src="img/lavoro1.jpeg" class="slide active" alt="Lavoro grafico La Piramide 1">
-                <img src="img/lavoro2.jpeg" class="slide" alt="Lavoro grafico La Piramide 2">
-                <img src="img/lavoro3.jpeg" class="slide" alt="Lavoro grafico La Piramide 3">
-                <img src="img/lavoro4.jpeg" class="slide" alt="Lavoro grafico La Piramide 4">
-                <img src="img/lavoro5.jpeg" class="slide" alt="Lavoro grafico La Piramide 5">
-                <img src="img/lavoro6.jpeg" class="slide" alt="Lavoro grafico La Piramide 6">
-                <img src="img/lavoro7.jpeg" class="slide" alt="Lavoro grafico La Piramide 7">
-                <img src="img/lavoro8.jpeg" class="slide" alt="Lavoro grafico La Piramide 8">
-            </div>
-            <div class="dots" id="sliderDots" aria-label="Seleziona slide"></div>
-        </section>
-
-        <section class="section reveal">
-            <span class="section-kicker">Perché scegliere noi</span>
-            <h2 class="section-title">Metodo, precisione e visione moderna.</h2>
-            <div class="grid grid-4">
-                <article class="card">
-                    <h3>Precisione sul territorio</h3>
-                    <p>Non distribuiamo a caso: ogni zona viene scelta con criterio per massimizzare l'impatto.</p>
-                </article>
-                <article class="card">
-                    <h3>Organizzazione reale</h3>
-                    <p>Lavoriamo con metodo e controllo, garantendo una distribuzione ordinata e verificabile.</p>
-                </article>
-                <article class="card">
-                    <h3>Approccio pratico</h3>
-                    <p>Niente teoria inutile: puntiamo su azioni concrete che portano risultati visibili.</p>
-                </article>
-                <article class="card">
-                    <h3>Visione moderna</h3>
-                    <p>Unione tra pubblicità tradizionale e digitale per una comunicazione completa.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- FIDUCIA -->
-        <section class="section trust lux-panel reveal" id="fiducia">
-            <div class="portrait"><img src="img/imgio1.jpeg" alt="Responsabile La Piramide"></div>
-            <div>
+            <div class="trust-message">
                 <span class="section-kicker">Fiducia</span>
-                <h2 class="section-title gold-text">Dietro La Piramide ci sono persone vere.</h2>
-                <p class="section-copy">Affidare la propria pubblicità significa mettere nelle mani di qualcuno la visibilit&agrave; della propria attivit&agrave;. Per questo ci mettiamo la faccia: ogni distribuzione viene seguita con attenzione, organizzazione e responsabilit&agrave;.</p>
-                <p class="section-copy">Il nostro lavoro non è semplicemente consegnare volantini, ma creare fiducia, presenza sul territorio e risultati concreti.</p>
+                <h2 class="section-title gold-text" id="fiducia-title">FIDUCIA</h2>
+                <p class="trust-quote">"Dietro La Piramide ci sono persone vere."</p>
+                <p class="section-copy trust-note">Dietro ogni lavoro ci siamo noi: persone presenti, attente e responsabili, pronte a seguire la tua comunicazione con cura reale.</p>
                 <span class="signature">La Piramide</span>
             </div>
         </section>
 
         <!-- CTA FINALE -->
-        <section class="section final-cta lux-panel reveal">
+        <section class="section final-cta lux-panel reveal" id="contatti">
             <span class="section-kicker">Iniziamo</span>
-            <h2 class="section-title gold-text">Ogni giorno senza visibilità è un cliente perso.</h2>
+            <h2 class="section-title gold-text">Ogni giorno senza visibilit� � un cliente perso.</h2>
             <p class="section-copy">Noi ti aiutiamo a trovarlo.</p>
             <a class="btn"
                 href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20per%20pubblicita%20e%20distribuzione%20volantini">Richiedi
@@ -2306,16 +2402,16 @@ body::after {
       <h3>Distribuzione volantini</h3>
 
       <input id="nome" type="text" placeholder="Nome e cognome">
-      <input id="attivita" type="text" placeholder="Nome attività">
+      <input id="attivita" type="text" placeholder="Nome attivit�">
       <input id="telefono" type="text" placeholder="Numero WhatsApp">
 
       <input id="pezzi" type="number" placeholder="Quanti volantini vuoi distribuire?">
       <textarea id="zone" placeholder="In quali zone vuoi distribuire?"></textarea>
 
-      <label class="quote-label">Hai già il volantino?</label>
+      <label class="quote-label">Hai gi� il volantino?</label>
       <select id="haVolantino" onchange="toggleGrafica()">
         <option value="">Seleziona</option>
-        <option value="si">Sì, ho già il volantino</option>
+        <option value="si">S�, ho gi� il volantino</option>
         <option value="no">No, mi serve anche la grafica</option>
       </select>
     </div>
@@ -2323,14 +2419,14 @@ body::after {
     <div id="stepGrafica" class="quote-step hidden">
       <h3>Grafica volantino</h3>
 
-      <textarea id="tipoAttivita" placeholder="Che tipo di attività svolgi?"></textarea>
+      <textarea id="tipoAttivita" placeholder="Che tipo di attivit� svolgi?"></textarea>
       <textarea id="messaggioVolantino" placeholder="Cosa vuoi comunicare nel volantino?"></textarea>
-      <textarea id="puntiForti" placeholder="Quali sono i punti forti della tua attività?"></textarea>
+      <textarea id="puntiForti" placeholder="Quali sono i punti forti della tua attivit�?"></textarea>
 
-      <label class="quote-label">Hai già un sito web?</label>
+      <label class="quote-label">Hai gi� un sito web?</label>
       <select id="haSito" onchange="toggleSito()">
         <option value="">Seleziona</option>
-        <option value="si">Sì, ho già un sito</option>
+        <option value="si">S�, ho gi� un sito</option>
         <option value="no">No, vorrei valutare anche un sito web</option>
       </select>
     </div>
@@ -2391,6 +2487,23 @@ body::after {
 
         updateNavState();
         window.addEventListener('scroll', updateNavState, { passive: true });
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (nav && navToggle && mobileMenu) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('is-open');
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('is-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
 
         document.querySelectorAll('.section, .card, .service-card, .premium-card, .testimonial-card, .review-card, .proof-item, .gallery-item, .detail-box, .video-panel, .premium-tracking, .final-cta, .statement').forEach((item) => {
             item.classList.add('reveal');
@@ -2755,20 +2868,20 @@ body::after {
 
             message += `DATI CLIENTE%0A`;
             message += `Nome: ${nome}%0A`;
-            message += `Attività: ${attivita}%0A`;
+            message += `Attivit�: ${attivita}%0A`;
             message += `Telefono: ${telefono}%0A%0A`;
 
             message += `DISTRIBUZIONE VOLANTINI%0A`;
             message += `Numero volantini: ${pezzi}%0A`;
             message += `Zone richieste: ${zone}%0A`;
-            message += `Ha già il volantino: ${haVolantino}%0A%0A`;
+            message += `Ha gi� il volantino: ${haVolantino}%0A%0A`;
 
             if (haVolantino === "no") {
                 message += `GRAFICA VOLANTINO%0A`;
-                message += `Tipo attività: ${tipoAttivita}%0A`;
+                message += `Tipo attivit�: ${tipoAttivita}%0A`;
                 message += `Cosa vuole comunicare: ${messaggioVolantino}%0A`;
                 message += `Punti forti: ${puntiForti}%0A`;
-                message += `Ha già un sito web: ${haSito}%0A%0A`;
+                message += `Ha gi� un sito web: ${haSito}%0A%0A`;
             }
 
             if (haSito === "no") {
@@ -2782,3 +2895,4 @@ body::after {
     </script>
 </body>
 </html>
+
