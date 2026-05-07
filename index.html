@@ -807,11 +807,13 @@
 
         .video-panel video {
             width: 100%;
-            max-height: 660px;
+            max-width: 900px;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            display: block;
+            margin: 0 auto;
             border: 1px solid var(--line);
             border-radius: 24px;
-            background: #000;
-            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5);
         }
 
         .review-section {
@@ -2108,8 +2110,8 @@ body::after {
             <span class="section-kicker">Controlli</span>
             <h2 class="section-title gold-text">Trasparenza nella distribuzione.</h2>
             <p class="section-copy">Verifichiamo il lavoro sul territorio con attenzione, per offrire un servizio ordinato, concreto e controllabile.</p>
-            <video controls preload="metadata">
-                <source src="video/controlli1.mp4" type="video/mp4">
+            <video controls preload="metadata" playsinline>
+                <source src="controlli1.mp4" type="video/mp4">
                 Il tuo browser non supporta la riproduzione del video.
             </video>
         </section>
