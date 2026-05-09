@@ -2368,6 +2368,72 @@ body::after {
         gap: 14px;
     }
 }
+
+/* FIX SLIDER CHI SIAMO MOBILE */
+
+.about-company {
+    width: 100%;
+}
+
+.about-track {
+    display: flex;
+    align-items: center;
+}
+
+.about-slide {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-slide img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    object-fit: contain !important;
+    border-radius: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .about-company {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .about-track {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .about-slide {
+        width: 100%;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .about-slide img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        border-radius: 16px;
+    }
+
+    .about-arrow {
+        z-index: 20;
+    }
+
+    .about-dots {
+        margin-top: 18px;
+    }
+}
+
 </style>
 </head>
 
