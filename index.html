@@ -516,7 +516,7 @@
             margin-bottom: 16px;
         }
 
-        .about-slider {
+        .about-pdf-preview {
             position: relative;
             width: 100%;
             max-width: 980px;
@@ -528,102 +528,20 @@
             box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
         }
 
-        .about-slider-viewport {
-            overflow: hidden;
-        }
-
-        .about-slider-track {
-            display: flex;
-            transition: transform 700ms var(--ease);
-            will-change: transform;
-        }
-
-        .about-slide {
-            flex: 0 0 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            background: #050505;
-        }
-
-        .about-slide img {
-            display: block;
+        .about-pdf-frame {
             width: 100%;
-            height: auto;
-            max-height: 80vh;
-            object-fit: contain;
-            margin: 0 auto;
-            border-radius: 22px;
-        }
-
-        .about-arrow {
-            position: absolute;
-            top: 50%;
-            z-index: 2;
-            width: 46px;
-            height: 46px;
-            display: grid;
-            place-items: center;
-            border: 1px solid var(--line);
-            border-radius: 50%;
-            color: var(--gold-light);
-            font-size: 26px;
-            font-weight: 700;
-            background: rgba(5, 4, 3, 0.78);
-            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
-            cursor: pointer;
-            transform: translateY(-50%);
-            transition: 280ms var(--ease);
-        }
-
-        .about-arrow:hover {
-            color: #090704;
-            border-color: var(--line-strong);
-            background: linear-gradient(135deg, #fff1b8, var(--gold));
-            box-shadow: 0 22px 54px rgba(215, 179, 90, 0.28);
-        }
-
-        .about-arrow.prev {
-            left: 16px;
-        }
-
-        .about-arrow.next {
-            right: 16px;
-        }
-
-        .about-dots {
-            position: absolute;
-            left: 50%;
-            bottom: 16px;
-            z-index: 2;
-            display: flex;
-            gap: 8px;
-            padding: 8px 10px;
-            border: 1px solid rgba(255, 223, 135, 0.24);
-            border-radius: 999px;
-            background: rgba(3, 3, 3, 0.62);
-            backdrop-filter: blur(10px);
-            transform: translateX(-50%);
-        }
-
-        .about-dots button {
-            width: 9px;
-            height: 9px;
-            min-height: 0;
-            padding: 0;
+            height: min(64vw, 620px);
+            min-height: 420px;
             border: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.32);
-            cursor: pointer;
-            transition: 280ms var(--ease);
+            display: block;
+            background: #050505;
+            pointer-events: none;
         }
 
-        .about-dots button.active {
-            width: 34px;
-            border-radius: 99px;
-            background: var(--gold-light);
-            box-shadow: 0 0 18px rgba(255, 223, 135, 0.46);
+        .about-pdf-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 22px;
         }
 
         .section-title {
@@ -1626,52 +1544,18 @@
                 margin-bottom: 24px;
             }
 
-            .about-slider {
+            .about-pdf-preview {
                 width: 100%;
                 max-width: 100%;
                 margin-top: 24px;
                 border-radius: 20px;
-                overflow: visible;
-            }
-
-            .about-slider-viewport {
                 overflow: hidden;
                 border-radius: 16px;
             }
 
-            .about-slide img {
-                width: 100%;
-                height: auto;
-                max-height: none;
-                object-fit: contain;
-                border-radius: 16px;
-            }
-
-            .about-arrow {
-                width: 34px;
-                height: 34px;
-                font-size: 22px;
-                background: rgba(5, 4, 3, 0.58);
-            }
-
-            .about-arrow.prev {
-                left: 6px;
-            }
-
-            .about-arrow.next {
-                right: 6px;
-            }
-
-            .about-dots {
-                position: relative;
-                left: auto;
-                bottom: auto;
-                justify-content: center;
-                width: fit-content;
-                margin: 14px auto 0;
-                gap: 6px;
-                padding: 7px 8px;
-                transform: none;
+            .about-pdf-frame {
+                height: 58vh;
+                min-height: 320px;
             }
 
             .presentation img {
@@ -2369,71 +2253,6 @@ body::after {
     }
 }
 
-/* FIX SLIDER CHI SIAMO MOBILE */
-
-.about-company {
-    width: 100%;
-}
-
-.about-track {
-    display: flex;
-    align-items: center;
-}
-
-.about-slide {
-    width: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-slide img {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-    object-fit: contain !important;
-    border-radius: 20px;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .about-company {
-        width: 100%;
-        overflow: visible;
-    }
-
-    .about-track {
-        width: 100%;
-        overflow: visible;
-    }
-
-    .about-slide {
-        width: 100%;
-        min-height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-    }
-
-    .about-slide img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        object-fit: contain !important;
-        border-radius: 16px;
-    }
-
-    .about-arrow {
-        z-index: 20;
-    }
-
-    .about-dots {
-        margin-top: 18px;
-    }
-}
-
 </style>
 </head>
 
@@ -2504,35 +2323,12 @@ body::after {
                     <p class="section-copy">Una presentazione aziendale chiara, visiva e ordinata: il modo più semplice per capire come La Piramide costruisce presenza locale, comunicazione e risultati per le attività.</p>
                 </div>
 
-                <div class="about-slider" id="aboutSlider">
-                    <div class="about-slider-viewport">
-                        <div class="about-slider-track">
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-01.jpg" alt="Presentazione aziendale La Piramide 1" loading="lazy">
-                            </figure>
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-02.jpg" alt="Presentazione aziendale La Piramide 2" loading="lazy">
-                            </figure>
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-03.jpg" alt="Presentazione aziendale La Piramide 3" loading="lazy">
-                            </figure>
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-04.jpg" alt="Presentazione aziendale La Piramide 4" loading="lazy">
-                            </figure>
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-05.jpg" alt="Presentazione aziendale La Piramide 5" loading="lazy">
-                            </figure>
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-06.jpg" alt="Presentazione aziendale La Piramide 6" loading="lazy">
-                            </figure>
-                            <figure class="about-slide">
-                                <img src="pdf/presentazione-slide-07.jpg" alt="Presentazione aziendale La Piramide 7" loading="lazy">
-                            </figure>
-                        </div>
-                    </div>
-                    <button class="about-arrow prev" type="button" aria-label="Slide precedente">&lsaquo;</button>
-                    <button class="about-arrow next" type="button" aria-label="Slide successiva">&rsaquo;</button>
-                    <div class="about-dots" aria-label="Indicatori presentazione"></div>
+                <div class="about-pdf-preview">
+                    <iframe class="about-pdf-frame" src="pdf/presentazione.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Anteprima presentazione La Piramide" loading="lazy"></iframe>
+                </div>
+
+                <div class="about-pdf-actions">
+                    <a class="btn" href="pdf/presentazione.pdf" target="_blank" rel="noopener">Apri presentazione</a>
                 </div>
             </div>
         </section>
@@ -2914,86 +2710,6 @@ body::after {
                 item.style.setProperty('--y', `${event.clientY - rect.top}px`);
             });
         });
-
-        const aboutSlider = document.getElementById('aboutSlider');
-
-        if (aboutSlider) {
-            const aboutTrack = aboutSlider.querySelector('.about-slider-track');
-            const aboutSlides = [...aboutSlider.querySelectorAll('.about-slide')];
-            const aboutPrev = aboutSlider.querySelector('.about-arrow.prev');
-            const aboutNext = aboutSlider.querySelector('.about-arrow.next');
-            const aboutDotsWrap = aboutSlider.querySelector('.about-dots');
-            let aboutIndex = 0;
-            let aboutTimer;
-            let aboutTouchStart = 0;
-
-            aboutSlides.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.type = 'button';
-                dot.setAttribute('aria-label', `Vai alla slide ${index + 1}`);
-                dot.addEventListener('click', () => {
-                    showAboutSlide(index);
-                    restartAboutTimer();
-                });
-                aboutDotsWrap.appendChild(dot);
-            });
-
-            const aboutDots = [...aboutDotsWrap.querySelectorAll('button')];
-
-            function showAboutSlide(index) {
-                aboutIndex = (index + aboutSlides.length) % aboutSlides.length;
-                aboutTrack.style.transform = `translateX(-${aboutIndex * 100}%)`;
-                aboutDots.forEach((dot) => dot.classList.remove('active'));
-                aboutDots[aboutIndex].classList.add('active');
-            }
-
-            function nextAboutSlide() {
-                showAboutSlide(aboutIndex + 1);
-            }
-
-            function prevAboutSlide() {
-                showAboutSlide(aboutIndex - 1);
-            }
-
-            function startAboutTimer() {
-                if (reducedMotion) return;
-                clearInterval(aboutTimer);
-                aboutTimer = setInterval(nextAboutSlide, 4500);
-            }
-
-            function restartAboutTimer() {
-                clearInterval(aboutTimer);
-                startAboutTimer();
-            }
-
-            aboutNext.addEventListener('click', () => {
-                nextAboutSlide();
-                restartAboutTimer();
-            });
-
-            aboutPrev.addEventListener('click', () => {
-                prevAboutSlide();
-                restartAboutTimer();
-            });
-
-            aboutSlider.addEventListener('mouseenter', () => clearInterval(aboutTimer));
-            aboutSlider.addEventListener('mouseleave', startAboutTimer);
-            aboutSlider.addEventListener('touchstart', (event) => {
-                aboutTouchStart = event.touches[0].clientX;
-                clearInterval(aboutTimer);
-            }, { passive: true });
-            aboutSlider.addEventListener('touchend', (event) => {
-                const touchEnd = event.changedTouches[0].clientX;
-                const distance = touchEnd - aboutTouchStart;
-                if (Math.abs(distance) > 40) {
-                    distance < 0 ? nextAboutSlide() : prevAboutSlide();
-                }
-                restartAboutTimer();
-            }, { passive: true });
-
-            showAboutSlide(0);
-            startAboutTimer();
-        }
 
         // Contenuti tecnici mostrati nel pannello servizi.
         const serviceTexts = {
