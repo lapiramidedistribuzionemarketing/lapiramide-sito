@@ -7,11 +7,11 @@
     <meta name="description"
         content="La Piramide aiuta aziende e negozi in Italia con volantinaggio mirato, grafica pubblicitaria e social media marketing.">
     <meta name="keywords"
-        content="volantinaggio Italia, grafica pubblicitaria, social media marketing, pubblicit&agrave; locale, La Piramide">
+        content="volantinaggio Italia, grafica pubblicitaria, social media marketing, pubblicità locale, La Piramide">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="La Piramide | Volantinaggio, grafica e social media marketing">
     <meta property="og:description"
-        content="Campagne locali e digitali per aziende che vogliono pi&ugrave; visibilit&agrave;, fiducia e clienti reali.">
+        content="Campagne locali e digitali per aziende che vogliono più visibilità, fiducia e clienti reali.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="img/logo piramide.png">
     <title>La Piramide | Marketing locale premium</title>
@@ -109,7 +109,7 @@
             position: sticky;
             top: 0;
             z-index: 20;
-            width: min(1180px, calc(100% - 32px));
+            width: min(1320px, calc(100% - 32px));
             margin: 18px auto 0;
             padding: 12px 14px 12px 18px;
             display: flex;
@@ -273,7 +273,7 @@
         /* HERO PREMIUM TECH */
         .hero {
             position: relative;
-            width: min(1220px, calc(100% - 32px));
+            width: min(1400px, calc(100% - 32px));
             min-height: 760px;
             margin: 18px auto 80px;
             padding: 82px 34px 34px;
@@ -464,7 +464,7 @@
 
         .section {
             position: relative;
-            width: min(1180px, calc(100% - 32px));
+            width: min(1320px, calc(100% - 32px));
             margin: 96px auto;
         }
 
@@ -501,6 +501,122 @@
         .presentation:hover img {
             transform: scale(1.025);
             filter: contrast(1.05) brightness(1.08);
+        }
+
+        .about-company {
+            padding: 44px;
+        }
+
+        .about-head {
+            max-width: 880px;
+            margin-bottom: 34px;
+        }
+
+        .about-head .section-title {
+            margin-bottom: 16px;
+        }
+
+        .about-slider {
+            position: relative;
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 10%, rgba(255, 223, 135, 0.08), #050505 58%);
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
+        }
+
+        .about-slider-viewport {
+            overflow: hidden;
+        }
+
+        .about-slider-track {
+            display: flex;
+            transition: transform 700ms var(--ease);
+            will-change: transform;
+        }
+
+        .about-slide {
+            flex: 0 0 100%;
+            display: grid;
+            place-items: center;
+            margin: 0;
+            background: #050505;
+        }
+
+        .about-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .about-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            color: var(--gold-light);
+            font-size: 26px;
+            font-weight: 700;
+            background: rgba(5, 4, 3, 0.78);
+            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+            cursor: pointer;
+            transform: translateY(-50%);
+            transition: 280ms var(--ease);
+        }
+
+        .about-arrow:hover {
+            color: #090704;
+            border-color: var(--line-strong);
+            background: linear-gradient(135deg, #fff1b8, var(--gold));
+            box-shadow: 0 22px 54px rgba(215, 179, 90, 0.28);
+        }
+
+        .about-arrow.prev {
+            left: 16px;
+        }
+
+        .about-arrow.next {
+            right: 16px;
+        }
+
+        .about-dots {
+            position: absolute;
+            left: 50%;
+            bottom: 16px;
+            z-index: 2;
+            display: flex;
+            gap: 8px;
+            padding: 8px 10px;
+            border: 1px solid rgba(255, 223, 135, 0.24);
+            border-radius: 999px;
+            background: rgba(3, 3, 3, 0.62);
+            backdrop-filter: blur(10px);
+            transform: translateX(-50%);
+        }
+
+        .about-dots button {
+            width: 9px;
+            height: 9px;
+            min-height: 0;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.32);
+            cursor: pointer;
+            transition: 280ms var(--ease);
+        }
+
+        .about-dots button.active {
+            width: 34px;
+            border-radius: 99px;
+            background: var(--gold-light);
+            box-shadow: 0 0 18px rgba(255, 223, 135, 0.46);
         }
 
         .section-title {
@@ -779,7 +895,7 @@
         }
 
         .statement {
-            width: min(980px, calc(100% - 32px));
+            width: min(1120px, calc(100% - 32px));
             margin: 100px auto;
             text-align: center;
         }
@@ -821,7 +937,7 @@
         }
 
         .extra-text {
-            width: min(840px, calc(100% - 40px));
+            width: min(960px, calc(100% - 40px));
             margin: 0 auto 38px;
             padding: 24px;
             border: 1px solid var(--line);
@@ -880,11 +996,15 @@
 
         .video-panel video {
             width: 100%;
-            max-height: 660px;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9 ;
+            display: block;
+            margin: 0 auto;
             border: 1px solid var(--line);
             border-radius: 24px;
             background: #000;
-            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
         }
 
         .review-section {
@@ -1277,6 +1397,83 @@
             background: linear-gradient(135deg, #fff0b7, var(--gold));
             box-shadow: 0 20px 48px rgba(215, 179, 90, 0.28);
 }
+
+        @media (min-width: 1440px) {
+            .nav,
+            .section {
+                width: min(1400px, calc(100% - 64px));
+            }
+
+            .hero {
+                width: min(1500px, calc(100% - 64px));
+                gap: 48px;
+                padding: 92px 48px 44px;
+            }
+
+            .hero h1 {
+                max-width: 880px;
+            }
+
+            .hero-lead {
+                max-width: 720px;
+            }
+
+            .hero-text {
+                max-width: 700px;
+            }
+
+            .section {
+                margin: 112px auto;
+            }
+
+            .presentation,
+            .conversion,
+            .trust,
+            .method,
+            .proof-section,
+            .testimonials,
+            .review-section {
+                padding: 48px;
+            }
+
+            .about-company {
+                padding: 54px;
+            }
+
+            .grid,
+            .testimonial-grid {
+                gap: 22px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 18px;
+            }
+
+            .premium-content {
+                max-width: 1400px;
+            }
+        }
+
+        @media (min-width: 1800px) {
+            .nav,
+            .section {
+                width: min(1520px, calc(100% - 96px));
+            }
+
+            .hero {
+                width: min(1640px, calc(100% - 96px));
+            }
+
+            .section {
+                margin: 128px auto;
+            }
+
+            .hero-stage {
+                min-height: 620px;
+            }
+        }
+
         @media (max-width: 980px) {
             .nav-links {
                 display: none;
@@ -1329,6 +1526,7 @@
                 width: min(100%, 280px);
                 max-height: 315px;
             }
+
         }
 
         @media (max-width: 640px) {
@@ -1410,6 +1608,38 @@
             .proof-section,
             .testimonials {
                 padding: 22px;
+            }
+
+            .about-company {
+                padding: 22px;
+            }
+
+            .about-head {
+                margin-bottom: 24px;
+            }
+
+            .about-slider {
+                border-radius: 20px;
+            }
+
+            .about-arrow {
+                width: 38px;
+                height: 38px;
+                font-size: 22px;
+            }
+
+            .about-arrow.prev {
+                left: 8px;
+            }
+
+            .about-arrow.next {
+                right: 8px;
+            }
+
+            .about-dots {
+                bottom: 8px;
+                gap: 6px;
+                padding: 7px 8px;
             }
 
             .presentation img {
@@ -1721,7 +1951,7 @@ scroll-behavior: auto !important;
 }
 
 .premium-content {
-  max-width: 1100px;
+  max-width: 1240px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1838,6 +2068,18 @@ scroll-behavior: auto !important;
   .card-top {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1440px) {
+  .premium-content {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .premium-content {
+    max-width: 1520px;
   }
 }
 /* BONIFICA LUXURY FINALE - unico sistema grafico nero/oro */
@@ -2093,22 +2335,6 @@ body::after {
         gap: 14px;
     }
 }
-
-body .reveal.show {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-}
-@media (max-width: 768px) {
-    .video-panel {
-        padding: 20px;
-    }
-    .video-panel video {
-        width: 100%;
-        border-radius: 18px;
-    }
-}
-        
 </style>
 </head>
 
@@ -2148,7 +2374,7 @@ body .reveal.show {
         <div class="hero-copy reveal">
             <span class="kicker">Marketing locale premium</span>
             <h1>Portiamo clienti reali nel tuo negozio, <span>partendo dal tuo territorio.</span></h1>
-            <p class="hero-lead">Distribuzione volantini, grafica pubblicitaria, social media e siti web per attivit&agrave; e aziende.</p>
+            <p class="hero-lead">Distribuzione volantini, grafica pubblicitaria, social media e siti web per attività e aziende.</p>
             <p class="hero-text">Costruiamo campagne coordinate tra territorio e digitale: messaggio chiaro,
                 immagine raffinata, distribuzione controllata e contatti reali.</p>
             <div class="hero-actions">
@@ -2172,9 +2398,44 @@ body .reveal.show {
     <main>
         <!-- CHI SIAMO -->
         <section class="section lux-panel reveal" id="chi-siamo">
-            <span class="section-kicker">Chi siamo</span>
-            <h2 class="section-title gold-text">CHI SIAMO</h2>
-            <p class="section-copy">La Piramide nasce per aiutare attivit&agrave; e aziende a farsi conoscere realmente sul territorio. Seguiamo ogni fase del lavoro: grafica, stampa, distribuzione, promozione social e presenza online.</p>
+            <div class="about-company">
+                <div class="about-head">
+                    <span class="section-kicker">Chi siamo</span>
+                    <h2 class="section-title gold-text">Chi siamo</h2>
+                    <p class="section-copy">Una presentazione aziendale chiara, visiva e ordinata: il modo più semplice per capire come La Piramide costruisce presenza locale, comunicazione e risultati per le attività.</p>
+                </div>
+
+                <div class="about-slider" id="aboutSlider">
+                    <div class="about-slider-viewport">
+                        <div class="about-slider-track">
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-01.jpg" alt="Presentazione aziendale La Piramide 1" loading="lazy">
+                            </figure>
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-02.jpg" alt="Presentazione aziendale La Piramide 2" loading="lazy">
+                            </figure>
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-03.jpg" alt="Presentazione aziendale La Piramide 3" loading="lazy">
+                            </figure>
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-04.jpg" alt="Presentazione aziendale La Piramide 4" loading="lazy">
+                            </figure>
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-05.jpg" alt="Presentazione aziendale La Piramide 5" loading="lazy">
+                            </figure>
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-06.jpg" alt="Presentazione aziendale La Piramide 6" loading="lazy">
+                            </figure>
+                            <figure class="about-slide">
+                                <img src="pdf/presentazione-slide-07.jpg" alt="Presentazione aziendale La Piramide 7" loading="lazy">
+                            </figure>
+                        </div>
+                    </div>
+                    <button class="about-arrow prev" type="button" aria-label="Slide precedente">&lsaquo;</button>
+                    <button class="about-arrow next" type="button" aria-label="Slide successiva">&rsaquo;</button>
+                    <div class="about-dots" aria-label="Indicatori presentazione"></div>
+                </div>
+            </div>
         </section>
 
         <!-- Card servizi cliccabili con pannello tecnico dettagliato. -->
@@ -2211,7 +2472,7 @@ body .reveal.show {
                         <span class="card-number">03</span>
                         <button class="service-action" onclick="openQuoteForm('social')">richiedi social</button>
                     </div>
-                    <h3>Pubblicit&agrave; social</h3>
+                    <h3>Pubblicità social</h3>
                     <p>Presenza online mentre lavori offline: campagne e contenuti che mantengono vivo il contatto con il tuo pubblico.</p>
                 </article>
 
@@ -2231,10 +2492,10 @@ body .reveal.show {
                     <div>
                         <span class="service-detail-label">Sistema operativo</span>
                         <h3>Distribuzione strategica</h3>
-                        <p>Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio mirato diventa un'azione controllata, coordinata con la grafica e pensata per portare clienti reali verso la tua attivit&agrave;.</p>
+                        <p>Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio mirato diventa un'azione controllata, coordinata con la grafica e pensata per portare clienti reali verso la tua attività.</p>
                     </div>
                     <ul class="service-detail-list">
-                        <li>Mappatura delle aree pi&ugrave; utili per la tua attivit&agrave;.</li>
+                        <li>Mappatura delle aree più utili per la tua attività.</li>
                         <li>Messaggio chiaro, leggibile e coerente con il brand.</li>
                         <li>Controllo operativo con materiali foto e video dove previsto.</li>
                     </ul>
@@ -2246,15 +2507,15 @@ body .reveal.show {
         <section class="section method lux-panel reveal" id="metodo">
             <span class="section-kicker">Metodo La Piramide</span>
             <h2 class="section-title gold-text">Una campagna efficace nasce prima della distribuzione.</h2>
-            <p class="section-copy">Studiamo pubblico, messaggio e zone pi&ugrave; adatte prima di muoverci sul territorio. Cos&igrave; ogni azione ha una logica precisa.</p>
+            <p class="section-copy">Studiamo pubblico, messaggio e zone più adatte prima di muoverci sul territorio. Così ogni azione ha una logica precisa.</p>
             <div class="grid grid-4">
                 <article class="card"><b>1</b>
                     <h3>Analisi</h3>
-                    <p>Capire attivit&agrave;, obiettivi, zona e clienti ideali prima di proporre qualsiasi soluzione.</p>
+                    <p>Capire attività, obiettivi, zona e clienti ideali prima di proporre qualsiasi soluzione.</p>
                 </article>
                 <article class="card"><b>2</b>
                     <h3>Strategia</h3>
-                    <p>Costruire un messaggio chiaro e scegliere i canali pi&ugrave; efficaci tra territorio e digitale.</p>
+                    <p>Costruire un messaggio chiaro e scegliere i canali più efficaci tra territorio e digitale.</p>
                 </article>
                 <article class="card"><b>3</b>
                     <h3>Esecuzione</h3>
@@ -2276,18 +2537,18 @@ body .reveal.show {
                 <div class="premium-grid">
                     <div class="premium-card reveal">
                         <h3>Foto geolocalizzate</h3>
-                        <p>Possibilit&agrave; di ricevere foto con posizione reale della distribuzione.</p>
+                        <p>Possibilità di ricevere foto con posizione reale della distribuzione.</p>
                     </div>
                     <div class="premium-card reveal">
                         <h3>Data e ora</h3>
-                        <p>Ogni prova pu&ograve; mostrare quando e dove &egrave; stata effettuata l'attivit&agrave;.</p>
+                        <p>Ogni prova può mostrare quando e dove è stata effettuata l'attività.</p>
                     </div>
                     <div class="premium-card reveal">
-                        <h3>Controllo qualit&agrave;</h3>
-                        <p>Un livello extra di trasparenza per clienti che vogliono pi&ugrave; sicurezza.</p>
+                        <h3>Controllo qualità</h3>
+                        <p>Un livello extra di trasparenza per clienti che vogliono più sicurezza.</p>
                     </div>
                 </div>
-                <p class="premium-note">Il servizio di distribuzione tracciata &egrave; disponibile su richiesta e viene valutato in fase di preventivo.</p>
+                <p class="premium-note">Il servizio di distribuzione tracciata è disponibile su richiesta e viene valutato in fase di preventivo.</p>
                 <button class="premium-button" onclick="openQuoteForm('volantinaggio')">Richiedi distribuzione tracciata</button>
             </div>
         </section>
@@ -2368,7 +2629,7 @@ body .reveal.show {
                         <article class="review-card">
                             <div class="review-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;
                             </div>
-                            <p>"Seriet�, cortesia e professionalit�. Consiglio vivamente."</p>
+                            <p>"Serietà, cortesia e professionalità. Consiglio vivamente."</p>
                             <span class="review-author ">Davide Temperoni</span>
                         </article>
                     </div>
@@ -2418,16 +2679,16 @@ body .reveal.show {
       <h3>Distribuzione volantini</h3>
 
       <input id="nome" type="text" placeholder="Nome e cognome">
-      <input id="attivita" type="text" placeholder="Nome attivit�">
+      <input id="attivita" type="text" placeholder="Nome attività">
       <input id="telefono" type="text" placeholder="Numero WhatsApp">
 
       <input id="pezzi" type="number" placeholder="Quanti volantini vuoi distribuire?">
       <textarea id="zone" placeholder="In quali zone vuoi distribuire?"></textarea>
 
-      <label class="quote-label">Hai gi� il volantino?</label>
+      <label class="quote-label">Hai già il volantino?</label>
       <select id="haVolantino" onchange="toggleGrafica()">
         <option value="">Seleziona</option>
-        <option value="si">S�, ho gi� il volantino</option>
+        <option value="si">Sì, ho già il volantino</option>
         <option value="no">No, mi serve anche la grafica</option>
       </select>
     </div>
@@ -2435,14 +2696,14 @@ body .reveal.show {
     <div id="stepGrafica" class="quote-step hidden">
       <h3>Grafica volantino</h3>
 
-      <textarea id="tipoAttivita" placeholder="Che tipo di attivit� svolgi?"></textarea>
+      <textarea id="tipoAttivita" placeholder="Che tipo di attività svolgi?"></textarea>
       <textarea id="messaggioVolantino" placeholder="Cosa vuoi comunicare nel volantino?"></textarea>
-      <textarea id="puntiForti" placeholder="Quali sono i punti forti della tua attivit�?"></textarea>
+      <textarea id="puntiForti" placeholder="Quali sono i punti forti della tua attività?"></textarea>
 
-      <label class="quote-label">Hai gi� un sito web?</label>
+      <label class="quote-label">Hai già un sito web?</label>
       <select id="haSito" onchange="toggleSito()">
         <option value="">Seleziona</option>
-        <option value="si">S�, ho gi� un sito</option>
+        <option value="si">Sì, ho già un sito</option>
         <option value="no">No, vorrei valutare anche un sito web</option>
       </select>
     </div>
@@ -2455,30 +2716,30 @@ body .reveal.show {
     </div>
 
     <div id="stepSocial" class="quote-step hidden">
-      <h3>Pubblicit&agrave; Social</h3>
+      <h3>Pubblicità Social</h3>
 
       <input id="socialNome" type="text" placeholder="Nome e cognome">
-      <input id="socialAttivita" type="text" placeholder="Nome attivit&agrave;">
+      <input id="socialAttivita" type="text" placeholder="Nome attività;">
       <input id="socialTelefono" type="text" placeholder="Numero WhatsApp">
 
       <textarea id="socialPagine" placeholder="Che pagine vuoi gestire? Facebook, Instagram, TikTok, Google Business, altro"></textarea>
       <input id="socialNumeroPagine" type="number" placeholder="Quante pagine/profili sono?">
 
-      <label class="quote-label">Hai gi&agrave; le pagine create?</label>
+      <label class="quote-label">Hai già le pagine create?</label>
       <select id="socialPagineCreate">
         <option value="">Seleziona</option>
-        <option value="si">S&igrave;</option>
+        <option value="si">Sì</option>
         <option value="no">No</option>
       </select>
 
       <textarea id="socialContenuti" placeholder="Che tipo di contenuti ti servono? Post, storie, reel, video, foto, campagne sponsorizzate"></textarea>
       <input id="socialFrequenza" type="text" placeholder="Quante volte vorresti pubblicare a settimana?">
-      <textarea id="socialObiettivo" placeholder="Qual &egrave; il tuo obiettivo principale? Pi&ugrave; clienti, pi&ugrave; visibilit&agrave;, promozioni, gestione immagine, altro"></textarea>
+      <textarea id="socialObiettivo" placeholder="Qual è il tuo obiettivo principale? Più clienti, più visibilità, promozioni, gestione immagine, altro"></textarea>
 
-      <label class="quote-label">Hai foto/video gi&agrave; pronti?</label>
+      <label class="quote-label">Hai foto/video già pronti?</label>
       <select id="socialMaterialiPronti">
         <option value="">Seleziona</option>
-        <option value="si">S&igrave;</option>
+        <option value="si">Sì</option>
         <option value="no">No</option>
       </select>
 
@@ -2555,21 +2816,101 @@ body .reveal.show {
             });
         });
 
+        const aboutSlider = document.getElementById('aboutSlider');
+
+        if (aboutSlider) {
+            const aboutTrack = aboutSlider.querySelector('.about-slider-track');
+            const aboutSlides = [...aboutSlider.querySelectorAll('.about-slide')];
+            const aboutPrev = aboutSlider.querySelector('.about-arrow.prev');
+            const aboutNext = aboutSlider.querySelector('.about-arrow.next');
+            const aboutDotsWrap = aboutSlider.querySelector('.about-dots');
+            let aboutIndex = 0;
+            let aboutTimer;
+            let aboutTouchStart = 0;
+
+            aboutSlides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.setAttribute('aria-label', `Vai alla slide ${index + 1}`);
+                dot.addEventListener('click', () => {
+                    showAboutSlide(index);
+                    restartAboutTimer();
+                });
+                aboutDotsWrap.appendChild(dot);
+            });
+
+            const aboutDots = [...aboutDotsWrap.querySelectorAll('button')];
+
+            function showAboutSlide(index) {
+                aboutIndex = (index + aboutSlides.length) % aboutSlides.length;
+                aboutTrack.style.transform = `translateX(-${aboutIndex * 100}%)`;
+                aboutDots.forEach((dot) => dot.classList.remove('active'));
+                aboutDots[aboutIndex].classList.add('active');
+            }
+
+            function nextAboutSlide() {
+                showAboutSlide(aboutIndex + 1);
+            }
+
+            function prevAboutSlide() {
+                showAboutSlide(aboutIndex - 1);
+            }
+
+            function startAboutTimer() {
+                if (reducedMotion) return;
+                clearInterval(aboutTimer);
+                aboutTimer = setInterval(nextAboutSlide, 4500);
+            }
+
+            function restartAboutTimer() {
+                clearInterval(aboutTimer);
+                startAboutTimer();
+            }
+
+            aboutNext.addEventListener('click', () => {
+                nextAboutSlide();
+                restartAboutTimer();
+            });
+
+            aboutPrev.addEventListener('click', () => {
+                prevAboutSlide();
+                restartAboutTimer();
+            });
+
+            aboutSlider.addEventListener('mouseenter', () => clearInterval(aboutTimer));
+            aboutSlider.addEventListener('mouseleave', startAboutTimer);
+            aboutSlider.addEventListener('touchstart', (event) => {
+                aboutTouchStart = event.touches[0].clientX;
+                clearInterval(aboutTimer);
+            }, { passive: true });
+            aboutSlider.addEventListener('touchend', (event) => {
+                const touchEnd = event.changedTouches[0].clientX;
+                const distance = touchEnd - aboutTouchStart;
+                if (Math.abs(distance) > 40) {
+                    distance < 0 ? nextAboutSlide() : prevAboutSlide();
+                }
+                restartAboutTimer();
+            }, { passive: true });
+
+            showAboutSlide(0);
+            startAboutTimer();
+        }
+
         // Contenuti tecnici mostrati nel pannello servizi.
         const serviceTexts = {
             volantinaggio: {
                 title: 'Distribuzione strategica',
                 label: 'Sistema operativo',
-                body: 'Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio mirato diventa un&rsquo;azione controllata, coordinata con la grafica e pensata per portare clienti reali verso la tua attivit&agrave;.',
+                body: 'Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio mirato diventa un&rsquo;azione controllata, coordinata con la grafica e pensata per portare clienti reali verso la tua attività.',
                 points: [
-                    'Mappatura delle aree pi&ugrave; utili per la tua attivit&agrave;.',
+                    'Mappatura delle aree più utili per la tua attività.',
                     'Messaggio chiaro, leggibile e coerente con il brand.',
                     'Controllo operativo con materiali foto e video dove previsto.'
                 ]
             },
             grafica: {
                 title: 'Grafica pubblicitaria che vende',
-                label: 'Identit&agrave; visiva',
+                label: 'Identità visiva',
                 body: 'Realizziamo materiali chiari, eleganti e creati per attirare clienti: volantini, locandine, contenuti social e comunicazioni promozionali con gerarchia, contrasto e chiamata all&rsquo;azione.',
                 points: [
                     'Layout premium coerente con settore, offerta e target.',
@@ -2578,13 +2919,13 @@ body .reveal.show {
                 ]
             },
             social: {
-                title: 'Pubblicit&agrave; social e presenza online',
+                title: 'Pubblicità social e presenza online',
                 label: 'Amplificazione digitale',
-                body: 'Aiutiamo le attivit&agrave; a restare presenti online mentre lavorano offline, con contenuti e campagne su Facebook, Instagram e TikTok collegati alla presenza locale.',
+                body: 'Aiutiamo le attività a restare presenti online mentre lavorano offline, con contenuti e campagne su Facebook, Instagram e TikTok collegati alla presenza locale.',
                 points: [
-                    'Creativit&agrave; coordinate con volantini e offerte attive.',
-                    'Campagne pensate per visibilit&agrave;, messaggi e contatti.',
-                    'Comunicazione pi&ugrave; riconoscibile nel tempo.'
+                    'Creatività coordinate con volantini e offerte attive.',
+                    'Campagne pensate per visibilità, messaggi e contatti.',
+                    'Comunicazione più riconoscibile nel tempo.'
                 ]
             },
             siti: {
@@ -2646,9 +2987,9 @@ body .reveal.show {
         const extraContent = document.getElementById('extraContent');
         const extraText = document.getElementById('extraText');
         const extraTexts = {
-            social: '<h3>Social Media Marketing</h3><p>Costruiamo una presenza social pi&ugrave; professionale, coerente e utile a generare interesse verso la tua attivit&agrave; con contenuti e campagne coordinate.</p>',
+            social: '<h3>Social Media Marketing</h3><p>Costruiamo una presenza social più professionale, coerente e utile a generare interesse verso la tua attività con contenuti e campagne coordinate.</p>',
             siti: '<h3>Creazione siti web</h3><p>Realizziamo pagine moderne e chiare, pensate per presentare al meglio il tuo servizio e trasformare i visitatori in contatti.</p>',
-            app: '<h3>App La Piramide</h3><p>Stiamo lavorando a strumenti per rendere i controlli ancora pi&ugrave; trasparenti, con foto, zone coperte e aggiornamenti consultabili dai clienti.</p>'
+            app: '<h3>App La Piramide</h3><p>Stiamo lavorando a strumenti per rendere i controlli ancora più trasparenti, con foto, zone coperte e aggiornamenti consultabili dai clienti.</p>'
         };
 
         if (extraToggle && extraContent) {
@@ -2884,20 +3225,20 @@ body .reveal.show {
 
             message += `DATI CLIENTE%0A`;
             message += `Nome: ${nome}%0A`;
-            message += `Attivit�: ${attivita}%0A`;
+            message += `Attività: ${attivita}%0A`;
             message += `Telefono: ${telefono}%0A%0A`;
 
             message += `DISTRIBUZIONE VOLANTINI%0A`;
             message += `Numero volantini: ${pezzi}%0A`;
             message += `Zone richieste: ${zone}%0A`;
-            message += `Ha gi� il volantino: ${haVolantino}%0A%0A`;
+            message += `Ha già il volantino: ${haVolantino}%0A%0A`;
 
             if (haVolantino === "no") {
                 message += `GRAFICA VOLANTINO%0A`;
-                message += `Tipo attivit�: ${tipoAttivita}%0A`;
+                message += `Tipo attività: ${tipoAttivita}%0A`;
                 message += `Cosa vuole comunicare: ${messaggioVolantino}%0A`;
                 message += `Punti forti: ${puntiForti}%0A`;
-                message += `Ha gi� un sito web: ${haSito}%0A%0A`;
+                message += `Ha già un sito web: ${haSito}%0A%0A`;
             }
 
             if (haSito === "no") {
@@ -2911,4 +3252,3 @@ body .reveal.show {
     </script>
 </body>
 </html>
-
