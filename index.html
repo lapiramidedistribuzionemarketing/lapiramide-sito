@@ -1,3073 +1,448 @@
 ﻿<!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="La Piramide aiuta aziende e negozi in Italia con volantinaggio mirato, grafica pubblicitaria e social media marketing.">
-    <meta name="keywords"
-        content="volantinaggio Italia, grafica pubblicitaria, social media marketing, pubblicità locale, La Piramide">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="La Piramide | Volantinaggio, grafica e social media marketing">
-    <meta property="og:description"
-        content="Campagne locali e digitali per aziende che vogliono più visibilità, fiducia e clienti reali.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="img/logo piramide.png">
-    <title>La Piramide | Marketing locale premium</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <title>La Piramide | Marketing Locale Premium</title>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "La Piramide",
-        "description": "Agenzia marketing specializzata in volantinaggio mirato, grafica pubblicitaria e social media marketing per aziende in Italia.",
-        "areaServed": "IT",
-        "telephone": "+393457340981",
-        "sameAs": ["https://wa.me/393457340981"],
-        "serviceType": ["Volantinaggio mirato", "Grafica pubblicitaria", "Social media marketing"]
-    }
-    </script>
+  <meta name="description" content="La Piramide: volantinaggio mirato, grafica pubblicitaria, social media marketing, siti web, distribuzioni controllate e servizi premium per attività locali." />
 
-    <style>
-        :root {
-            --black: #030303;
-            --panel: rgba(12, 10, 7, 0.82);
-            --panel-2: rgba(5, 4, 3, 0.72);
-            --gold: #d7b35a;
-            --gold-light: #ffdf87;
-            --gold-dark: #8d6b25;
-            --cream: #fff7df;
-            --muted: #cbbd98;
-            --line: rgba(255, 218, 132, 0.28);
-            --line-strong: rgba(255, 218, 132, 0.58);
-            --shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
-            --radius: 28px;
-            --ease: cubic-bezier(.2, .8, .2, 1);
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            color: var(--cream);
-            font-family: 'Montserrat', sans-serif;
-            background:
-                radial-gradient(circle at 16% 10%, rgba(215, 179, 90, 0.22), transparent 26%),
-                radial-gradient(circle at 82% 6%, rgba(255, 223, 135, 0.12), transparent 30%),
-                radial-gradient(circle at 50% 62%, rgba(141, 107, 37, 0.16), transparent 38%),
-                linear-gradient(180deg, #020202 0%, #0a0805 45%, #030303 100%);
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            pointer-events: none;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-            background-size: 54px 54px;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.78), transparent 78%);
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -3;
-            pointer-events: none;
-            background:
-                linear-gradient(115deg, transparent 0 42%, rgba(255, 223, 135, 0.08) 47%, transparent 52% 100%),
-                radial-gradient(circle at 50% -10%, rgba(255, 244, 200, 0.08), transparent 34%);
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img,
-        video {
-            max-width: 100%;
-        }
-.nav {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            width: min(1320px, calc(100% - 32px));
-            margin: 18px auto 0;
-            padding: 12px 14px 12px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            border: 1px solid var(--line);
-            border-radius: 999px;
-            background: rgba(3, 3, 3, 0.66);
-            backdrop-filter: blur(18px);
-            box-shadow: 0 18px 54px rgba(0, 0, 0, 0.35);
-}
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Cinzel', serif;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-        }
-
-        .brand img {
-            width: 38px;
-            height: 38px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 16px rgba(255, 223, 135, 0.24));
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .nav-links a {
-            padding: 10px 13px;
-            border-radius: 999px;
-            color: var(--muted);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            transition: 280ms var(--ease);
-        }
-
-        .nav-links a:hover {
-            color: var(--cream);
-            background: rgba(255, 223, 135, 0.1);
-        }
-
-        .nav-toggle {
-            display: none;
-            width: 44px;
-            height: 44px;
-            flex: 0 0 auto;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--line);
-            border-radius: 50%;
-            color: var(--gold-light);
-            background: rgba(255, 223, 135, 0.08);
-            cursor: pointer;
-        }
-
-        .nav-toggle span,
-        .nav-toggle::before,
-        .nav-toggle::after {
-            content: "";
-            width: 18px;
-            height: 2px;
-            border-radius: 999px;
-            background: currentColor;
-            transition: transform 260ms var(--ease), opacity 260ms var(--ease);
-        }
-
-        .nav-toggle {
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .nav.is-open .nav-toggle::before {
-            transform: translateY(7px) rotate(45deg);
-        }
-
-        .nav.is-open .nav-toggle span {
-            opacity: 0;
-        }
-
-        .nav.is-open .nav-toggle::after {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 82px;
-            left: 16px;
-            right: 16px;
-            z-index: 19;
-            padding: 12px;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            background: rgba(3, 3, 3, 0.94);
-            backdrop-filter: blur(18px);
-            box-shadow: 0 24px 72px rgba(0, 0, 0, 0.55);
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 14px 16px;
-            border-radius: 14px;
-            color: var(--muted);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-        }
-
-        .mobile-menu a:hover {
-            color: var(--cream);
-            background: rgba(255, 223, 135, 0.1);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            min-height: 48px;
-            padding: 14px 24px;
-            border: 0;
-            border-radius: 999px;
-            color: #080704;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            background: linear-gradient(135deg, #fff0b7 0%, var(--gold) 48%, var(--gold-dark) 100%);
-            box-shadow: 0 16px 38px rgba(215, 179, 90, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.45);
-            transition: transform 300ms var(--ease), box-shadow 300ms var(--ease), filter 300ms var(--ease);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            filter: saturate(1.08);
-            box-shadow: 0 24px 54px rgba(215, 179, 90, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.16) inset;
-        }
-
-        .btn.secondary {
-            color: var(--cream);
-            border: 1px solid var(--line);
-            background: rgba(255, 223, 135, 0.08);
-            box-shadow: none;
-        }
-
-        /* HERO PREMIUM TECH */
-        .hero {
-            position: relative;
-            width: min(1400px, calc(100% - 32px));
-            min-height: 760px;
-            margin: 18px auto 80px;
-            padding: 82px 34px 34px;
-            display: grid;
-            grid-template-columns: 1.04fr 0.96fr;
-            gap: 34px;
-            align-items: center;
-            isolation: isolate;
-            overflow: hidden;
-            border-radius: 34px;
-            background:
-                radial-gradient(circle at 74% 42%, rgba(255, 214, 117, 0.16), transparent 31%),
-                radial-gradient(circle at 14% 8%, rgba(22, 42, 68, 0.72), transparent 34%),
-                linear-gradient(145deg, rgba(4, 7, 13, 0.96), rgba(0, 0, 0, 0.34) 46%, rgba(9, 7, 3, 0.72));
-            box-shadow: inset 0 0 0 1px rgba(255, 223, 135, 0.08), 0 34px 100px rgba(0, 0, 0, 0.52);
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 54px 0 auto 56%;
-            width: 620px;
-            height: 620px;
-            z-index: -1;
-            transform: translateX(-50%);
-            border-radius: 50%;
-            background:
-                radial-gradient(circle, rgba(255, 240, 185, 0.18), transparent 16%),
-                radial-gradient(circle, rgba(255, 211, 96, 0.28), transparent 58%);
-            filter: blur(4px);
-}
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            pointer-events: none;
-            background:
-                linear-gradient(135deg, transparent 0 42%, rgba(255, 223, 135, 0.07) 49%, transparent 56% 100%),
-                radial-gradient(circle at 72% 38%, rgba(255, 223, 135, 0.1), transparent 34%);
-            opacity: 0.62;
-        }
-
-        .kicker,
-        .section-kicker {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            color: var(--gold-light);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 2.4px;
-            text-transform: uppercase;
-        }
-
-        .kicker::before,
-        .section-kicker::before,
-        .section-kicker::after {
-            content: "";
-            width: 34px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold-light));
-        }
-
-        .section-kicker::after {
-            background: linear-gradient(90deg, var(--gold-light), transparent);
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin-top: 0;
-        }
-
-        .hero h1 {
-            max-width: 780px;
-            margin-bottom: 24px;
-            font-family: 'Cinzel', serif;
-            font-size: clamp(44px, 7vw, 94px);
-            line-height: 0.98;
-            letter-spacing: -1.6px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 span,
-        .gold-text {
-            color: transparent;
-            background: linear-gradient(120deg, #fff8dc 0%, var(--gold-light) 36%, #a9822e 76%, #fff1b6 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-
-        .hero h1 span {
-            display: block;
-        }
-
-        .hero-lead {
-            max-width: 640px;
-            margin: 0 0 24px;
-            color: #e8dcc1;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(22px, 2.4vw, 31px);
-            line-height: 1.42;
-        }
-
-        .section-copy,
-        .hero-text {
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.85;
-        }
-
-        .hero-text {
-            max-width: 620px;
-            margin: 0 0 30px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .hero-actions .btn {
-            min-height: 54px;
-            padding: 16px 28px;
-            box-shadow: 0 20px 48px rgba(215, 179, 90, 0.36), 0 0 0 1px rgba(255, 255, 255, 0.18) inset;
-        }
-
-        .hero-actions .btn.secondary {
-            color: var(--gold-light);
-            border-color: rgba(255, 223, 135, 0.54);
-            background: rgba(255, 223, 135, 0.12);
-            box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-        }
-
-        .hero-stage {
-            position: relative;
-            min-height: 560px;
-            display: grid;
-            place-items: center;
-            perspective: 1200px;
-            transform-style: preserve-3d;
-        }
-.metric-card {
-            position: absolute;
-            z-index: 4;
-            width: 190px;
-            padding: 18px;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            background: rgba(5, 4, 3, 0.72);
-            backdrop-filter: blur(14px);
-            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
-}
-
-        .metric-card strong {
-            display: block;
-            color: var(--gold-light);
-            font-family: 'Cinzel', serif;
-            font-size: 28px;
-        }
-
-        .metric-card span {
-            color: var(--muted);
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 1.45;
-            text-transform: uppercase;
-        }
-
-        .metric-card.one {
-            top: 54px;
-            right: 2px;
-}
-
-        .metric-card.two {
-            bottom: 72px;
-            left: 4px;
-}
-
-        .metric-card.three {
-            right: 24px;
-            bottom: 12px;
-}
-
-        .section {
-            position: relative;
-            width: min(1320px, calc(100% - 32px));
-            margin: 96px auto;
-        }
-
-        .lux-panel {
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            background:
-                linear-gradient(135deg, rgba(255, 223, 135, 0.12), transparent 36%),
-                linear-gradient(180deg, rgba(15, 12, 9, 0.86), rgba(4, 4, 4, 0.88));
-            box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-        }
-
-        .presentation,
-        .conversion,
-        .trust {
-            display: grid;
-            grid-template-columns: 0.95fr 1.05fr;
-            gap: 34px;
-            align-items: center;
-            padding: 30px;
-        }
-
-        .presentation img {
-            width: 100%;
-            height: 460px;
-            object-fit: cover;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            box-shadow: 0 28px 70px rgba(0, 0, 0, 0.46);
-            transition: transform 600ms var(--ease), filter 600ms var(--ease);
-        }
-
-        .presentation:hover img {
-            transform: scale(1.025);
-            filter: contrast(1.05) brightness(1.08);
-        }
-
-        .about-company {
-            padding: 44px;
-        }
-
-        .about-head {
-            max-width: 880px;
-            margin-bottom: 34px;
-        }
-
-        .about-head .section-title {
-            margin-bottom: 16px;
-        }
-
-        .about-presentation-box {
-            position: relative;
-            width: 100%;
-            max-width: 920px;
-            margin: 32px auto 0;
-            padding: 36px;
-            border: 1px solid var(--line);
-            border-radius: 26px;
-            overflow: hidden;
-            text-align: center;
-            background:
-                radial-gradient(circle at 50% 0%, rgba(255, 223, 135, 0.15), transparent 38%),
-                linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 48%),
-                rgba(5, 4, 3, 0.72);
-            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
-        }
-
-        .about-presentation-box h3 {
-            margin-bottom: 12px;
-            color: var(--cream);
-            font-family: 'Cinzel', serif;
-            font-size: clamp(24px, 3vw, 36px);
-        }
-
-        .about-presentation-box p {
-            max-width: 680px;
-            margin: 0 auto 24px;
-            color: var(--muted);
-            line-height: 1.75;
-        }
-
-        .about-presentation-box .btn {
-            min-width: 240px;
-        }
-
-        .section-title {
-            margin-bottom: 18px;
-            color: var(--cream);
-            font-family: 'Cinzel', serif;
-            font-size: clamp(32px, 4.8vw, 58px);
-            line-height: 1.05;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            gap: 18px;
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .grid-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .card {
-            position: relative;
-            min-height: 230px;
-            padding: 28px;
-            border: 1px solid var(--line);
-            border-radius: 24px;
-            background:
-                linear-gradient(160deg, rgba(255, 223, 135, 0.09), transparent 45%),
-                rgba(9, 8, 6, 0.84);
-            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
-            overflow: hidden;
-            transition: transform 420ms var(--ease), border-color 420ms var(--ease), box-shadow 420ms var(--ease);
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            background: radial-gradient(circle at var(--x, 50%) var(--y, 20%), rgba(255, 223, 135, 0.22), transparent 34%);
-            transition: opacity 350ms var(--ease);
-        }
-
-        .card:hover {
-            transform: translateY(-9px);
-            border-color: var(--line-strong);
-            box-shadow: 0 34px 74px rgba(0, 0, 0, 0.54), 0 0 42px rgba(215, 179, 90, 0.13);
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card-number {
-            display: inline-grid;
-            place-items: center;
-            width: 46px;
-            height: 46px;
-            margin-bottom: 22px;
-            border: 1px solid var(--line);
-            border-radius: 50%;
-            color: var(--gold-light);
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            background: rgba(255, 223, 135, 0.07);
-        }
-
-        .card h3 {
-            position: relative;
-            margin-bottom: 12px;
-            color: var(--cream);
-            font-family: 'Cinzel', serif;
-            font-size: 24px;
-        }
-
-        .card p {
-            position: relative;
-            margin: 0;
-            color: var(--muted);
-            line-height: 1.72;
-        }
-
-        /* SERVIZI INTERATTIVI */
-        .service-card {
-            cursor: pointer;
-            min-height: 255px;
-        }
-
-        .service-card.is-active {
-            border-color: rgba(255, 223, 135, 0.74);
-            box-shadow: 0 30px 82px rgba(0, 0, 0, 0.5), 0 0 42px rgba(215, 179, 90, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .service-card.is-active .card-number {
-            color: #090704;
-            background: linear-gradient(135deg, #fff1b8, var(--gold));
-            box-shadow: 0 0 28px rgba(255, 223, 135, 0.32);
-        }
-
-        .detail-box {
-            margin-top: 22px;
-            padding: 34px;
-            border: 1px solid rgba(255, 223, 135, 0.48);
-            border-radius: 24px;
-            background:
-                radial-gradient(circle at 18% 0%, rgba(255, 223, 135, 0.14), transparent 34%),
-                linear-gradient(145deg, rgba(8, 15, 28, 0.82), rgba(4, 4, 4, 0.92));
-            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            transition: opacity 350ms var(--ease), transform 350ms var(--ease);
-        }
-
-        .detail-box.switching {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-
-        .detail-box h3 {
-            color: var(--gold-light);
-            font-family: 'Cinzel', serif;
-            font-size: 30px;
-        }
-
-        .detail-box p,
-        .service-detail-list li {
-            color: var(--muted);
-            line-height: 1.8;
-        }
-
-        .service-detail-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 28px;
-            align-items: start;
-        }
-
-        .service-detail-label {
-            display: inline-flex;
-            margin-bottom: 16px;
-            color: var(--gold-light);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .service-detail-list {
-            display: grid;
-            gap: 12px;
-            margin: 8px 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .service-detail-list li {
-            position: relative;
-            padding: 13px 16px 13px 34px;
-            border: 1px solid rgba(255, 223, 135, 0.17);
-            border-radius: 16px;
-            background: rgba(255, 223, 135, 0.055);
-        }
-
-        .service-detail-list li::before {
-            content: "";
-            position: absolute;
-            left: 15px;
-            top: 23px;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--gold-light);
-            box-shadow: 0 0 14px rgba(255, 223, 135, 0.72);
-        }
-
-        .proof-section {
-            padding: 42px;
-        }
-
-        .proof-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 28px;
-        }
-
-        .proof-item {
-            position: relative;
-            min-height: 150px;
-            padding: 24px 22px 22px 72px;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            background:
-                radial-gradient(circle at 18% 0%, rgba(255, 223, 135, 0.13), transparent 42%),
-                rgba(9, 8, 6, 0.74);
-            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
-        }
-
-        .proof-icon {
-            position: absolute;
-            left: 22px;
-            top: 24px;
-            width: 34px;
-            height: 34px;
-            display: grid;
-            place-items: center;
-            border: 1px solid var(--line-strong);
-            border-radius: 50%;
-            color: #090704;
-            font-weight: 900;
-            background: linear-gradient(135deg, #fff1b8, var(--gold));
-            box-shadow: 0 0 24px rgba(255, 223, 135, 0.22);
-        }
-
-        .proof-item strong {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--cream);
-            font-family: 'Cinzel', serif;
-            font-size: 20px;
-        }
-
-        .proof-item span {
-            color: var(--muted);
-            line-height: 1.7;
-        }
-
-        .method {
-            padding: 48px;
-        }
-
-        .method .card b {
-            display: block;
-            margin-bottom: 44px;
-            color: rgba(255, 223, 135, 0.2);
-            font-family: 'Cinzel', serif;
-            font-size: 74px;
-            line-height: 0.8;
-        }
-
-        .conversion {
-            grid-template-columns: 1fr 0.86fr;
-            padding: 42px;
-        }
-
-        .points {
-            display: grid;
-            gap: 12px;
-        }
-
-        .points span {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 18px;
-            border: 1px solid var(--line);
-            border-radius: 999px;
-            color: var(--cream);
-            background: rgba(255, 223, 135, 0.07);
-            font-weight: 700;
-        }
-
-        .points span::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gold-light);
-            box-shadow: 0 0 18px rgba(255, 223, 135, 0.75);
-        }
-
-        .statement {
-            width: min(1120px, calc(100% - 32px));
-            margin: 100px auto;
-            text-align: center;
-        }
-
-        .statement p {
-            margin: 0 auto 18px;
-            color: #e9dcc0;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(25px, 4vw, 46px);
-            line-height: 1.25;
-        }
-
-        .extra-head {
-            padding: 42px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .extra-content {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows 520ms var(--ease);
-        }
-
-        .extra-content.open {
-            grid-template-rows: 1fr;
-        }
-
-        .extra-inner {
-            overflow: hidden;
-        }
-
-        .extra-actions {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            padding: 0 34px 34px;
-        }
-
-        .extra-text {
-            width: min(960px, calc(100% - 40px));
-            margin: 0 auto 38px;
-            padding: 24px;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            background: rgba(0, 0, 0, 0.28);
-            color: var(--muted);
-            line-height: 1.8;
-            transition: 260ms var(--ease);
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
-        }
-
-        .gallery-item {
-            position: relative;
-            aspect-ratio: 4 / 3;
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            overflow: hidden;
-            background: #050505;
-            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scale(1.04);
-            transition: transform 600ms var(--ease), filter 600ms var(--ease);
-        }
-
-        .gallery-item::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.36));
-            transition: opacity 350ms var(--ease);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.13);
-            filter: brightness(1.13) contrast(1.05);
-        }
-
-        .gallery-item:hover::after {
-            opacity: 1;
-        }
-
-        .video-panel {
-            padding: 36px;
-        }
-
-        .video-panel video {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9 ;
-            display: block;
-            margin: 0 auto;
-            border: 1px solid var(--line);
-            border-radius: 24px;
-            background: #000;
-            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
-        }
-
-        .review-section {
-            padding: 42px;
-        }
-
-        .review-slider {
-            position: relative;
-            margin-top: 30px;
-            padding: 0 58px;
-        }
-
-        .review-viewport {
-            overflow: hidden;
-            border-radius: 24px;
-        }
-
-        .review-track {
-            display: flex;
-            gap: 18px;
-            transition: transform 620ms var(--ease);
-            will-change: transform;
-        }
-
-        .review-card {
-            position: relative;
-            flex: 0 0 calc((100% - 18px) / 2);
-            min-height: 255px;
-            padding: 34px;
-            border: 1px solid rgba(255, 223, 135, 0.48);
-            border-radius: 24px;
-            background:
-                radial-gradient(circle at 18% 0%, rgba(255, 223, 135, 0.16), transparent 35%),
-                linear-gradient(155deg, rgba(15, 12, 9, 0.9), rgba(4, 4, 4, 0.94));
-            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-            transition: transform 420ms var(--ease), border-color 420ms var(--ease), box-shadow 420ms var(--ease);
-        }
-
-        .review-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            background: radial-gradient(circle at 24% 8%, rgba(255, 223, 135, 0.2), transparent 38%);
-            transition: opacity 350ms var(--ease);
-        }
-
-        .review-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--line-strong);
-            box-shadow: 0 34px 82px rgba(0, 0, 0, 0.56), 0 0 48px rgba(215, 179, 90, 0.15);
-        }
-
-        .review-card:hover::before {
-            opacity: 1;
-        }
-
-        .review-stars {
-            position: relative;
-            display: flex;
-            gap: 5px;
-            margin-bottom: 22px;
-            color: var(--gold-light);
-            font-size: 18px;
-            letter-spacing: 1px;
-            text-shadow: 0 0 18px rgba(255, 223, 135, 0.38);
-        }
-
-        .review-card p {
-            position: relative;
-            margin: 0;
-            color: #e8dcc1;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(24px, 2.5vw, 34px);
-            line-height: 1.34;
-        }
-
-        .review-author {
-            position: relative;
-            display: block;
-            margin-top: 26px;
-            color: var(--gold-light);
-            font-family: 'Cinzel', serif;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-        }
-
-        .review-author::before {
-            content: "";
-            display: inline-block;
-            width: 28px;
-            height: 1px;
-            margin-right: 10px;
-            vertical-align: middle;
-            background: var(--gold-light);
-            box-shadow: 0 0 12px rgba(255, 223, 135, 0.48);
-        }
-
-        .review-arrow {
-            position: absolute;
-            top: 50%;
-            z-index: 2;
-            width: 44px;
-            height: 44px;
-            display: grid;
-            place-items: center;
-            border: 1px solid var(--line);
-            border-radius: 50%;
-            color: var(--gold-light);
-            font-size: 24px;
-            font-weight: 700;
-            background: rgba(5, 4, 3, 0.78);
-            box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
-            cursor: pointer;
-            transform: translateY(-50%);
-            transition: 280ms var(--ease);
-        }
-
-        .review-arrow:hover {
-            color: #090704;
-            border-color: var(--line-strong);
-            background: linear-gradient(135deg, #fff1b8, var(--gold));
-            box-shadow: 0 22px 54px rgba(215, 179, 90, 0.28);
-        }
-
-        .review-arrow.prev {
-            left: 0;
-        }
-
-        .review-arrow.next {
-            right: 0;
-        }
-
-        .review-dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 22px;
-        }
-
-        .review-dots button {
-            width: 9px;
-            height: 9px;
-            min-height: 0;
-            padding: 0;
-            border: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.28);
-            cursor: pointer;
-            transition: 280ms var(--ease);
-        }
-
-        .review-dots button.active {
-            width: 34px;
-            border-radius: 99px;
-            background: var(--gold-light);
-            box-shadow: 0 0 18px rgba(255, 223, 135, 0.46);
-        }
-
-        .testimonials {
-            padding: 42px;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 28px;
-        }
-
-        .testimonial-card {
-            position: relative;
-            min-height: 210px;
-            padding: 34px;
-            border: 1px solid var(--line);
-            border-radius: 24px;
-            background:
-                linear-gradient(160deg, rgba(255, 223, 135, 0.11), transparent 48%),
-                rgba(9, 8, 6, 0.84);
-            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
-        }
-
-        .testimonial-card::before {
-            content: "";
-            position: absolute;
-            top: 26px;
-            right: 30px;
-            width: 38px;
-            height: 38px;
-            border-top: 1px solid var(--line-strong);
-            border-right: 1px solid var(--line-strong);
-            opacity: 0.7;
-        }
-
-        .testimonial-card p {
-            margin: 0;
-            color: #e8dcc1;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(23px, 2.6vw, 34px);
-            line-height: 1.32;
-        }
-
-        .testimonial-card span {
-            display: block;
-            margin-top: 22px;
-            color: var(--gold-light);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-        }
-
-        .slider {
-            position: relative;
-            height: min(680px, 70vw);
-            min-height: 360px;
-            border: 1px solid var(--line);
-            border-radius: 28px;
-            overflow: hidden;
-            background: #050505;
-            box-shadow: var(--shadow);
-        }
-
-        .slide {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 18px;
-            opacity: 0;
-            transform: scale(1.06);
-            filter: blur(10px) brightness(0.7);
-            transition: opacity 900ms var(--ease), transform 1400ms var(--ease), filter 900ms var(--ease);
-        }
-
-        .slide.active {
-            opacity: 1;
-            transform: scale(1);
-            filter: blur(0) brightness(1);
-        }
-
-        .dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 18px;
-        }
-
-        .dots button {
-            width: 9px;
-            height: 9px;
-            min-height: 0;
-            padding: 0;
-            border: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.28);
-            cursor: pointer;
-            transition: 280ms var(--ease);
-        }
-
-        .dots button.active {
-            width: 34px;
-            border-radius: 99px;
-            background: var(--gold-light);
-        }
-
-        .trust {
-            grid-template-columns: 360px 1fr;
-            padding: 34px;
-        }
-
-        .human-trust {
-            position: relative;
-            grid-template-columns: minmax(230px, 310px) 1fr;
-            gap: 30px;
-            margin-top: 72px;
-            margin-bottom: 58px;
-            padding: 28px;
-            isolation: isolate;
-            background:
-                radial-gradient(circle at 12% 18%, rgba(255, 223, 135, 0.16), transparent 34%),
-                linear-gradient(135deg, rgba(255, 223, 135, 0.1), transparent 42%),
-                linear-gradient(180deg, rgba(12, 9, 5, 0.92), rgba(2, 2, 2, 0.94));
-        }
-
-        .human-trust::before {
-            content: "";
-            position: absolute;
-            inset: 1px;
-            z-index: -1;
-            border-radius: calc(var(--radius) - 1px);
-            pointer-events: none;
-            background:
-                linear-gradient(110deg, transparent 0 48%, rgba(255, 223, 135, 0.08) 52%, transparent 60% 100%),
-                radial-gradient(circle at 78% 22%, rgba(255, 223, 135, 0.12), transparent 32%);
-        }
-
-        .human-trust .section-kicker {
-            margin-bottom: 14px;
-        }
-
-        .human-trust .section-title {
-            margin-bottom: 12px;
-            font-size: clamp(26px, 3.4vw, 42px);
-        }
-
-        .trust-message {
-            max-width: 760px;
-        }
-
-        .trust-quote {
-            margin: 0 0 18px;
-            color: var(--cream);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(27px, 3.1vw, 43px);
-            font-weight: 600;
-            line-height: 1.18;
-        }
-
-        .trust-note {
-            max-width: 640px;
-            margin-bottom: 0;
-        }
-
-        .portrait {
-            aspect-ratio: 3 / 4;
-            border: 1px solid var(--line);
-            border-radius: 26px;
-            overflow: hidden;
-            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
-        }
-
-        .portrait img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 800ms var(--ease);
-        }
-
-        .human-trust .portrait {
-            aspect-ratio: 4 / 5;
-            max-height: 350px;
-            border-radius: 24px;
-        }
-
-        .human-trust .portrait img {
-            object-position: 50% 24%;
-        }
-
-        .trust:hover .portrait img {
-            transform: scale(1.045);
-        }
-
-        .signature {
-            display: block;
-            margin-top: 18px;
-            color: var(--gold-light);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 42px;
-            font-style: italic;
-        }
-
-        .human-trust .signature {
-            margin-top: 12px;
-            font-size: 31px;
-        }
-
-        .final-cta {
-            padding: 68px 34px;
-            text-align: center;
-        }
-
-        .whatsapp {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            z-index: 30;
-            width: 62px;
-            height: 62px;
-            display: grid;
-            place-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: #061006;
-            font-size: 24px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #fff0b7, var(--gold));
-            box-shadow: 0 20px 48px rgba(215, 179, 90, 0.28);
-}
-
-        @media (min-width: 1440px) {
-            .nav,
-            .section {
-                width: min(1400px, calc(100% - 64px));
-            }
-
-            .hero {
-                width: min(1500px, calc(100% - 64px));
-                gap: 48px;
-                padding: 92px 48px 44px;
-            }
-
-            .hero h1 {
-                max-width: 880px;
-            }
-
-            .hero-lead {
-                max-width: 720px;
-            }
-
-            .hero-text {
-                max-width: 700px;
-            }
-
-            .section {
-                margin: 112px auto;
-            }
-
-            .presentation,
-            .conversion,
-            .trust,
-            .method,
-            .proof-section,
-            .testimonials,
-            .review-section {
-                padding: 48px;
-            }
-
-            .about-company {
-                padding: 54px;
-            }
-
-            .grid,
-            .testimonial-grid {
-                gap: 22px;
-            }
-
-            .gallery {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 18px;
-            }
-
-            .premium-content {
-                max-width: 1400px;
-            }
-        }
-
-        @media (min-width: 1800px) {
-            .nav,
-            .section {
-                width: min(1520px, calc(100% - 96px));
-            }
-
-            .hero {
-                width: min(1640px, calc(100% - 96px));
-            }
-
-            .section {
-                margin: 128px auto;
-            }
-
-            .hero-stage {
-                min-height: 620px;
-            }
-        }
-
-        @media (max-width: 980px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero,
-            .presentation,
-            .conversion,
-            .trust {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                min-height: auto;
-                padding-top: 56px;
-            }
-
-            .hero-stage {
-                min-height: 500px;
-            }
-
-            .service-detail-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .grid-3,
-            .grid-4,
-            .gallery,
-            .proof-list,
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .trust {
-                text-align: center;
-            }
-
-            .human-trust {
-                gap: 24px;
-                padding: 26px;
-                text-align: left;
-            }
-
-            .portrait {
-                max-width: 330px;
-                margin: auto;
-            }
-
-            .human-trust .portrait {
-                width: min(100%, 280px);
-                max-height: 315px;
-            }
-
-        }
-
-        @media (max-width: 640px) {
-            .nav {
-                width: calc(100% - 20px);
-                margin-top: 10px;
-                padding: 10px 10px 10px 14px;
-            }
-
-            .brand span {
-                display: none;
-            }
-
-            .nav .btn {
-                padding: 12px 15px;
-                font-size: 11px;
-            }
-
-            .hero,
-            .section {
-                width: calc(100% - 20px);
-            }
-
-            .hero {
-                margin-top: 6px;
-                padding: 44px 14px 22px;
-            }
-
-            .hero h1 {
-                font-size: clamp(38px, 14vw, 58px);
-            }
-
-            .hero-actions,
-            .extra-actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .hero-stage {
-                min-height: 390px;
-            }
-
-.metric-card {
-                width: 145px;
-                padding: 14px;
-            }
-
-            .metric-card strong {
-                font-size: 22px;
-            }
-
-            .metric-card span {
-                font-size: 10px;
-            }
-
-            .metric-card.one {
-                top: 8px;
-                right: 0;
-            }
-
-            .metric-card.two {
-                bottom: 44px;
-                left: 0;
-            }
-
-            .metric-card.three {
-                right: 4px;
-                bottom: 0;
-            }
-
-            .presentation,
-            .method,
-            .conversion,
-            .video-panel,
-            .trust,
-            .final-cta,
-            .proof-section,
-            .testimonials {
-                padding: 22px;
-            }
-
-            .about-company {
-                padding: 22px;
-            }
-
-            .about-head {
-                margin-bottom: 24px;
-            }
-
-            .about-presentation-box {
-                width: 100%;
-                max-width: 100%;
-                margin-top: 24px;
-                padding: 24px 18px;
-                border-radius: 16px;
-            }
-
-            .about-presentation-box .btn {
-                width: 100%;
-                min-width: 0;
-            }
-
-            .presentation img {
-                height: 300px;
-            }
-
-            .grid-3,
-            .grid-4,
-            .gallery,
-            .proof-list,
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .proof-item {
-                padding-left: 62px;
-            }
-
-            .review-section {
-                padding: 22px;
-            }
-
-            .human-trust {
-                margin-top: 56px;
-                margin-bottom: 42px;
-                padding: 18px;
-                gap: 18px;
-                border-radius: 24px;
-            }
-
-            .human-trust .section-kicker {
-                margin-bottom: 10px;
-            }
-
-            .human-trust .section-title {
-                margin-bottom: 8px;
-                font-size: 26px;
-            }
-
-            .trust-quote {
-                margin-bottom: 12px;
-                font-size: 25px;
-                line-height: 1.15;
-            }
-
-            .trust-note {
-                font-size: 14px;
-                line-height: 1.65;
-            }
-
-            .human-trust .portrait {
-                width: min(100%, 220px);
-                max-height: 250px;
-                border-radius: 20px;
-            }
-
-            .human-trust .signature {
-                font-size: 26px;
-            }
-
-            .review-slider {
-                padding: 0 0 56px;
-            }
-
-            .review-card {
-                flex-basis: 100%;
-                min-height: 245px;
-                padding: 28px;
-            }
-
-            .review-arrow {
-                top: auto;
-                bottom: 0;
-                transform: none;
-            }
-
-            .review-arrow.prev {
-                left: calc(50% - 52px);
-            }
-
-            .review-arrow.next {
-                right: calc(50% - 52px);
-            }
-
-            .detail-box {
-                padding: 24px;
-            }
-
-            .slider {
-                min-height: 420px;
-                height: 520px;
-            }
-
-            .whatsapp {
-                width: 54px;
-                height: 54px;
-                right: 14px;
-                bottom: 14px;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            #extra,
-            #extra.extra,
-            #distribuzioni,
-            .video-panel,
-            .extra,
-            .extra-content,
-            .extra-grid {
-                height: auto !important;
-                min-height: 0 !important;
-            }
-
-            #extra {
-                margin-bottom: 40px;
-            }
-
-            #extra + #distribuzioni {
-                margin-top: 0;
-                margin-bottom: 40px;
-                padding-top: 0;
-                padding-bottom: 0;
-            }
-
-            #distribuzioni + .video-panel {
-                margin-top: 0;
-            }
-
-            #extra .extra-head {
-                padding: 28px 18px;
-            }
-
-            #extra .extra-actions {
-                padding: 0 18px 24px;
-            }
-
-            #extra .extra-text {
-                margin-bottom: 28px;
-            }
-
-            .video-panel {
-                padding: 22px;
-            }
-
-            #extra.reveal,
-            #extra .reveal,
-            #distribuzioni.reveal,
-            #distribuzioni .reveal,
-            .video-panel.reveal,
-            .video-panel .reveal {
-                opacity: 1 !important;
-                transform: none !important;
-                filter: none !important;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            *,
-            *::before,
-            *::after {
-scroll-behavior: auto !important;
-                transition-duration: 1ms !important;
-            }
-        }
-        .service-action {
-  margin-top: 18px;
-  padding: 13px 22px;
-  border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.8);
-  background: linear-gradient(135deg, #f7d774, #b88a22);
-  color: #111;
-  font-weight: 800;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
-}
-
-.quote-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.82);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  padding: 18px;
-}
-
-.quote-modal.active {
-  display: flex;
-}
-
-.quote-box {
-  width: 100%;
-  max-width: 680px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: linear-gradient(180deg, #111, #050505);
-  border: 1px solid rgba(212, 175, 55, 0.7);
-  border-radius: 28px;
-  padding: 28px;
-  color: #f6e7b2;
-  box-shadow: 0 0 45px rgba(212, 175, 55, 0.25);
-  position: relative;
-}
-
-.quote-close {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  background: transparent;
-  color: #d4af37;
-  border: none;
-  font-size: 34px;
-  cursor: pointer;
-}
-
-.quote-box h2,
-.quote-box h3 {
-  color: #d4af37;
-  text-align: center;
-}
-
-.quote-subtitle {
-  text-align: center;
-  color: #e8dcc0;
-  margin-bottom: 22px;
-}
-
-.quote-step {
-  margin-top: 20px;
-}
-
-.quote-box input,
-.quote-box textarea,
-.quote-box select {
-  width: 100%;
-  margin: 8px 0;
-  padding: 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  background: #171717;
-  color: #fff;
-  font-size: 15px;
-}
-
-.quote-box textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
-.quote-label {
-  display: block;
-  margin-top: 14px;
-  color: #f6e7b2;
-  font-weight: 700;
-}
-
-.hidden {
-  display: none;
-}
-
-.quote-whatsapp {
-  width: 100%;
-  margin-top: 24px;
-  padding: 16px;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(135deg, #f7d774, #b88a22);
-  color: #111;
-  font-size: 17px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.service-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 34px;
-}
-
-.service-card {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.card-top {
-  min-height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.card-number {
-  flex: 0 0 auto;
-  margin-bottom: 0;
-}
-
-.premium-tracking {
-  padding: 80px 20px;
-  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.15), #050505 55%);
-  color: #fff;
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-}
-
-.premium-content {
-  max-width: 1240px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.premium-label {
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 8px 18px;
-  border: 1px solid rgba(212, 175, 55, 0.7);
-  border-radius: 999px;
-  color: #d4af37;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
-.premium-tracking h2 {
-  color: #d4af37;
-  font-size: clamp(32px, 5vw, 58px);
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.premium-tracking p {
-  color: #f4ead2;
-  line-height: 1.7;
-}
-
-.premium-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
-  margin: 40px 0;
-}
-
-.premium-card {
-  padding: 26px;
-  border-radius: 24px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.08);
-}
-
-.premium-card h3 {
-  color: #d4af37;
-  margin-bottom: 12px;
-}
-
-.premium-note {
-  margin-top: 20px;
-  font-weight: 700;
-}
-
-.premium-button {
-  margin-top: 28px;
-  padding: 15px 26px;
-  border: none;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #f7d774, #b88a22);
-  color: #111;
-  font-weight: 900;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-@media (max-width: 980px) {
-    .nav {
-        position: sticky;
-    }
-
-    .nav-toggle {
-        display: inline-flex;
-    }
-
-    .nav.is-open + .mobile-menu {
-        display: block;
-    }
-
-  .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .mobile-menu {
-    top: 70px;
-    left: 10px;
-    right: 10px;
-  }
-
-  .section {
-    margin: 42px auto;
-  }
-
-  .section-copy {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .premium-tracking {
-    padding: 42px 16px;
-  }
-
-  .premium-grid {
-    gap: 14px;
-    margin: 26px 0;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card-top {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 1440px) {
-  .premium-content {
-    max-width: 1400px;
-  }
-}
-
-@media (min-width: 1800px) {
-  .premium-content {
-    max-width: 1520px;
-  }
-}
-/* BONIFICA LUXURY FINALE - unico sistema grafico nero/oro */
-body {
-    background:
-        radial-gradient(circle at 14% 4%, rgba(255, 223, 135, 0.18), transparent 28%),
-        radial-gradient(circle at 86% 12%, rgba(215, 179, 90, 0.14), transparent 30%),
-        radial-gradient(circle at 50% 70%, rgba(255, 223, 135, 0.07), transparent 42%),
-        linear-gradient(180deg, #010101 0%, #090805 48%, #020202 100%);
-}
-
-body::before {
-    display: none;
-}
-
-body::after {
-    opacity: 0.62;
-    background:
-        radial-gradient(circle at 50% 0%, rgba(255, 238, 178, 0.09), transparent 34%),
-        linear-gradient(115deg, transparent 0 44%, rgba(255, 223, 135, 0.045) 50%, transparent 58% 100%);
-}
-
-.reveal {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-    filter: blur(8px);
-    transition:
-        opacity 780ms cubic-bezier(.18, .84, .22, 1),
-        transform 920ms cubic-bezier(.18, .84, .22, 1),
-        filter 920ms cubic-bezier(.18, .84, .22, 1);
-    will-change: opacity, transform, filter;
-}
-
-.reveal.show {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    filter: blur(0);
-}
-
-.section-title,
-.hero h1,
-.premium-tracking h2 {
-    text-shadow:
-        0 0 20px rgba(255, 223, 135, 0.16),
-        0 28px 70px rgba(0, 0, 0, 0.62);
-}
-
-.gold-text,
-.hero h1 span {
-    color: transparent;
-    background: linear-gradient(112deg, #fff7d4 0%, #f5d67a 28%, #b9892b 58%, #fff0b0 84%, #d7b35a 100%);
-    background-size: 180% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    filter: drop-shadow(0 0 15px rgba(255, 223, 135, 0.16));
-}
-
-.hero-logo {
-    position: relative;
-    width: min(500px, 86vw);
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-    border: 1px solid rgba(255, 223, 135, 0.28);
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 50% 48%, rgba(255, 238, 178, 0.16), transparent 22%),
-        radial-gradient(circle at 50% 52%, rgba(215, 179, 90, 0.18), transparent 55%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(5, 4, 3, 0.42));
-    box-shadow:
-        inset 0 0 90px rgba(255, 223, 135, 0.09),
-        0 0 100px rgba(215, 179, 90, 0.14),
-        0 42px 120px rgba(0, 0, 0, 0.62);
-}
-
-.hero-logo img {
-    width: 68%;
-    filter: drop-shadow(0 28px 60px rgba(0, 0, 0, 0.54)) drop-shadow(0 0 34px rgba(255, 223, 135, 0.28));
-}
-
-.section-title {
-    position: relative;
-}
-
-.section-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -12px;
-    width: min(190px, 48%);
-    height: 1px;
-    pointer-events: none;
-    background: linear-gradient(90deg, transparent, rgba(255, 245, 202, 0.92), rgba(215, 179, 90, 0.48), transparent);
-    box-shadow: 0 0 20px rgba(255, 223, 135, 0.28);
-}
-
-.text-center .section-title::after,
-.review-section .section-title::after,
-.testimonials .section-title::after,
-.final-cta .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.card,
-.service-card,
-.premium-card,
-.testimonial-card,
-.review-card,
-.proof-item,
-.gallery-item,
-.detail-box,
-.lux-panel {
-    position: relative;
-    border-color: rgba(255, 223, 135, 0.34);
-    transition:
-        transform 380ms var(--ease),
-        border-color 380ms var(--ease),
-        box-shadow 380ms var(--ease),
-        background 380ms var(--ease),
-        filter 380ms var(--ease);
-}
-
-.card::before,
-.service-card::before,
-.premium-card::before,
-.testimonial-card::before,
-.review-card::before,
-.proof-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    display: block;
-    border-radius: inherit;
-    opacity: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at var(--x, 50%) var(--y, 24%), rgba(255, 223, 135, 0.20), transparent 34%),
-        linear-gradient(115deg, transparent 0 34%, rgba(255, 236, 174, 0.10) 48%, transparent 64% 100%);
-    mix-blend-mode: screen;
-    transition: opacity 440ms var(--ease);
-}
-
-.card:hover::before,
-.service-card:hover::before,
-.premium-card:hover::before,
-.testimonial-card:hover::before,
-.review-card:hover::before,
-.proof-item:hover::before {
-    opacity: 1;
-}
-
-.service-card:hover,
-.service-card.is-active,
-.premium-card:hover,
-.testimonial-card:hover,
-.review-card:hover,
-.proof-item:hover {
-    transform: translateY(-8px);
-    border-color: rgba(255, 223, 135, 0.86);
-    box-shadow:
-        0 30px 74px rgba(0, 0, 0, 0.56),
-        0 0 42px rgba(215, 179, 90, 0.18);
-    background:
-        radial-gradient(circle at var(--x, 50%) var(--y, 20%), rgba(255, 223, 135, 0.12), transparent 36%),
-        linear-gradient(150deg, rgba(255, 255, 255, 0.05), transparent 42%),
-        rgba(7, 6, 4, 0.88);
-}
-
-.btn,
-.service-action,
-.premium-button,
-.quote-whatsapp {
-    border: 1px solid rgba(255, 223, 135, 0.66);
-    color: #090704;
-    background: linear-gradient(135deg, #fff2bc 0%, #d7b35a 48%, #8d6b25 100%);
-    box-shadow:
-        0 15px 36px rgba(215, 179, 90, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.44);
-    transition:
-        transform 300ms var(--ease),
-        filter 300ms var(--ease),
-        box-shadow 300ms var(--ease),
-        border-color 300ms var(--ease);
-}
-
-.btn:hover,
-.service-action:hover,
-.premium-button:hover,
-.quote-whatsapp:hover {
-    transform: translateY(-2px) scale(1.026);
-    filter: brightness(1.08) saturate(1.08);
-    border-color: rgba(255, 241, 184, 0.92);
-    box-shadow:
-        0 20px 46px rgba(215, 179, 90, 0.34),
-        0 0 26px rgba(255, 223, 135, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.56);
-}
-
-.btn::before,
-.btn::after,
-.service-action::after,
-.premium-button::after,
-.quote-whatsapp::after {
-    animation: none;
-    opacity: 0;
-}
-
-.nav.is-scrolled {
-    margin-top: 8px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    border-color: rgba(255, 223, 135, 0.46);
-    background: rgba(4, 4, 3, 0.88);
-    box-shadow: 0 18px 58px rgba(0, 0, 0, 0.54), 0 0 28px rgba(215, 179, 90, 0.10);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition-duration: 1ms !important;
-        scroll-behavior: auto !important;
-    }
-
-    body .reveal,
-    body .reveal.show {
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-    }
-
-}
-
-@media (max-width: 768px) {
-    body .reveal,
-    body .reveal.show {
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-        transition-duration: 1ms !important;
-    }
-
-    .hero {
-        margin-bottom: 44px;
-    }
-
-    .hero-text {
-        margin-top: 10px;
-    }
-
-    .gallery {
-        gap: 14px;
-    }
-}
-
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- NAVIGAZIONE -->
-    <nav class="nav" aria-label="Navigazione principale">
-        <a class="brand" href="#top" aria-label="La Piramide homepage">
-            <img src="img/logo piramide.png" alt="Logo La Piramide">
-            <span>La Piramide</span>
-        </a>
-        <div class="nav-links">
-            <a href="#top">Home</a>
-            <a href="#chi-siamo">Chi siamo</a>
-            <a href="#servizi">Servizi</a>
-            <a href="#distribuzioni">Distribuzioni</a>
-            <a href="#recensioni">Recensioni</a>
-            <a href="#contatti">Contatti</a>
-        </div>
-        <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
-            <span></span>
-        </button>
-        <a class="btn"
-            href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20per%20pubblicita%20e%20distribuzione%20volantini">Preventivo</a>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#top">Home</a>
-        <a href="#chi-siamo">Chi siamo</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#distribuzioni">Distribuzioni</a>
-        <a href="#recensioni">Recensioni</a>
-        <a href="#contatti">Contatti</a>
+  <canvas class="future-bg" id="futureBg" aria-hidden="true"></canvas>
+  <div class="future-vignette" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="#home" class="brand">
+      <img src="img/logo piramide.png" alt="La Piramide">
+      <span>La Piramide</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#presentazione">Presentazione</a>
+      <a href="#metodo">Metodo</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#distribuzioni">Distribuzioni</a>
+      <a href="#extra">Extra</a>
+      <a href="#controlli">Controlli</a>
+      <a href="#lavori">Lavori</a>
+      <a href="#contatti">Contatti</a>
     </div>
 
-    <!-- HERO -->
-    <header class="hero" id="top">
-        <div class="hero-copy reveal">
-            <span class="kicker">Marketing locale premium</span>
-            <h1>Portiamo clienti reali nel tuo negozio, <span>partendo dal tuo territorio.</span></h1>
-            <p class="hero-lead">Distribuzione volantini, grafica pubblicitaria, social media e siti web per attività e aziende.</p>
-            <p class="hero-text">Costruiamo campagne coordinate tra territorio e digitale: messaggio chiaro,
-                immagine raffinata, distribuzione controllata e contatti reali.</p>
-            <div class="hero-actions">
-                <a class="btn"
-                    href="https://wa.me/393457340981?text=Salve,%20vorrei%20una%20strategia%20gratuita%20per%20la%20mia%20attivita">Richiedi
-                    una strategia</a>
-                <a class="btn secondary" href="#servizi">Scopri i servizi</a>
-            </div>
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <a class="btn nav-btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20con%20La%20Piramide">
+      Preventivo
+    </a>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#presentazione">Presentazione</a>
+    <a href="#metodo">Metodo</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#distribuzioni">Distribuzioni</a>
+    <a href="#extra">Extra</a>
+    <a href="#controlli">Controlli</a>
+    <a href="#lavori">Lavori</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+
+  <header class="hero reveal-section" id="home">
+    <div class="hero-top">
+      <span class="wide-label">Marketing locale premium</span>
+
+      <div class="hero-logo-stage">
+        <div class="logo-glow"></div>
+        <div class="logo-scan"></div>
+        <img src="img/logo piramide.png" alt="Logo La Piramide">
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <h1>
+        Portiamo clienti reali nel tuo negozio,
+        <span>partendo dal tuo territorio.</span>
+      </h1>
+
+      <p>
+        Distribuzione volantini, grafica pubblicitaria, social media, siti web e strumenti digitali
+        per attività che vogliono farsi vedere davvero.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#servizi">
+          Richiedi strategia
+        </a>
+
+        <a class="btn btn-dark" href="#extra">
+          Scopri extra e novità
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section compact-section reveal-section" id="presentazione">
+      <div class="section-head">
+        <span class="wide-label">Presentazione aziendale</span>
+        <h2>Scopri La Piramide</h2>
+        <p>Apri la presentazione completa e scopri il progetto, i servizi e il metodo di lavoro.</p>
+      </div>
+
+      <div class="presentation-simple">
+        <img src="img/img1.jpeg" alt="Presentazione La Piramide">
+
+        <a class="btn" href="pdf/presentazione.pdf" target="_blank">
+          Apri la presentazione completa
+        </a>
+      </div>
+    </section>
+
+    <section class="section compact-section reveal-section" id="metodo">
+      <div class="section-head">
+        <span class="wide-label">Metodo</span>
+        <h2>Una campagna efficace nasce prima della distribuzione.</h2>
+      </div>
+
+      <div class="method-grid">
+        <article class="method-card">
+          <span>1</span>
+          <h3>Analisi</h3>
+          <p>Capisco attività, zona, obiettivo e pubblico ideale.</p>
+        </article>
+
+        <article class="method-card">
+          <span>2</span>
+          <h3>Strategia</h3>
+          <p>Creo messaggio, grafica e piano di comunicazione.</p>
+        </article>
+
+        <article class="method-card">
+          <span>3</span>
+          <h3>Esecuzione</h3>
+          <p>Gestisco distribuzione, materiali e presenza operativa.</p>
+        </article>
+
+        <article class="method-card">
+          <span>4</span>
+          <h3>Controllo</h3>
+          <p>Foto, prove, dati e tracciamento dove previsto.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact-section reveal-section" id="servizi">
+      <div class="section-head">
+        <span class="wide-label">Servizi</span>
+        <h2>I servizi La Piramide</h2>
+        <p>Ogni servizio può essere singolo oppure integrato in una strategia completa.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <span>01</span>
+          <h3>Volantinaggio mirato</h3>
+          <p>Distribuzione studiata per zone, pubblico e obiettivo commerciale.</p>
+          <button onclick="openServiceForm('volantinaggio')">Richiedi</button>
+        </article>
+
+        <article class="service-card">
+          <span>02</span>
+          <h3>Grafica pubblicitaria</h3>
+          <p>Volantini, locandine e contenuti visivi con immagine curata e professionale.</p>
+          <button onclick="openServiceForm('grafica')">Richiedi</button>
+        </article>
+
+        <article class="service-card">
+          <span>03</span>
+          <h3>Social media marketing</h3>
+          <p>Contenuti, post, storie, reel e gestione della presenza online.</p>
+          <button onclick="openServiceForm('social')">Richiedi</button>
+        </article>
+
+        <article class="service-card">
+          <span>04</span>
+          <h3>Siti web</h3>
+          <p>Siti eleganti, responsive e pensati per trasformare visite in contatti.</p>
+          <button onclick="openServiceForm('sito')">Richiedi</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact-section distributions-section reveal-section" id="distribuzioni">
+      <div class="section-head">
+        <span class="wide-label">Le nostre distribuzioni</span>
+        <h2>Presenza reale sul territorio</h2>
+        <p>
+          Alcune immagini delle distribuzioni svolte sul campo, per mostrare il lavoro reale
+          e la presenza operativa.
+        </p>
+      </div>
+
+      <div class="distribution-slider">
+        <div class="distribution-group active">
+          <img src="img/distribuzione (1).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (2).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (3).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (4).jpeg" alt="Distribuzione La Piramide">
         </div>
-        <!-- HERO VISUAL -->
-        <div class="hero-stage" aria-hidden="true">
-            <div class="hero-logo">
-                <img src="img/logo piramide.png" alt="">
-            </div>
-            <div class="metric-card one"><strong>01</strong><span>Zone scelte con criterio</span></div>
-            <div class="metric-card two"><strong>02</strong><span>Grafica curata e riconoscibile</span></div>
-            <div class="metric-card three"><strong>03</strong><span>Contatti e fiducia reale</span></div>
+
+        <div class="distribution-group">
+          <img src="img/distribuzione (5).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (6).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (7).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (8).jpeg" alt="Distribuzione La Piramide">
         </div>
-    </header>
 
-    <main>
-        <!-- CHI SIAMO -->
-        <section class="section lux-panel reveal" id="chi-siamo">
-            <div class="about-company">
-                <div class="about-head">
-                    <span class="section-kicker">Chi siamo</span>
-                    <h2 class="section-title gold-text">Chi siamo</h2>
-                    <p class="section-copy">Una presentazione aziendale chiara, visiva e ordinata: il modo più semplice per capire come La Piramide costruisce presenza locale, comunicazione e risultati per le attività.</p>
-                </div>
+        <div class="distribution-group">
+          <img src="img/distribuzione (9).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (10).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (11).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (12).jpeg" alt="Distribuzione La Piramide">
+        </div>
 
-                <div class="about-presentation-box">
-                    <h3>Presentazione aziendale</h3>
-                    <p>Scopri chi siamo, come lavoriamo e come accompagniamo le attività nella loro comunicazione locale.</p>
-                    <a class="btn" href="pdf/presentazione.pdf" target="_blank" rel="noopener">Apri presentazione</a>
-                </div>
-            </div>
-        </section>
+        <div class="distribution-group">
+          <img src="img/distribuzione (13).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (14).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (1).jpeg" alt="Distribuzione La Piramide">
+          <img src="img/distribuzione (2).jpeg" alt="Distribuzione La Piramide">
+        </div>
+      </div>
 
-        <!-- Card servizi cliccabili con pannello tecnico dettagliato. -->
-        <!-- SERVIZI -->
-        <section class="section reveal" id="servizi">
-            <span class="section-kicker">Servizi</span>
-            <section class="services">
-                <h2>i nostri servizi</h2>
-                <p class="section-copy">
-                    scegli il servizio di cui hai bisogno e compila la richiesta guidata:
-                    riceveremo direttamente tutti i dettagli su WhatsApp per prepararti un preventivo gratuito.
-                </p>
-                <div class="grid service-grid">
-                <article class="card service-card reveal is-active" data-service="volantinaggio" tabindex="0" role="button" aria-controls="detailBox">
-                    <div class="card-top">
-                        <span class="card-number">01</span>
-                        <button class="service-action" onclick="openQuoteForm('volantinaggio')">richiedi distribuzione</button>
-                    </div>
-                    <h3>Volantinaggio mirato</h3>
-                    <p>Distribuzione mirata nelle zone giuste per intercettare clienti reali e aumentare presenza nel tuo territorio.</p>
-                </article>
+      <div class="distribution-dots" id="distributionDots"></div>
+    </section>
 
-                <article class="card service-card reveal" data-service="grafica" tabindex="0" role="button" aria-controls="detailBox">
-                    <div class="card-top">
-                        <span class="card-number">02</span>
-                        <button class="service-action" onclick="openQuoteForm('grafica')">richiedi grafica</button>
-                    </div>
-                    <h3>Grafica pubblicitaria</h3>
-                    <p>Volantini, locandine e contenuti creati per attirare clienti, comunicare valore e rendere la tua offerta immediata.</p>
-                </article>
+    <section class="section compact-section extra-section reveal-section" id="extra">
+  <div class="section-head">
+    <span class="wide-label">Extra e novità</span>
+    <h2>La Piramide Track</h2>
+    <p>
+      La Piramide Track è la piattaforma digitale creata da La Piramide per dare valore,
+      controllo e tracciabilità a prodotti, servizi, offerte e campagne pubblicitarie.
+    </p>
+  </div>
 
-                <article class="card service-card reveal" data-service="social" tabindex="0" role="button" aria-controls="detailBox">
-                    <div class="card-top">
-                        <span class="card-number">03</span>
-                        <button class="service-action" onclick="openQuoteForm('social')">richiedi social</button>
-                    </div>
-                    <h3>Pubblicità social</h3>
-                    <p>Presenza online mentre lavori offline: campagne e contenuti che mantengono vivo il contatto con il tuo pubblico.</p>
-                </article>
+  <div class="track-advertising-box">
+    <h3>Trasforma ogni oggetto in uno strumento digitale.</h3>
 
-                <article class="card service-card reveal" data-service="siti" tabindex="0" role="button" aria-controls="detailBox">
-                    <div class="card-top">
-                        <span class="card-number">04</span>
-                        <button class="service-action" onclick="openQuoteForm('sito')">richiedi sito web</button>
-                    </div>
-                    <h3>Creazione siti web</h3>
-                    <p>Siti moderni, veloci e chiari per presentare il brand e trasformare visite in contatti concreti.</p>
-                </article>
-                </div>
-            </section>
+    <p>
+      Con QR Code e NFC puoi collegare volantini, prodotti, menù, cataloghi, offerte,
+      biglietti da visita, etichette e materiali pubblicitari a una pagina digitale dedicata.
+    </p>
 
-            <div class="detail-box" id="detailBox">
-            <div class="service-detail-grid reveal">
-                    <div>
-                        <span class="service-detail-label">Sistema operativo</span>
-                        <h3>Distribuzione strategica</h3>
-                        <p>Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio mirato diventa un'azione controllata, coordinata con la grafica e pensata per portare clienti reali verso la tua attività.</p>
-                    </div>
-                    <ul class="service-detail-list">
-                        <li>Mappatura delle aree più utili per la tua attività.</li>
-                        <li>Messaggio chiaro, leggibile e coerente con il brand.</li>
-                        <li>Controllo operativo con materiali foto e video dove previsto.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <p>
+      Il cliente scansiona, apre il contenuto e tu puoi presentare informazioni, immagini,
+      contatti, promozioni e dettagli in modo moderno e professionale.
+    </p>
 
-        <!-- METODO -->
-        <section class="section method lux-panel reveal" id="metodo">
-            <span class="section-kicker">Metodo La Piramide</span>
-            <h2 class="section-title gold-text">Una campagna efficace nasce prima della distribuzione.</h2>
-            <p class="section-copy">Studiamo pubblico, messaggio e zone più adatte prima di muoverci sul territorio. Così ogni azione ha una logica precisa.</p>
-            <div class="grid grid-4">
-                <article class="card"><b>1</b>
-                    <h3>Analisi</h3>
-                    <p>Capire attività, obiettivi, zona e clienti ideali prima di proporre qualsiasi soluzione.</p>
-                </article>
-                <article class="card"><b>2</b>
-                    <h3>Strategia</h3>
-                    <p>Costruire un messaggio chiaro e scegliere i canali più efficaci tra territorio e digitale.</p>
-                </article>
-                <article class="card"><b>3</b>
-                    <h3>Esecuzione</h3>
-                    <p>Gestire distribuzione, grafica e comunicazione con ordine, presenza e controllo operativo.</p>
-                </article>
-                <article class="card"><b>4</b>
-                    <h3>Fiducia</h3>
-                    <p>Mostrare il lavoro svolto con foto, video e controlli per dare sicurezza al cliente.</p>
-                </article>
-            </div>
-        </section>
+    <a class="btn" href="https://lapiramidetrack.com" target="_blank">
+      Vai su lapiramidetrack.com
+    </a>
+  </div>
+</section>
 
-        <!-- TRACCIAMENTO PREMIUM -->
-        <section class="premium-tracking reveal" id="tracciamento-premium">
-            <div class="premium-content">
-                <span class="premium-label">Servizio premium</span>
-                <h2>Distribuzione tracciata e verificata</h2>
-                <p>Oltre alla distribuzione classica, La Piramide offre un servizio avanzato di tracciamento per chi desidera il massimo controllo sul lavoro svolto.</p>
-                <div class="premium-grid">
-                    <div class="premium-card reveal">
-                        <h3>Foto geolocalizzate</h3>
-                        <p>Possibilità di ricevere foto con posizione reale della distribuzione.</p>
-                    </div>
-                    <div class="premium-card reveal">
-                        <h3>Data e ora</h3>
-                        <p>Ogni prova può mostrare quando e dove è stata effettuata l'attività.</p>
-                    </div>
-                    <div class="premium-card reveal">
-                        <h3>Controllo qualità</h3>
-                        <p>Un livello extra di trasparenza per clienti che vogliono più sicurezza.</p>
-                    </div>
-                </div>
-                <p class="premium-note">Il servizio di distribuzione tracciata è disponibile su richiesta e viene valutato in fase di preventivo.</p>
-                <button class="premium-button" onclick="openQuoteForm('volantinaggio')">Richiedi distribuzione tracciata</button>
-            </div>
-        </section>
+    <section class="section compact-section proof-section reveal-section">
+      <span class="wide-label">Servizio premium extra</span>
 
-        <section class="section reveal" id="lavori">
-            <span class="section-kicker">Lavori e grafiche</span>
-            <h2 class="section-title">I nostri lavori sul territorio</h2>
-            <p class="section-copy">Una selezione di grafiche e materiali realizzati per campagne locali.</p>
-            <div class="slider" id="workSlider">
-                <img src="img/lavoro1.jpeg" class="slide active" alt="Lavoro grafico La Piramide 1">
-                <img src="img/lavoro2.jpeg" class="slide" alt="Lavoro grafico La Piramide 2">
-                <img src="img/lavoro3.jpeg" class="slide" alt="Lavoro grafico La Piramide 3">
-                <img src="img/lavoro4.jpeg" class="slide" alt="Lavoro grafico La Piramide 4">
-                <img src="img/lavoro5.jpeg" class="slide" alt="Lavoro grafico La Piramide 5">
-                <img src="img/lavoro6.jpeg" class="slide" alt="Lavoro grafico La Piramide 6">
-                <img src="img/lavoro7.jpeg" class="slide" alt="Lavoro grafico La Piramide 7">
-                <img src="img/lavoro8.jpeg" class="slide" alt="Lavoro grafico La Piramide 8">
-            </div>
-            <div class="dots" id="sliderDots" aria-label="Seleziona slide"></div>
-        </section>
+      <h2>Distribuzione tracciata e verificata</h2>
 
-        <!-- DISTRIBUZIONI -->
-        <section class="section reveal" id="distribuzioni">
-            <span class="section-kicker">Sul territorio</span>
-            <h2 class="section-title">Le nostre distribuzioni.</h2>
-            <p class="section-copy">Alcuni momenti delle distribuzioni realizzate con metodo, presenza e attenzione alle zone scelte.</p>
-            <div class="gallery">
-                <div class="gallery-item"><img src="img/distribuzione (1).jpeg" alt="Distribuzione La Piramide 1"></div>
-                <div class="gallery-item"><img src="img/distribuzione (2).jpeg" alt="Distribuzione La Piramide 2"></div>
-                <div class="gallery-item"><img src="img/distribuzione (3).jpeg" alt="Distribuzione La Piramide 3"></div>
-                <div class="gallery-item"><img src="img/distribuzione (4).jpeg" alt="Distribuzione La Piramide 4"></div>
-                <div class="gallery-item"><img src="img/distribuzione (5).jpeg" alt="Distribuzione La Piramide 5"></div>
-                <div class="gallery-item"><img src="img/distribuzione (6).jpeg" alt="Distribuzione La Piramide 6"></div>
-                <div class="gallery-item"><img src="img/distribuzione (7).jpeg" alt="Distribuzione La Piramide 7"></div>
-                <div class="gallery-item"><img src="img/distribuzione (8).jpeg" alt="Distribuzione La Piramide 8"></div>
-                <div class="gallery-item"><img src="img/distribuzione (9).jpeg" alt="Distribuzione La Piramide 9"></div>
-                <div class="gallery-item"><img src="img/distribuzione (10).jpeg" alt="Distribuzione La Piramide 10">
-                </div>
-                <div class="gallery-item"><img src="img/distribuzione (11).jpeg" alt="Distribuzione La Piramide 11">
-                </div>
-                <div class="gallery-item"><img src="img/distribuzione (12).jpeg" alt="Distribuzione La Piramide 12">
-                </div>
-                <div class="gallery-item"><img src="img/distribuzione (13).jpeg" alt="Distribuzione La Piramide 13">
-                </div>
-                <div class="gallery-item"><img src="img/distribuzione (14).jpeg" alt="Distribuzione La Piramide 14">
-                </div>
-            </div>
-        </section>
+      <p>
+        Per chi desidera un livello superiore di controllo, La Piramide può offrire foto geolocalizzate,
+        prove operative e strumenti digitali. Questo è un servizio aggiuntivo con preventivo dedicato.
+      </p>
 
-        <!-- VIDEO CONTROLLI -->
-        <section class="section video-panel lux-panel reveal">
-            <span class="section-kicker">Controlli</span>
-            <h2 class="section-title gold-text">Trasparenza nella distribuzione.</h2>
-            <p class="section-copy">Verifichiamo il lavoro sul territorio con attenzione, per offrire un servizio ordinato, concreto e controllabile.</p>
-            <video controls preload="metadata">
-                <source src="controlli1.mp4" type="video/mp4">
-                Il tuo browser non supporta la riproduzione del video.
-            </video>
-        </section>
+      <div class="proof-grid">
+        <div>
+          <h3>Foto geolocalizzate</h3>
+          <p>Prove visive con posizione reale.</p>
+        </div>
 
-        <!-- RECENSIONI -->
-        <section class="section review-section lux-panel reveal" id="recensioni">
-            <span class="section-kicker">Recensioni Facebook</span>
-            <h2 class="section-title gold-text">Cosa dicono i nostri clienti</h2>
-            <p class="section-copy">Recensioni reali ricevute sulla nostra pagina Facebook.</p>
+        <div>
+          <h3>Data e ora</h3>
+          <p>Controllo temporale della distribuzione.</p>
+        </div>
 
-            <div class="review-slider" id="facebookReviewSlider" aria-label="Recensioni clienti Facebook">
-                <button class="review-arrow prev" type="button"
-                    aria-label="Recensione precedente">&lsaquo;</button>
-                <div class="review-viewport ">
-                    <div class="review-track">
-                        <article class="review-card">
-                            <div class="review-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;
-                            </div>
-                            <p>"Distribuzione veloce e precisa. Ottimo servizio."</p>
-                            <span class="review-author">Claudia Adanti</span>
-                        </article>
-                        <article class="review-card">
-                            <div class="review-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;
-                            </div>
-                            <p>"Serietà, cortesia e professionalità. Consiglio vivamente."</p>
-                            <span class="review-author ">Davide Temperoni</span>
-                        </article>
-                    </div>
-                </div>
-                <button class="review-arrow next" type="button"
-                    aria-label="Recensione successiva">&rsaquo;</button>
-                <div class="review-dots " aria-label="Seleziona recensione"></div>
-            </div>
-        </section>
+        <div>
+          <h3>Dati e scansioni</h3>
+          <p>Interazioni misurabili dove previsto.</p>
+        </div>
+      </div>
 
-        <!-- FIDUCIA: chiusura umana prima del contatto finale -->
-        <section class="section human-trust trust lux-panel reveal" aria-labelledby="fiducia-title">
-            <div class="portrait">
-                <img src="img/imgio1.jpeg" alt="Foto personale del fondatore de La Piramide">
-            </div>
-            <div class="trust-message">
-                <span class="section-kicker">Fiducia</span>
-                <h2 class="section-title gold-text" id="fiducia-title">FIDUCIA</h2>
-                <p class="trust-quote">"Dietro La Piramide ci sono persone vere."</p>
-                <p class="section-copy trust-note">Dietro ogni lavoro ci siamo noi: persone presenti, attente e responsabili, pronte a seguire la tua comunicazione con cura reale.</p>
-                <span class="signature">La Piramide</span>
-            </div>
-        </section>
+      <a class="btn section-btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20per%20la%20distribuzione%20tracciata%20e%20verificata">
+        Richiedi preventivo per questa sezione plus
+      </a>
+    </section>
 
-        <!-- CTA FINALE -->
-        <section class="section final-cta lux-panel reveal" id="contatti">
-            <span class="section-kicker">Iniziamo</span>
-            <h2 class="section-title gold-text">Ogni giorno senza visibilità è un cliente perso.</h2>
-            <p class="section-copy">Noi ti aiutiamo a trovarlo.</p>
-            <a class="btn"
-                href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20per%20pubblicita%20e%20distribuzione%20volantini">Richiedi
-                una strategia gratuita</a>
-        </section>
-    </main>
+    <section class="section compact-section controlli-section reveal-section" id="controlli">
+      <div class="section-head">
+        <span class="wide-label">Controlli</span>
+        <h2>Controlli reali durante il lavoro</h2>
+        <p>
+          Dove previsto, La Piramide può documentare il lavoro svolto con video, foto,
+          prove operative e materiale utile a dimostrare la presenza sul territorio.
+        </p>
+      </div>
 
-    <a class="whatsapp" href="https://wa.me/393457340981?text=Salve,%20vorrei%20informazioni%20su%20La%20Piramide"
-        aria-label="Contatta La Piramide su WhatsApp">W</a>
-    <!-- FORM WHATSAPP -->
-    <div id="quoteModal" class="quote-modal">
-  <div class="quote-box">
-    <button class="quote-close" onclick="closeQuoteForm()">&times;</button>
+      <div class="video-box">
+        <video controls playsinline preload="metadata">
+          <source src="video/controlli1.mp4" type="video/mp4">
+          Il tuo browser non supporta la riproduzione del video.
+        </video>
+      </div>
+    </section>
 
-    <h2>Richiedi il tuo preventivo gratuito</h2>
-    <p class="quote-subtitle">Compila i dettagli: riceveremo la richiesta direttamente su WhatsApp.</p>
+    <section class="section compact-section reveal-section" id="lavori">
+      <div class="section-head">
+        <span class="wide-label">Lavori grafici</span>
+        <h2>I lavori di grafica della Piramide</h2>
+        <p>Grafiche, materiali pubblicitari e contenuti visivi realizzati per attività locali.</p>
+      </div>
 
-    <div id="stepDistribuzione" class="quote-step">
-      <h3>Distribuzione volantini</h3>
+      <div class="slider">
+        <img src="img/lavoro1.jpeg" class="slide active" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro2.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro3.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro4.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro5.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro6.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro7.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+        <img src="img/lavoro8.jpeg" class="slide" alt="Lavoro grafico La Piramide">
+      </div>
+
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <section class="section compact-section real-people-section reveal-section">
+      <div class="real-people-image">
+        <img src="img/imgio1.jpeg" alt="Dietro La Piramide">
+      </div>
+
+      <div class="real-people-text">
+        <h2>Dietro La Piramide ci sono persone vere.</h2>
+
+        <p>
+          La Piramide non è solo un nome, un logo o un servizio. Dietro ogni distribuzione,
+          ogni grafica e ogni progetto ci sono presenza reale, responsabilità, attenzione e voglia
+          di costruire qualcosa di serio per le attività del territorio.
+        </p>
+
+        <p>
+          Ogni cliente viene seguito con cura, ascoltando le sue esigenze e cercando la soluzione
+          più adatta per aumentare visibilità, fiducia e risultati.
+        </p>
+      </div>
+    </section>
+
+    <section class="section compact-section reviews reveal-section">
+      <span class="wide-label">Recensioni</span>
+
+      <h2>Cosa dicono i clienti</h2>
+
+      <div class="review-grid">
+        <article>
+          <p>“Distribuzione veloce e precisa. Ottimo servizio.”</p>
+          <strong>★★★★★</strong>
+        </article>
+
+        <article>
+          <p>“Serietà, cortesia e professionalità. Consiglio vivamente.”</p>
+          <strong>★★★★★</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact-section final-cta reveal-section" id="contatti">
+      <span class="wide-label">Contatti</span>
+
+      <h2>Contatti</h2>
+
+      <div class="contacts-grid">
+
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+
+          <h3>WhatsApp</h3>
+
+          <p>
+            <strong>345 734 0981</strong>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+
+          <h3>Email</h3>
+
+          <p>
+            <strong>lapiramidedistribuzione@gmail.com</strong>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🌐</div>
+
+          <h3>Social</h3>
+
+          <p>📘 Facebook:<br><strong>La Piramide</strong></p>
+          <p>📸 Instagram:<br><strong>la_piramide_distribuzioni</strong></p>
+          <p>🎵 TikTok:<br><strong>@la_piramide_90</strong></p>
+        </div>
+
+      </div>
+
+      <a class="btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20con%20La%20Piramide">
+        Scrivimi su WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <img src="img/logo piramide.png" alt="La Piramide">
+
+    <p>La Piramide — Marketing locale premium</p>
+
+    <div>
+      <a href="#home">Home</a>
+      <a href="#presentazione">Presentazione</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#extra">Extra</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp whatsapp-float" href="https://wa.me/393457340981?text=Salve,%20vorrei%20informazioni%20su%20La%20Piramide">
+    W
+  </a>
+
+  <div class="quote-modal" id="quoteModal">
+    <div class="quote-box">
+      <button class="close-modal" onclick="closeQuoteForm()">×</button>
+
+      <h2 id="formTitle">Richiedi preventivo</h2>
 
       <input id="nome" type="text" placeholder="Nome e cognome">
       <input id="attivita" type="text" placeholder="Nome attività">
       <input id="telefono" type="text" placeholder="Numero WhatsApp">
 
-      <input id="pezzi" type="number" placeholder="Quanti volantini vuoi distribuire?">
-      <textarea id="zone" placeholder="In quali zone vuoi distribuire?"></textarea>
+      <div id="formDynamicArea"></div>
 
-      <label class="quote-label">Hai già il volantino?</label>
-      <select id="haVolantino" onchange="toggleGrafica()">
-        <option value="">Seleziona</option>
-        <option value="si">Sì, ho già il volantino</option>
-        <option value="no">No, mi serve anche la grafica</option>
-      </select>
+      <button class="btn" onclick="sendServiceWhatsapp()">Invia richiesta su WhatsApp</button>
     </div>
-
-    <div id="stepGrafica" class="quote-step hidden">
-      <h3>Grafica volantino</h3>
-
-      <textarea id="tipoAttivita" placeholder="Che tipo di attività svolgi?"></textarea>
-      <textarea id="messaggioVolantino" placeholder="Cosa vuoi comunicare nel volantino?"></textarea>
-      <textarea id="puntiForti" placeholder="Quali sono i punti forti della tua attività?"></textarea>
-
-      <label class="quote-label">Hai già un sito web?</label>
-      <select id="haSito" onchange="toggleSito()">
-        <option value="">Seleziona</option>
-        <option value="si">Sì, ho già un sito</option>
-        <option value="no">No, vorrei valutare anche un sito web</option>
-      </select>
-    </div>
-
-    <div id="stepSito" class="quote-step hidden">
-      <h3>Sito web</h3>
-
-      <textarea id="tipoSito" placeholder="Che tipo di sito vorresti? Esempio: vetrina, ristorante, aziendale, prenotazioni..."></textarea>
-      <textarea id="funzioniSito" placeholder="Che funzioni ti servono? WhatsApp, galleria, menu, form contatti, prenotazioni..."></textarea>
-    </div>
-
-    <div id="stepSocial" class="quote-step hidden">
-      <h3>Pubblicità Social</h3>
-
-      <input id="socialNome" type="text" placeholder="Nome e cognome">
-      <input id="socialAttivita" type="text" placeholder="Nome attività;">
-      <input id="socialTelefono" type="text" placeholder="Numero WhatsApp">
-
-      <textarea id="socialPagine" placeholder="Che pagine vuoi gestire? Facebook, Instagram, TikTok, Google Business, altro"></textarea>
-      <input id="socialNumeroPagine" type="number" placeholder="Quante pagine/profili sono?">
-
-      <label class="quote-label">Hai già le pagine create?</label>
-      <select id="socialPagineCreate">
-        <option value="">Seleziona</option>
-        <option value="si">Sì</option>
-        <option value="no">No</option>
-      </select>
-
-      <textarea id="socialContenuti" placeholder="Che tipo di contenuti ti servono? Post, storie, reel, video, foto, campagne sponsorizzate"></textarea>
-      <input id="socialFrequenza" type="text" placeholder="Quante volte vorresti pubblicare a settimana?">
-      <textarea id="socialObiettivo" placeholder="Qual è il tuo obiettivo principale? Più clienti, più visibilità, promozioni, gestione immagine, altro"></textarea>
-
-      <label class="quote-label">Hai foto/video già pronti?</label>
-      <select id="socialMaterialiPronti">
-        <option value="">Seleziona</option>
-        <option value="si">Sì</option>
-        <option value="no">No</option>
-      </select>
-
-      <textarea id="socialNote" placeholder="Note o richieste particolari"></textarea>
-    </div>
-
-    <button class="quote-whatsapp" onclick="sendQuoteWhatsapp()">
-      Invia richiesta su WhatsApp
-    </button>
   </div>
-</div>
 
-    <!-- SCRIPT FUNZIONI SITO E REVEAL -->
-    <script>
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const nav = document.querySelector('.nav');
+  <script src="script.js"></script>
 
-        function updateNavState() {
-            if (!nav) return;
-            nav.classList.toggle('is-scrolled', window.scrollY > 24);
-        }
-
-        updateNavState();
-        window.addEventListener('scroll', updateNavState, { passive: true });
-
-        const navToggle = document.querySelector('.nav-toggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        if (nav && navToggle && mobileMenu) {
-            navToggle.addEventListener('click', () => {
-                const isOpen = nav.classList.toggle('is-open');
-                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            });
-
-            mobileMenu.querySelectorAll('a').forEach((link) => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('is-open');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                });
-            });
-        }
-
-        document.querySelectorAll('.section, .card, .service-card, .premium-card, .testimonial-card, .review-card, .proof-item, .gallery-item, .detail-box, .video-panel, .premium-tracking, .final-cta, .statement').forEach((item) => {
-            item.classList.add('reveal');
-        });
-
-        document.querySelectorAll('.grid, .service-grid, .premium-grid, .proof-list, .gallery, .testimonial-grid, .points').forEach((group) => {
-            [...group.children].forEach((item, index) => {
-                item.style.transitionDelay = `${Math.min(index * 70, 420)}ms`;
-            });
-        });
-
-        const revealItems = document.querySelectorAll('.reveal');
-
-        if (reducedMotion) {
-            revealItems.forEach((item) => item.classList.add('show'));
-        } else {
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('show');
-                    observer.unobserve(entry.target);
-                });
-            }, { threshold: 0.16, rootMargin: '0px 0px -10% 0px' });
-
-            revealItems.forEach((item) => revealObserver.observe(item));
-        }
-
-        document.querySelectorAll('.card, .premium-card, .proof-item, .testimonial-card, .review-card').forEach((item) => {
-            item.addEventListener('pointermove', (event) => {
-                const rect = item.getBoundingClientRect();
-                item.style.setProperty('--x', `${event.clientX - rect.left}px`);
-                item.style.setProperty('--y', `${event.clientY - rect.top}px`);
-            });
-        });
-
-        // Contenuti tecnici mostrati nel pannello servizi.
-        const serviceTexts = {
-            volantinaggio: {
-                title: 'Distribuzione strategica',
-                label: 'Sistema operativo',
-                body: 'Partiamo da zona, pubblico e obiettivo commerciale. Il volantinaggio mirato diventa un&rsquo;azione controllata, coordinata con la grafica e pensata per portare clienti reali verso la tua attività.',
-                points: [
-                    'Mappatura delle aree più utili per la tua attività.',
-                    'Messaggio chiaro, leggibile e coerente con il brand.',
-                    'Controllo operativo con materiali foto e video dove previsto.'
-                ]
-            },
-            grafica: {
-                title: 'Grafica pubblicitaria che vende',
-                label: 'Identità visiva',
-                body: 'Realizziamo materiali chiari, eleganti e creati per attirare clienti: volantini, locandine, contenuti social e comunicazioni promozionali con gerarchia, contrasto e chiamata all&rsquo;azione.',
-                points: [
-                    'Layout premium coerente con settore, offerta e target.',
-                    'Testi sintetici per far capire subito il valore.',
-                    'Formati pronti per stampa, social e campagne locali.'
-                ]
-            },
-            social: {
-                title: 'Pubblicità social e presenza online',
-                label: 'Amplificazione digitale',
-                body: 'Aiutiamo le attività a restare presenti online mentre lavorano offline, con contenuti e campagne su Facebook, Instagram e TikTok collegati alla presenza locale.',
-                points: [
-                    'Creatività coordinate con volantini e offerte attive.',
-                    'Campagne pensate per visibilità, messaggi e contatti.',
-                    'Comunicazione più riconoscibile nel tempo.'
-                ]
-            },
-            siti: {
-                title: 'Creazione siti web premium',
-                label: 'Base digitale',
-                body: 'Costruiamo siti moderni, responsive e orientati al contatto: una pagina chiara dove raccontare servizi, mostrare lavori e portare il cliente verso WhatsApp o richiesta preventivo.',
-                points: [
-                    'Struttura veloce da consultare su telefono e desktop.',
-                    'Design coerente con immagine, settore e obiettivo.',
-                    'Percorsi semplici verso contatto, preventivo e fiducia.'
-                ]
-            }
-        };
-
-        const detailBox = document.getElementById('detailBox');
-        const serviceCards = document.querySelectorAll('[data-service]');
-
-        function renderServiceDetail(button) {
-            const data = serviceTexts[button.dataset.service];
-            if (!data || !detailBox) return;
-
-            serviceCards.forEach((card) => card.classList.remove('is-active'));
-            button.classList.add('is-active');
-            detailBox.classList.add('switching');
-
-            setTimeout(() => {
-                detailBox.innerHTML = `
-                    <div class="service-detail-grid">
-                        <div>
-                            <span class="service-detail-label">${data.label}</span>
-                            <h3>${data.title}</h3>
-                            <p>${data.body}</p>
-                        </div>
-                        <ul class="service-detail-list">
-                            ${data.points.map((point) => `<li>${point}</li>`).join('')}
-                        </ul>
-                    </div>
-                `;
-                detailBox.classList.remove('switching');
-                detailBox.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' });
-            }, 180);
-        }
-
-        serviceCards.forEach((button) => {
-            button.addEventListener('click', () => renderServiceDetail(button));
-            button.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    renderServiceDetail(button);
-                }
-            });
-        });
-
-        document.querySelectorAll('.service-action').forEach((button) => {
-            button.addEventListener('click', (event) => event.stopPropagation());
-        });
-
-        const extraToggle = document.getElementById('extraToggle');
-        const extraContent = document.getElementById('extraContent');
-        const extraText = document.getElementById('extraText');
-        const extraTexts = {
-            social: '<h3>Social Media Marketing</h3><p>Costruiamo una presenza social più professionale, coerente e utile a generare interesse verso la tua attività con contenuti e campagne coordinate.</p>',
-            siti: '<h3>Creazione siti web</h3><p>Realizziamo pagine moderne e chiare, pensate per presentare al meglio il tuo servizio e trasformare i visitatori in contatti.</p>',
-            app: '<h3>App La Piramide</h3><p>Stiamo lavorando a strumenti per rendere i controlli ancora più trasparenti, con foto, zone coperte e aggiornamenti consultabili dai clienti.</p>'
-        };
-
-        if (extraToggle && extraContent) {
-            extraToggle.addEventListener('click', () => extraContent.classList.toggle('open'));
-        }
-
-        document.querySelectorAll('[data-extra]').forEach((button) => {
-            button.addEventListener('click', (event) => {
-                event.stopPropagation();
-                if (!extraContent || !extraText) return;
-                extraContent.classList.add('open');
-                extraText.style.opacity = '0';
-                extraText.style.transform = 'translateY(10px)';
-                setTimeout(() => {
-                    extraText.innerHTML = extraTexts[button.dataset.extra];
-                    extraText.style.opacity = '1';
-                    extraText.style.transform = 'translateY(0)';
-                }, 180);
-            });
-        });
-
-        const reviewSlider = document.getElementById('facebookReviewSlider');
-
-        if (reviewSlider) {
-            const reviewTrack = reviewSlider.querySelector('.review-track');
-            const originalReviewCards = [...reviewTrack.querySelectorAll('.review-card')];
-            const reviewPrev = reviewSlider.querySelector('.review-arrow.prev');
-            const reviewNext = reviewSlider.querySelector('.review-arrow.next');
-            const reviewDotsWrap = reviewSlider.querySelector('.review-dots');
-            let reviewIndex = 0;
-            let reviewTimer;
-
-            originalReviewCards.forEach((card) => {
-                const clone = card.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                reviewTrack.appendChild(clone);
-            });
-
-            originalReviewCards.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.type = 'button';
-                dot.setAttribute('aria-label', `Vai alla recensione ${index + 1}`);
-                dot.addEventListener('click', () => {
-                    showReview(index);
-                    restartReviewTimer();
-                });
-                reviewDotsWrap.appendChild(dot);
-            });
-
-            const reviewDots = [...reviewDotsWrap.querySelectorAll('button')];
-
-            function getReviewStep() {
-                const firstCard = reviewTrack.querySelector('.review-card');
-                const gap = parseFloat(getComputedStyle(reviewTrack).gap) || 0;
-                return firstCard.getBoundingClientRect().width + gap;
-            }
-
-            function showReview(index) {
-                reviewIndex = (index + originalReviewCards.length) % originalReviewCards.length;
-                reviewTrack.style.transform = `translateX(-${getReviewStep() * reviewIndex}px)`;
-                reviewDots.forEach((dot) => dot.classList.remove('active'));
-                reviewDots[reviewIndex].classList.add('active');
-                [...reviewTrack.querySelectorAll('.review-card')].forEach((card, cardIndex) => {
-                    card.classList.toggle('is-current', cardIndex % originalReviewCards.length === reviewIndex);
-                });
-            }
-
-            function nextReview() {
-                showReview(reviewIndex + 1);
-            }
-
-            function prevReview() {
-                showReview(reviewIndex - 1);
-            }
-
-            function startReviewTimer() {
-                clearInterval(reviewTimer);
-                reviewTimer = setInterval(nextReview, 4000);
-            }
-
-            function restartReviewTimer() {
-                clearInterval(reviewTimer);
-                startReviewTimer();
-            }
-
-            reviewNext.addEventListener('click', () => {
-                nextReview();
-                restartReviewTimer();
-            });
-
-            reviewPrev.addEventListener('click', () => {
-                prevReview();
-                restartReviewTimer();
-            });
-
-            reviewSlider.addEventListener('mouseenter', () => clearInterval(reviewTimer));
-            reviewSlider.addEventListener('mouseleave', startReviewTimer);
-            window.addEventListener('resize', () => showReview(reviewIndex));
-
-            showReview(0);
-            startReviewTimer();
-        }
-
-        const slides = [...document.querySelectorAll('.slide')];
-        const dotsWrap = document.getElementById('sliderDots');
-        let currentSlide = 0;
-        let slideTimer;
-
-        if (slides.length && dotsWrap) {
-            slides.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.type = 'button';
-                dot.setAttribute('aria-label', `Vai alla slide ${index + 1}`);
-                dot.addEventListener('click', () => {
-                    showSlide(index);
-                    restartSlideTimer();
-                });
-                dotsWrap.appendChild(dot);
-            });
-
-            const dots = [...dotsWrap.querySelectorAll('button')];
-
-            function showSlide(index) {
-                slides[currentSlide].classList.remove('active');
-                dots[currentSlide].classList.remove('active');
-                currentSlide = (index + slides.length) % slides.length;
-                slides[currentSlide].classList.add('active');
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                showSlide(currentSlide + 1);
-            }
-
-            function restartSlideTimer() {
-                clearInterval(slideTimer);
-                slideTimer = setInterval(nextSlide, 3600);
-            }
-
-            showSlide(0);
-            restartSlideTimer();
-        }
-
-        const whatsappNumber = "393457340981";
-        let activeQuoteService = "volantinaggio";
-
-        function openQuoteForm(service) {
-            activeQuoteService = service || "volantinaggio";
-            document.getElementById("quoteModal").classList.add("active");
-            document.getElementById("stepDistribuzione").classList.toggle("hidden", activeQuoteService === "social");
-            document.getElementById("stepGrafica").classList.add("hidden");
-            document.getElementById("stepSito").classList.add("hidden");
-            document.getElementById("stepSocial").classList.toggle("hidden", activeQuoteService !== "social");
-
-            if (activeQuoteService === "grafica") {
-                document.getElementById("stepGrafica").classList.remove("hidden");
-            }
-
-            if (activeQuoteService === "sito") {
-                document.getElementById("stepSito").classList.remove("hidden");
-            }
-        }
-
-        function closeQuoteForm() {
-            document.getElementById("quoteModal").classList.remove("active");
-        }
-
-        function toggleGrafica() {
-            const value = document.getElementById("haVolantino").value;
-            document.getElementById("stepGrafica").classList.toggle("hidden", value !== "no");
-        }
-
-        function toggleSito() {
-            const value = document.getElementById("haSito").value;
-            document.getElementById("stepSito").classList.toggle("hidden", value !== "no");
-        }
-
-        function sendQuoteWhatsapp() {
-            if (activeQuoteService === "social") {
-                const socialNome = document.getElementById("socialNome").value;
-                const socialAttivita = document.getElementById("socialAttivita").value;
-                const socialTelefono = document.getElementById("socialTelefono").value;
-                const socialPagine = document.getElementById("socialPagine").value;
-                const socialNumeroPagine = document.getElementById("socialNumeroPagine").value;
-                const socialPagineCreate = document.getElementById("socialPagineCreate").value;
-                const socialContenuti = document.getElementById("socialContenuti").value;
-                const socialFrequenza = document.getElementById("socialFrequenza").value;
-                const socialObiettivo = document.getElementById("socialObiettivo").value;
-                const socialMaterialiPronti = document.getElementById("socialMaterialiPronti").value;
-                const socialNote = document.getElementById("socialNote").value;
-
-                const socialMessage = [
-                    "NUOVA RICHIESTA DAL SITO LA PIRAMIDE",
-                    "",
-                    "PUBBLICITA SOCIAL",
-                    "",
-                    "DATI CLIENTE",
-                    `Nome: ${socialNome}`,
-                    `Attivita: ${socialAttivita}`,
-                    `Telefono: ${socialTelefono}`,
-                    "",
-                    "DETTAGLI SOCIAL",
-                    `Pagine da gestire: ${socialPagine}`,
-                    `Numero pagine/profili: ${socialNumeroPagine}`,
-                    `Pagine gia create: ${socialPagineCreate}`,
-                    `Contenuti richiesti: ${socialContenuti}`,
-                    `Pubblicazioni a settimana: ${socialFrequenza}`,
-                    `Obiettivo principale: ${socialObiettivo}`,
-                    `Foto/video gia pronti: ${socialMaterialiPronti}`,
-                    `Note: ${socialNote}`
-                ].join("\n");
-
-                window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(socialMessage)}`, "_blank");
-                return;
-            }
-
-            const nome = document.getElementById("nome").value;
-            const attivita = document.getElementById("attivita").value;
-            const telefono = document.getElementById("telefono").value;
-            const pezzi = document.getElementById("pezzi").value;
-            const zone = document.getElementById("zone").value;
-            const haVolantino = document.getElementById("haVolantino").value;
-
-            const tipoAttivita = document.getElementById("tipoAttivita").value;
-            const messaggioVolantino = document.getElementById("messaggioVolantino").value;
-            const puntiForti = document.getElementById("puntiForti").value;
-            const haSito = document.getElementById("haSito").value;
-
-            const tipoSito = document.getElementById("tipoSito").value;
-            const funzioniSito = document.getElementById("funzioniSito").value;
-
-            let message = `NUOVA RICHIESTA DAL SITO LA PIRAMIDE%0A%0A`;
-
-            message += `DATI CLIENTE%0A`;
-            message += `Nome: ${nome}%0A`;
-            message += `Attività: ${attivita}%0A`;
-            message += `Telefono: ${telefono}%0A%0A`;
-
-            message += `DISTRIBUZIONE VOLANTINI%0A`;
-            message += `Numero volantini: ${pezzi}%0A`;
-            message += `Zone richieste: ${zone}%0A`;
-            message += `Ha già il volantino: ${haVolantino}%0A%0A`;
-
-            if (haVolantino === "no") {
-                message += `GRAFICA VOLANTINO%0A`;
-                message += `Tipo attività: ${tipoAttivita}%0A`;
-                message += `Cosa vuole comunicare: ${messaggioVolantino}%0A`;
-                message += `Punti forti: ${puntiForti}%0A`;
-                message += `Ha già un sito web: ${haSito}%0A%0A`;
-            }
-
-            if (haSito === "no") {
-                message += `SITO WEB%0A`;
-                message += `Tipo sito richiesto: ${tipoSito}%0A`;
-                message += `Funzioni desiderate: ${funzioniSito}%0A`;
-            }
-
-            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
-        }
-    </script>
 </body>
 </html>
