@@ -758,3 +758,50 @@ document.addEventListener("keydown", (e) => {
     closeQuoteForm();
   }
 });
+
+/* =====================================================
+   GA4 - TRACCIAMENTO CLICK LA PIRAMIDE
+===================================================== */
+
+function tracciaEvento(nomeEvento, dettagli = {}) {
+  if (typeof gtag === "function") {
+    gtag("event", nomeEvento, dettagli);
+  }
+}
+
+document.addEventListener("click", function (e) {
+  const elemento = e.target.closest("a, button");
+
+  if (!elemento) return;
+
+  const testo = elemento.innerText.trim();
+  const href = elemento.getAttribute("href") || "";
+  const onclick = elemento.getAttribute("onclick") || "";
+
+  if (href.includes("wa.me")) {
+    tracciaEvento("click_whatsapp", {
+      testo_pulsante: testo,
+      link: href
+    });
+  }
+
+  if (href.includes("lapiramidetrack.com")) {
+    tracciaEvento("click_lapiramide_track", {
+      testo_pulsante: testo,
+      link: href
+    });
+  }
+
+  if (onclick.includes("openServiceForm")) {
+    tracciaEvento("click_richiesta_servizio", {
+      servizio: onclick
+    });
+  }
+
+  if (href.startsWith("#")) {
+    tracciaEvento("click_sezione_menu", {
+      sezione: href,
+      testo_link: testo
+    });
+  }
+});
