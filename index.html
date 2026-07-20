@@ -1,458 +1,1455 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
 
-  <title>La Piramide | Marketing Locale Premium</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description" content="La Piramide: volantinaggio mirato, grafica pubblicitaria, social media marketing, siti web, distribuzioni controllate e servizi premium per attività locali." />
+  <title>
+    La Piramide | Marketing, tecnologia, distribuzioni e Hospitality
+  </title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="La Piramide aiuta imprese e attività a crescere attraverso distribuzioni controllate, grafica, tecnologia, gestionali CRM, La Piramide Track e servizi Hospitality."
+  >
 
-  <link rel="stylesheet" href="style.css" />
+  <meta
+    name="theme-color"
+    content="#050505"
+  >
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9VSNKCYFM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lapiramidedistribuzioni.com/">
+  <link rel="icon" href="img/logo-piramide.jpeg" type="image/jpeg">
 
-  gtag('config', 'G-D9VSNKCYFM');
-</script>
+  <meta property="og:title" content="La Piramide | Marketing, tecnologia, distribuzioni e Hospitality">
+  <meta property="og:description" content="La Piramide aiuta imprese e attività a crescere attraverso distribuzioni controllate, grafica, tecnologia, gestionali CRM, La Piramide Track e servizi Hospitality.">
+  <meta property="og:image" content="https://lapiramidedistribuzioni.com/img/logo-piramide.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lapiramidedistribuzioni.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Piramide | Marketing, tecnologia, distribuzioni e Hospitality">
+  <meta name="twitter:description" content="La Piramide aiuta imprese e attività a crescere attraverso distribuzioni controllate, grafica, tecnologia, gestionali CRM, La Piramide Track e servizi Hospitality.">
+  <meta name="twitter:image" content="https://lapiramidedistribuzioni.com/img/logo-piramide.jpeg">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/index.css"
+  >
 </head>
 
 <body>
 
-  <canvas class="future-bg" id="futureBg" aria-hidden="true"></canvas>
-  <div class="future-vignette" aria-hidden="true"></div>
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
 
-  <nav class="nav">
-    <a href="#home" class="brand">
-      <img src="img/logo piramide.png" alt="La Piramide">
-      <span>La Piramide</span>
+  <header
+    class="nav"
+    id="navbar"
+  >
+    <a
+      class="brand"
+      href="#home"
+      aria-label="Torna alla Home"
+    >
+      <img
+        class="brand-logo"
+        src="img/logo-piramide.jpeg"
+        alt="Logo La Piramide"
+      >
+
+      <span class="brand-name">
+        La Piramide
+      </span>
     </a>
 
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#presentazione">Presentazione</a>
-      <a href="#metodo">Metodo</a>
-      <a href="#servizi">Servizi</a>
-      <a href="#distribuzioni">Distribuzioni</a>
-      <a href="#extra">Extra</a>
-      <a href="#controlli">Controlli</a>
-      <a href="#lavori">Lavori</a>
-      <a href="#contatti">Contatti</a>
-    </div>
+    <nav
+      class="nav-links"
+      id="navLinks"
+      aria-label="Navigazione principale"
+    >
+      <a href="#home">
+        Home
+      </a>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+      <a href="#azienda">
+        Azienda
+      </a>
 
-    <a class="btn nav-btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20con%20La%20Piramide">
-      Preventivo
+      <a href="#storia">
+        La nostra storia
+      </a>
+
+      <a href="#metodo">
+        Metodo
+      </a>
+
+      <a href="#visione">
+        Visione
+      </a>
+
+      <a href="#settori">
+        Settori
+      </a>
+
+      <a href="#contatti">
+        Contatti
+      </a>
+    </nav>
+
+    <a
+      class="btn nav-cta"
+      href="#contatti"
+    >
+      Parliamo del tuo progetto
     </a>
-  </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home">Home</a>
-    <a href="#presentazione">Presentazione</a>
-    <a href="#metodo">Metodo</a>
-    <a href="#servizi">Servizi</a>
-    <a href="#distribuzioni">Distribuzioni</a>
-    <a href="#extra">Extra</a>
-    <a href="#controlli">Controlli</a>
-    <a href="#lavori">Lavori</a>
-    <a href="#contatti">Contatti</a>
-  </div>
-
-  <header class="hero reveal-section" id="home">
-    <div class="hero-top">
-      <span class="wide-label">Marketing locale premium</span>
-
-      <div class="hero-logo-stage">
-        <div class="logo-glow"></div>
-        <div class="logo-scan"></div>
-        <img src="img/logo piramide.png" alt="Logo La Piramide">
-      </div>
-    </div>
-
-    <div class="hero-bottom">
-      <h1>
-        Portiamo clienti reali nel tuo negozio,
-        <span>partendo dal tuo territorio.</span>
-      </h1>
-
-      <p>
-        Distribuzione volantini, grafica pubblicitaria, social media, siti web e strumenti digitali
-        per attività che vogliono farsi vedere davvero.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn" href="#servizi">
-          Richiedi strategia
-        </a>
-
-        <a class="btn btn-dark" href="#extra">
-          Scopri extra e novità
-        </a>
-      </div>
-    </div>
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Apri il menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+
+  <!-- =====================================================
+       CONTENUTO PRINCIPALE
+  ====================================================== -->
 
   <main>
 
-    <section class="section compact-section reveal-section" id="presentazione">
-      <div class="section-head">
-        <span class="wide-label">Presentazione aziendale</span>
-        <h2>Scopri La Piramide</h2>
-        <p>Apri la presentazione completa e scopri il progetto, i servizi e il metodo di lavoro.</p>
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+      <div
+        class="hero-decorations"
+        aria-hidden="true"
+      >
+        <span class="hero-light hero-light-one"></span>
+        <span class="hero-light hero-light-two"></span>
+        <span class="hero-line hero-line-one"></span>
+        <span class="hero-line hero-line-two"></span>
       </div>
 
-      <div class="presentation-simple">
-        <img src="img/img1.jpeg" alt="Presentazione La Piramide">
+      <div class="hero-content reveal">
+        <span class="section-label">
+          Una sola realtà. Competenze diverse.
+        </span>
 
-        <a class="btn" href="pdf/presentazione.pdf" target="_blank">
-          Apri la presentazione completa
+        <h1>
+          Trasformiamo problemi complessi
+          <span>in soluzioni concrete.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Marketing, distribuzioni, grafica, tecnologia,
+          gestionali e Hospitality lavorano insieme per aiutare
+          imprese e attività a crescere in modo più organizzato,
+          misurabile e consapevole.
+        </p>
+
+        <p class="hero-secondary">
+          Non partiamo dal servizio che vogliamo vendere.
+          Partiamo da ciò che serve realmente alla tua impresa.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="btn"
+            href="#settori"
+          >
+            Scopri La Piramide
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="#storia"
+          >
+            Conosci la nostra storia
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight">
+            <strong>5</strong>
+
+            <span>
+              aree aziendali
+            </span>
+          </div>
+
+          <div class="hero-highlight">
+            <strong>1</strong>
+
+            <span>
+              metodo condiviso
+            </span>
+          </div>
+
+          <div class="hero-highlight">
+            <strong>1</strong>
+
+            <span>
+              obiettivo: creare valore
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="logo-showcase">
+          <div class="logo-backlight"></div>
+
+          <div class="logo-frame">
+            <span class="frame-corner frame-corner-one"></span>
+            <span class="frame-corner frame-corner-two"></span>
+            <span class="frame-corner frame-corner-three"></span>
+            <span class="frame-corner frame-corner-four"></span>
+
+            <img
+              class="hero-logo"
+              src="img/logo-piramide.jpeg"
+              alt="La Piramide"
+            >
+          </div>
+
+          <div
+            class="logo-connections"
+            aria-hidden="true"
+          >
+            <span class="connection connection-one"></span>
+            <span class="connection connection-two"></span>
+            <span class="connection connection-three"></span>
+          </div>
+
+          <div class="logo-values">
+            <span>Fiducia</span>
+            <span>Metodo</span>
+            <span>Crescita</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         AZIENDA
+    ==================================================== -->
+
+    <section
+      class="section company-section"
+      id="azienda"
+    >
+      <div class="company-intro reveal">
+        <span class="section-label">
+          Chi siamo
+        </span>
+
+        <h2>
+          Non una semplice agenzia.
+          <span>Un sistema di competenze.</span>
+        </h2>
+      </div>
+
+      <div class="company-story reveal">
+        <p class="company-main-text">
+          La Piramide nasce per aiutare le piccole e medie imprese
+          a crescere attraverso metodo, organizzazione, tecnologia
+          e strategie concrete.
+        </p>
+
+        <p>
+          Distribuzioni, grafica, siti web, gestionali, sistemi di
+          tracciamento e Hospitality non sono attività separate.
+          Sono strumenti differenti che utilizziamo per costruire
+          la soluzione più adatta a ogni impresa.
+        </p>
+
+        <p>
+          Ogni progetto parte dall’ascolto. Analizziamo il contesto,
+          comprendiamo le necessità e progettiamo soltanto ciò che
+          può generare un miglioramento reale.
+        </p>
+
+        <div class="company-principles">
+          <article class="principle-card reveal">
+            <span class="principle-number">
+              01
+            </span>
+
+            <h3>
+              Ascolto
+            </h3>
+
+            <p>
+              Ogni impresa possiede una storia, un’identità e
+              necessità differenti.
+            </p>
+          </article>
+
+          <article class="principle-card reveal">
+            <span class="principle-number">
+              02
+            </span>
+
+            <h3>
+              Progettazione
+            </h3>
+
+            <p>
+              Non utilizziamo pacchetti standard. Ogni soluzione
+              nasce dal contesto reale.
+            </p>
+          </article>
+
+          <article class="principle-card reveal">
+            <span class="principle-number">
+              03
+            </span>
+
+            <h3>
+              Risultati concreti
+            </h3>
+
+            <p>
+              Gli strumenti hanno valore soltanto quando migliorano
+              davvero il lavoro delle persone.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         STORIA DEL NOME E DELL’AZIENDA
+    ==================================================== -->
+
+    <section
+      class="section history-section"
+      id="storia"
+    >
+      <div class="section-head reveal">
+        <span class="section-label">
+          La storia dietro il nome
+        </span>
+
+        <h2>
+          Una costruzione
+          <span>pensata per durare.</span>
+        </h2>
+
+        <p>
+          La Piramide non è soltanto un nome. È il simbolo del
+          nostro modo di lavorare, crescere e costruire valore.
+        </p>
+      </div>
+
+      <div class="history-layout">
+
+        <article class="history-main reveal">
+          <span class="history-chapter">
+            Le fondamenta
+          </span>
+
+          <h3>
+            Ogni grande costruzione nasce da fondamenta solide.
+          </h3>
+
+          <p>
+            Crediamo che ogni impresa solida nasca da principi
+            precisi: ascolto, fiducia, metodo, trasparenza e
+            rispetto.
+          </p>
+
+          <p>
+            Le tecnologie cambiano, gli strumenti evolvono e i
+            mercati si trasformano. Ma una costruzione destinata
+            a durare deve conservare intatta la propria identità.
+          </p>
+
+          <p>
+            Per questo La Piramide non nasce per vendere un singolo
+            servizio. Le nostre competenze sono strumenti differenti,
+            uniti dallo stesso obiettivo:
+            <strong>
+              creare valore reale e accompagnare ogni impresa nel
+              proprio percorso di crescita.
+            </strong>
+          </p>
+        </article>
+
+        <aside class="history-quote reveal">
+          <span aria-hidden="true">
+            “
+          </span>
+
+          <blockquote>
+            Non costruiamo semplicemente servizi. Costruiamo
+            fiducia, metodo e crescita, un mattone alla volta.
+          </blockquote>
+        </aside>
+      </div>
+
+      <div class="history-pillars">
+        <article class="history-card reveal">
+          <span>
+            01
+          </span>
+
+          <h3>
+            Perché esistiamo
+          </h3>
+
+          <p>
+            Per aiutare le imprese a diventare più organizzate,
+            autonome e forti, attraverso soluzioni utili e
+            sostenibili.
+          </p>
+        </article>
+
+        <article class="history-card reveal">
+          <span>
+            02
+          </span>
+
+          <h3>
+            Cosa costruiamo
+          </h3>
+
+          <p>
+            Relazioni, competenze, sistemi e strumenti capaci di
+            lasciare valore anche dopo la consegna del progetto.
+          </p>
+        </article>
+
+        <article class="history-card reveal">
+          <span>
+            03
+          </span>
+
+          <h3>
+            Come cresciamo
+          </h3>
+
+          <p>
+            Con pazienza, studio continuo e tanti piccoli
+            miglioramenti costruiti giorno dopo giorno.
+          </p>
+        </article>
+      </div>
+
+      <div class="history-statement reveal">
+        <p>
+          Il nome La Piramide rappresenta una convinzione:
+        </p>
+
+        <strong>
+          non esistono successi improvvisi. Esistono fondamenta
+          costruite con cura.
+        </strong>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         MISSIONE E VALORI
+    ==================================================== -->
+
+    <section
+      class="section values-section"
+      id="valori"
+    >
+      <div class="section-head reveal">
+        <span class="section-label">
+          Missione e valori
+        </span>
+
+        <h2>
+          Il valore prima
+          <span>della vendita.</span>
+        </h2>
+
+        <p>
+          La nostra missione non consiste nel vendere più strumenti.
+          Consiste nel trovare la soluzione migliore per ogni impresa.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card reveal">
+          <span class="value-icon">
+            01
+          </span>
+
+          <h3>
+            La fiducia viene prima del contratto
+          </h3>
+
+          <p>
+            Preferiamo rinunciare a un incarico piuttosto che proporre
+            qualcosa di inutile o promettere risultati impossibili.
+          </p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-icon">
+            02
+          </span>
+
+          <h3>
+            Ascoltare prima di proporre
+          </h3>
+
+          <p>
+            Prima osserviamo e comprendiamo. Solo dopo progettiamo
+            la soluzione.
+          </p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-icon">
+            03
+          </span>
+
+          <h3>
+            Trasparenza e rispetto
+          </h3>
+
+          <p>
+            Diciamo la verità anche quando è più difficile, perché
+            una promessa mantenuta vale più di cento illusioni.
+          </p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-icon">
+            04
+          </span>
+
+          <h3>
+            Tecnologia realmente utile
+          </h3>
+
+          <p>
+            L’innovazione non deve impressionare. Deve semplificare
+            il lavoro e migliorare la vita delle persone.
+          </p>
+        </article>
+      </div>
+
+      <div class="values-final-quote reveal">
+        <p>
+          «Il nostro obiettivo non è ottenere un cliente.
+          È meritare la sua fiducia.»
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         METODO
+    ==================================================== -->
+
+    <section
+      class="section method-section"
+      id="metodo"
+    >
+      <div class="section-head reveal">
+        <span class="section-label">
+          Il Metodo Piramide
+        </span>
+
+        <h2>
+          Prima comprendiamo.
+          <span>Poi costruiamo.</span>
+        </h2>
+
+        <p>
+          Gli strumenti possono cambiare. Il nostro modo di affrontare
+          ogni progetto rimane fondato su sei passaggi precisi.
+        </p>
+      </div>
+
+      <div class="method-list">
+
+        <article class="method-step reveal">
+          <div class="method-index">
+            01
+          </div>
+
+          <div class="method-content">
+            <span class="method-name">
+              Osservare
+            </span>
+
+            <h3>
+              Entriamo nella realtà dell’impresa senza pregiudizi.
+            </h3>
+
+            <p>
+              Studiamo il contesto, il territorio, il modo di lavorare
+              e le opportunità ancora inespresse.
+            </p>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-index">
+            02
+          </div>
+
+          <div class="method-content">
+            <span class="method-name">
+              Comprendere
+            </span>
+
+            <h3>
+              Cerchiamo le ragioni prima di formulare conclusioni.
+            </h3>
+
+            <p>
+              Ogni azienda è diversa. Una soluzione utile nasce
+              soltanto dalla comprensione della sua realtà.
+            </p>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-index">
+            03
+          </div>
+
+          <div class="method-content">
+            <span class="method-name">
+              Progettare
+            </span>
+
+            <h3>
+              Non chiediamo quale servizio vendere.
+            </h3>
+
+            <p>
+              Ci chiediamo quale soluzione possa creare il valore
+              maggiore per quella specifica impresa.
+            </p>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-index">
+            04
+          </div>
+
+          <div class="method-content">
+            <span class="method-name">
+              Costruire
+            </span>
+
+            <h3>
+              Ogni strumento viene realizzato con uno scopo preciso.
+            </h3>
+
+            <p>
+              Nulla viene sviluppato soltanto perché è moderno o
+              perché rappresenta una tendenza del momento.
+            </p>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-index">
+            05
+          </div>
+
+          <div class="method-content">
+            <span class="method-name">
+              Misurare
+            </span>
+
+            <h3>
+              Trasformiamo le impressioni in decisioni.
+            </h3>
+
+            <p>
+              I dati ci permettono di comprendere ciò che funziona,
+              individuare i limiti e migliorare il progetto.
+            </p>
+          </div>
+        </article>
+
+        <article class="method-step reveal">
+          <div class="method-index">
+            06
+          </div>
+
+          <div class="method-content">
+            <span class="method-name">
+              Evolvere
+            </span>
+
+            <h3>
+              Nessun progetto termina davvero con la consegna.
+            </h3>
+
+            <p>
+              Le imprese cambiano, i mercati evolvono e ogni esperienza
+              diventa un nuovo insegnamento.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         VISIONE
+    ==================================================== -->
+
+    <section
+      class="section vision-section"
+      id="visione"
+    >
+      <div class="vision-visual reveal">
+        <div class="vision-logo">
+          <span class="vision-orbit vision-orbit-one"></span>
+          <span class="vision-orbit vision-orbit-two"></span>
+
+          <img
+            src="img/logo-piramide.jpeg"
+            alt="Logo La Piramide"
+          >
+        </div>
+      </div>
+
+      <div class="vision-content reveal">
+        <span class="section-label">
+          La nostra visione
+        </span>
+
+        <h2>
+          Evolvere senza perdere
+          <span>la propria identità.</span>
+        </h2>
+
+        <p class="vision-lead">
+          Le tecnologie cambieranno. I mercati cambieranno.
+          Gli strumenti cambieranno. Il nostro metodo continuerà
+          a poggiare sulla fiducia, sull’ascolto e sulla crescita.
+        </p>
+
+        <p>
+          Vogliamo costruire una realtà capace di accompagnare le
+          imprese nella loro evoluzione, rendendole più autonome,
+          organizzate e forti.
+        </p>
+
+        <p>
+          Il nostro successo non verrà misurato soltanto dal numero
+          di servizi venduti, ma dal valore creato per le aziende
+          che avranno scelto di lavorare con noi.
+        </p>
+
+        <div class="vision-benefits">
+          <div class="vision-benefit">
+            <span></span>
+
+            <p>
+              Innovazione scelta per utilità, non per moda.
+            </p>
+          </div>
+
+          <div class="vision-benefit">
+            <span></span>
+
+            <p>
+              Soluzioni capaci di adattarsi al cambiamento.
+            </p>
+          </div>
+
+          <div class="vision-benefit">
+            <span></span>
+
+            <p>
+              Crescita costruita senza perdere i valori originari.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         SETTORI
+    ==================================================== -->
+
+    <section
+      class="section sectors-section"
+      id="settori"
+    >
+      <div class="section-head reveal">
+        <span class="section-label">
+          Le aree della Piramide
+        </span>
+
+        <h2>
+          Cinque competenze.
+          <span>Un’unica direzione.</span>
+        </h2>
+
+        <p>
+          Ogni ramo affronta un’esigenza diversa, ma tutti lavorano
+          attraverso lo stesso metodo e lo stesso obiettivo:
+          creare valore concreto.
+        </p>
+      </div>
+
+      <div class="sector-grid">
+
+        <!-- TRACK -->
+
+        <article class="sector-card sector-card-featured reveal">
+          <div class="sector-top">
+            <span class="sector-number">
+              01
+            </span>
+
+            <span class="sector-category">
+              Tecnologia e interazione
+            </span>
+          </div>
+
+          <div class="sector-body">
+            <h3>
+              La Piramide Track
+            </h3>
+
+            <p class="sector-promise">
+              Trasformiamo una semplice scansione in un’esperienza
+              interattiva e misurabile.
+            </p>
+
+            <p>
+              QR Code, NFC, contenuti dinamici, menù digitali,
+              geolocalizzazione, statistiche e strumenti di controllo
+              integrati in un unico ecosistema.
+            </p>
+          </div>
+
+          <figure class="sector-image sector-image-landscape">
+            <img
+              src="img/track/esperienze-interattive.jpeg"
+              alt="Esperienze interattive realizzate con La Piramide Track"
+              loading="lazy"
+            >
+          </figure>
+
+          <a
+            class="sector-button"
+            href="track.html"
+          >
+            Scopri La Piramide Track
+            <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- DISTRIBUZIONI -->
+
+        <article class="sector-card reveal">
+          <div class="sector-top">
+            <span class="sector-number">
+              02
+            </span>
+
+            <span class="sector-category">
+              Territorio e controllo
+            </span>
+          </div>
+
+          <div class="sector-body">
+            <h3>
+              Distribuzioni
+            </h3>
+
+            <p class="sector-promise">
+              Portiamo la comunicazione nelle mani delle persone,
+              partendo dal territorio.
+            </p>
+
+            <p>
+              Distribuzioni mirate, organizzate e controllate per
+              raggiungere zone, famiglie e attività con maggiore
+              precisione e trasparenza.
+            </p>
+          </div>
+
+          <div
+            class="sector-symbol distribution-symbol"
+            aria-label="Immagine distribuzioni in preparazione"
+          >
+            <svg
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <path d="M17 29h45l20 17v30H17z"></path>
+              <path d="M62 29v18h20"></path>
+              <path d="M30 44h19"></path>
+              <path d="M30 55h29"></path>
+              <path d="M30 66h21"></path>
+            </svg>
+          </div>
+
+          <a
+            class="sector-button"
+            href="distribuzioni.html"
+          >
+            Scopri le Distribuzioni
+            <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- GRAFICA -->
+
+        <article class="sector-card reveal">
+          <div class="sector-top">
+            <span class="sector-number">
+              03
+            </span>
+
+            <span class="sector-category">
+              Immagine e comunicazione
+            </span>
+          </div>
+
+          <div class="sector-body">
+            <h3>
+              Grafica
+            </h3>
+
+            <p class="sector-promise">
+              Ogni attività merita una comunicazione costruita
+              sulla propria identità.
+            </p>
+
+            <p>
+              Volantini, locandine, brochure, materiali promozionali
+              e progetti visivi realizzati per comunicare con
+              chiarezza e personalità.
+            </p>
+          </div>
+
+          <figure class="sector-image sector-image-portrait">
+            <img
+              src="img/grafica/lavoro8.jpeg"
+              alt="Lavoro grafico realizzato da La Piramide"
+              loading="lazy"
+            >
+          </figure>
+
+          <a
+            class="sector-button"
+            href="grafica.html"
+          >
+            Guarda i lavori grafici
+            <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- GESTIONALI -->
+
+        <article class="sector-card sector-card-wide reveal">
+          <div class="sector-top">
+            <span class="sector-number">
+              04
+            </span>
+
+            <span class="sector-category">
+              Software e organizzazione
+            </span>
+          </div>
+
+          <div class="sector-body">
+            <h3>
+              Gestionali, CRM e soluzioni digitali
+            </h3>
+
+            <p class="sector-promise">
+              La tecnologia deve alleggerire il lavoro.
+              Mai complicarlo.
+            </p>
+
+            <p>
+              Progettiamo gestionali, CRM, applicazioni e siti web
+              adattati al modo di lavorare delle persone, per
+              organizzare risorse, clienti, prenotazioni, ordini
+              e processi.
+            </p>
+          </div>
+
+          <figure class="sector-image sector-image-landscape">
+            <img
+              src="img/gestionali-crm/sale.png"
+              alt="Gestionale CRM Hospitality realizzato da La Piramide"
+              loading="lazy"
+            >
+          </figure>
+
+          <a
+            class="sector-button"
+            href="gestionali.html"
+          >
+            Scopri le soluzioni digitali
+            <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- HOSPITALITY -->
+
+        <article class="sector-card sector-card-wide reveal">
+          <div class="sector-top">
+            <span class="sector-number">
+              05
+            </span>
+
+            <span class="sector-category">
+              Ospitalità e valorizzazione
+            </span>
+          </div>
+
+          <div class="sector-body">
+            <h3>
+              La Piramide Hospitality
+            </h3>
+
+            <p class="sector-promise">
+              La tua casa. Il nostro impegno. I loro ricordi.
+            </p>
+
+            <p>
+              Gestione e valorizzazione di case vacanza e strutture
+              ricettive attraverso organizzazione, assistenza,
+              promozione, tecnologia e attenzione ai dettagli.
+            </p>
+          </div>
+
+          <figure class="sector-image sector-image-landscape">
+            <img
+              src="img/hospitality/tramonto.jpeg"
+              alt="La Piramide Hospitality"
+              loading="lazy"
+            >
+          </figure>
+
+          <a
+            class="sector-button"
+            href="hospitality.html"
+          >
+            Scopri Hospitality
+            <span>→</span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         PROMESSA FINALE
+    ==================================================== -->
+
+    <section class="section closing-section">
+      <div class="closing-content reveal">
+        <span class="section-label">
+          La promessa della Piramide
+        </span>
+
+        <h2>
+          La fiducia non si pretende.
+          <span>Si conquista.</span>
+        </h2>
+
+        <p>
+          Non promettiamo scorciatoie o risultati impossibili.
+          Promettiamo impegno, trasparenza, rispetto, studio
+          continuo e il coraggio di dire la verità anche quando
+          è difficile.
+        </p>
+
+        <p>
+          Ogni decisione viene presa con un solo obiettivo:
+          creare valore reale per le persone e le imprese che
+          scelgono di lavorare con noi.
+        </p>
+
+        <div class="closing-actions">
+          <a
+            class="btn"
+            href="#contatti"
+          >
+            Raccontaci il tuo progetto
+          </a>
+
+          <a
+            class="text-link"
+            href="#home"
+          >
+            Torna all’inizio
+            <span>↑</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================
+         CONTATTI
+    ==================================================== -->
+
+    <section
+      class="section contact-section"
+      id="contatti"
+    >
+      <div class="contact-heading reveal">
+        <span class="section-label">
+          Contatti
+        </span>
+
+        <h2>
+          Partiamo dalla tua
+          <span>reale necessità.</span>
+        </h2>
+
+        <p>
+          Raccontaci la tua attività, il problema che vuoi risolvere
+          o il progetto che desideri costruire. Prima ascoltiamo.
+          Solo dopo proponiamo.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a
+          class="contact-card reveal"
+          href="https://wa.me/393457340981"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-icon">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5z"></path>
+              <path d="M9 8.5c.4 2 2 3.6 4 4"></path>
+              <path d="M13.2 12.5l1.3-.7"></path>
+            </svg>
+          </div>
+
+          <div class="contact-details">
+            <span>
+              WhatsApp
+            </span>
+
+            <strong>
+              345 734 0981
+            </strong>
+
+            <small>
+              Scrivici per una prima valutazione.
+            </small>
+          </div>
         </a>
-      </div>
-    </section>
 
-    <section class="section compact-section reveal-section" id="metodo">
-      <div class="section-head">
-        <span class="wide-label">Metodo</span>
-        <h2>Una campagna efficace nasce prima della distribuzione.</h2>
-      </div>
+        <a
+          class="contact-card reveal"
+          href="mailto:lapiramidedistribuzioni@gmail.com"
+        >
+          <div class="contact-icon">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <rect
+                x="3"
+                y="5"
+                width="18"
+                height="14"
+                rx="2"
+              ></rect>
 
-      <div class="method-grid">
-        <article class="method-card">
-          <span>1</span>
-          <h3>Analisi</h3>
-          <p>Capisco attività, zona, obiettivo e pubblico ideale.</p>
-        </article>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+          </div>
 
-        <article class="method-card">
-          <span>2</span>
-          <h3>Strategia</h3>
-          <p>Creo messaggio, grafica e piano di comunicazione.</p>
-        </article>
+          <div class="contact-details">
+            <span>
+              Email
+            </span>
 
-        <article class="method-card">
-          <span>3</span>
-          <h3>Esecuzione</h3>
-          <p>Gestisco distribuzione, materiali e presenza operativa.</p>
-        </article>
+            <strong>
+              lapiramidedistribuzioni@gmail.com
+            </strong>
 
-        <article class="method-card">
-          <span>4</span>
-          <h3>Controllo</h3>
-          <p>Foto, prove, dati e tracciamento dove previsto.</p>
-        </article>
-      </div>
-    </section>
+            <small>
+              Inviaci informazioni e materiali del progetto.
+            </small>
+          </div>
+        </a>
 
-    <section class="section compact-section reveal-section" id="servizi">
-      <div class="section-head">
-        <span class="wide-label">Servizi</span>
-        <h2>I servizi La Piramide</h2>
-        <p>Ogni servizio può essere singolo oppure integrato in una strategia completa.</p>
-      </div>
+        <a
+          class="contact-card reveal"
+          href="https://lapiramidedistribuzioni.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-icon">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+              ></circle>
 
-      <div class="services-grid">
-        <article class="service-card">
-          <span>01</span>
-          <h3>Volantinaggio mirato</h3>
-          <p>Distribuzione studiata per zone, pubblico e obiettivo commerciale.</p>
-          <button onclick="openServiceForm('volantinaggio')">Richiedi</button>
-        </article>
+              <path d="M3 12h18"></path>
+              <path d="M12 3a15 15 0 0 1 0 18"></path>
+              <path d="M12 3a15 15 0 0 0 0 18"></path>
+            </svg>
+          </div>
 
-        <article class="service-card">
-          <span>02</span>
-          <h3>Grafica pubblicitaria</h3>
-          <p>Volantini, locandine e contenuti visivi con immagine curata e professionale.</p>
-          <button onclick="openServiceForm('grafica')">Richiedi</button>
-        </article>
+          <div class="contact-details">
+            <span>
+              Sito web
+            </span>
 
-        <article class="service-card">
-          <span>03</span>
-          <h3>Social media marketing</h3>
-          <p>Contenuti, post, storie, reel e gestione della presenza online.</p>
-          <button onclick="openServiceForm('social')">Richiedi</button>
-        </article>
+            <strong>
+              lapiramidedistribuzioni.com
+            </strong>
 
-        <article class="service-card">
-          <span>04</span>
-          <h3>Siti web</h3>
-          <p>Siti eleganti, responsive e pensati per trasformare visite in contatti.</p>
-          <button onclick="openServiceForm('sito')">Richiedi</button>
-        </article>
-      </div>
-    </section>
+            <small>
+              Esplora tutti i rami della Piramide.
+            </small>
+          </div>
+        </a>
 
-    <section class="section compact-section distributions-section reveal-section" id="distribuzioni">
-      <div class="section-head">
-        <span class="wide-label">Le nostre distribuzioni</span>
-        <h2>Presenza reale sul territorio</h2>
-        <p>
-          Alcune immagini delle distribuzioni svolte sul campo, per mostrare il lavoro reale
-          e la presenza operativa.
-        </p>
-      </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12z"></path>
+              <circle
+                cx="12"
+                cy="9"
+                r="2"
+              ></circle>
+            </svg>
+          </div>
 
-      <div class="distribution-slider">
-        <div class="distribution-group active">
-          <img src="img/distribuzione (1).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (2).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (3).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (4).jpeg" alt="Distribuzione La Piramide">
-        </div>
+          <div class="contact-details">
+            <span>
+              Territorio
+            </span>
 
-        <div class="distribution-group">
-          <img src="img/distribuzione (5).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (6).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (7).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (8).jpeg" alt="Distribuzione La Piramide">
-        </div>
+            <strong>
+              Umbria
+            </strong>
 
-        <div class="distribution-group">
-          <img src="img/distribuzione (9).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (10).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (11).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (12).jpeg" alt="Distribuzione La Piramide">
-        </div>
-
-        <div class="distribution-group">
-          <img src="img/distribuzione (13).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (14).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (1).jpeg" alt="Distribuzione La Piramide">
-          <img src="img/distribuzione (2).jpeg" alt="Distribuzione La Piramide">
-        </div>
-      </div>
-
-      <div class="distribution-dots" id="distributionDots"></div>
-    </section>
-
-    <section class="section compact-section extra-section reveal-section" id="extra">
-  <div class="section-head">
-    <span class="wide-label">Extra e novità</span>
-    <h2>La Piramide Track</h2>
-    <p>
-      La Piramide Track è la piattaforma digitale creata da La Piramide per dare valore,
-      controllo e tracciabilità a prodotti, servizi, offerte e campagne pubblicitarie.
-    </p>
-  </div>
-
-  <div class="track-advertising-box">
-    <h3>Trasforma ogni oggetto in uno strumento digitale.</h3>
-
-    <p>
-      Con QR Code e NFC puoi collegare volantini, prodotti, menù, cataloghi, offerte,
-      biglietti da visita, etichette e materiali pubblicitari a una pagina digitale dedicata.
-    </p>
-
-    <p>
-      Il cliente scansiona, apre il contenuto e tu puoi presentare informazioni, immagini,
-      contatti, promozioni e dettagli in modo moderno e professionale.
-    </p>
-
-    <a class="btn" href="https://lapiramidetrack.com" target="_blank">
-      Vai su lapiramidetrack.com
-    </a>
-  </div>
-</section>
-
-    <section class="section compact-section proof-section reveal-section">
-      <span class="wide-label">Servizio premium extra</span>
-
-      <h2>Distribuzione tracciata e verificata</h2>
-
-      <p>
-        Per chi desidera un livello superiore di controllo, La Piramide può offrire foto geolocalizzate,
-        prove operative e strumenti digitali. Questo è un servizio aggiuntivo con preventivo dedicato.
-      </p>
-
-      <div class="proof-grid">
-        <div>
-          <h3>Foto geolocalizzate</h3>
-          <p>Prove visive con posizione reale.</p>
-        </div>
-
-        <div>
-          <h3>Data e ora</h3>
-          <p>Controllo temporale della distribuzione.</p>
-        </div>
-
-        <div>
-          <h3>Dati e scansioni</h3>
-          <p>Interazioni misurabili dove previsto.</p>
-        </div>
-      </div>
-
-      <a class="btn section-btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20per%20la%20distribuzione%20tracciata%20e%20verificata">
-        Richiedi preventivo per questa sezione plus
-      </a>
-    </section>
-
-    <section class="section compact-section controlli-section reveal-section" id="controlli">
-      <div class="section-head">
-        <span class="wide-label">Controlli</span>
-        <h2>Controlli reali durante il lavoro</h2>
-        <p>
-          Dove previsto, La Piramide può documentare il lavoro svolto con video, foto,
-          prove operative e materiale utile a dimostrare la presenza sul territorio.
-        </p>
-      </div>
-
-      <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="controlli1.mp4" type="video/mp4">
-          Il tuo browser non supporta la riproduzione del video.
-        </video>
-      </div>
-    </section>
-
-    <section class="section compact-section reveal-section" id="lavori">
-      <div class="section-head">
-        <span class="wide-label">Lavori grafici</span>
-        <h2>I lavori di grafica della Piramide</h2>
-        <p>Grafiche, materiali pubblicitari e contenuti visivi realizzati per attività locali.</p>
-      </div>
-
-      <div class="slider">
-        <img src="img/lavoro1.jpeg" class="slide active" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro2.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro3.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro4.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro5.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro6.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro7.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-        <img src="img/lavoro8.jpeg" class="slide" alt="Lavoro grafico La Piramide">
-      </div>
-
-      <div class="slider-dots" id="sliderDots"></div>
-    </section>
-
-    <section class="section compact-section real-people-section reveal-section">
-      <div class="real-people-image">
-        <img src="img/imgio1.jpeg" alt="Dietro La Piramide">
-      </div>
-
-      <div class="real-people-text">
-        <h2>Dietro La Piramide ci sono persone vere.</h2>
-
-        <p>
-          La Piramide non è solo un nome, un logo o un servizio. Dietro ogni distribuzione,
-          ogni grafica e ogni progetto ci sono presenza reale, responsabilità, attenzione e voglia
-          di costruire qualcosa di serio per le attività del territorio.
-        </p>
-
-        <p>
-          Ogni cliente viene seguito con cura, ascoltando le sue esigenze e cercando la soluzione
-          più adatta per aumentare visibilità, fiducia e risultati.
-        </p>
-      </div>
-    </section>
-
-    <section class="section compact-section reviews reveal-section">
-      <span class="wide-label">Recensioni</span>
-
-      <h2>Cosa dicono i clienti</h2>
-
-      <div class="review-grid">
-        <article>
-          <p>“Distribuzione veloce e precisa. Ottimo servizio.”</p>
-          <strong>★★★★★</strong>
-        </article>
-
-        <article>
-          <p>“Serietà, cortesia e professionalità. Consiglio vivamente.”</p>
-          <strong>★★★★★</strong>
-        </article>
-      </div>
-    </section>
-
-    <section class="section compact-section final-cta reveal-section" id="contatti">
-      <span class="wide-label">Contatti</span>
-
-      <h2>Contatti</h2>
-
-      <div class="contacts-grid">
-
-        <div class="contact-card">
-          <div class="contact-icon">📱</div>
-
-          <h3>WhatsApp</h3>
-
-          <p>
-            <strong>345 734 0981</strong>
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon">✉️</div>
-
-          <h3>Email</h3>
-
-          <p>
-            <strong>lapiramidedistribuzione@gmail.com</strong>
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon">🌐</div>
-
-          <h3>Social</h3>
-
-          <p>📘 Facebook:<br><strong>La Piramide</strong></p>
-          <p>📸 Instagram:<br><strong>la_piramide_distribuzioni</strong></p>
-          <p>🎵 TikTok:<br><strong>@la_piramide_90</strong></p>
+            <small>
+              Soluzioni locali con una visione capace di crescere.
+            </small>
+          </div>
         </div>
 
       </div>
-
-      <a class="btn" href="https://wa.me/393457340981?text=Salve,%20vorrei%20un%20preventivo%20gratuito%20con%20La%20Piramide">
-        Scrivimi su WhatsApp
-      </a>
     </section>
 
   </main>
 
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer class="footer">
-    <img src="img/logo piramide.png" alt="La Piramide">
+    <div class="footer-main">
 
-    <p>La Piramide — Marketing locale premium</p>
+      <div class="footer-brand">
+        <img
+          src="img/logo-piramide.jpeg"
+          alt="Logo La Piramide"
+        >
 
-    <div>
-      <a href="#home">Home</a>
-      <a href="#presentazione">Presentazione</a>
-      <a href="#servizi">Servizi</a>
-      <a href="#extra">Extra</a>
-      <a href="#contatti">Contatti</a>
+        <div>
+          <strong>
+            La Piramide
+          </strong>
+
+          <p>
+            Metodo, fiducia e crescita.
+            Un mattone alla volta.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-navigation">
+        <span>
+          Navigazione
+        </span>
+
+        <a href="#azienda">
+          Azienda
+        </a>
+
+        <a href="#storia">
+          La nostra storia
+        </a>
+
+        <a href="#metodo">
+          Metodo
+        </a>
+
+        <a href="#visione">
+          Visione
+        </a>
+
+        <a href="#contatti">
+          Contatti
+        </a>
+      </div>
+
+      <div class="footer-services">
+        <span>
+          Settori
+        </span>
+
+        <a href="track.html">
+          La Piramide Track
+        </a>
+
+        <a href="distribuzioni.html">
+          Distribuzioni
+        </a>
+
+        <a href="grafica.html">
+          Grafica
+        </a>
+
+        <a href="gestionali.html">
+          Gestionali e CRM
+        </a>
+
+        <a href="hospitality.html">
+          Hospitality
+        </a>
+      </div>
+
+      <div class="footer-contacts">
+        <span>
+          Contatti
+        </span>
+
+        <a href="tel:+393457340981">
+          345 734 0981
+        </a>
+
+        <a href="mailto:lapiramidedistribuzioni@gmail.com">
+          lapiramidedistribuzioni@gmail.com
+        </a>
+
+        <a
+          href="https://lapiramidedistribuzioni.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          lapiramidedistribuzioni.com
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span id="currentYear"></span>
+        La Piramide. Tutti i diritti riservati.
+      </p>
+
+      <a href="#home">
+        Il futuro non si prevede. Si costruisce.
+        <span>↑</span>
+      </a>
     </div>
   </footer>
 
-  <a class="whatsapp whatsapp-float" href="https://wa.me/393457340981?text=Salve,%20vorrei%20informazioni%20su%20La%20Piramide">
-    W
+
+  <!-- =====================================================
+       WHATSAPP FISSO
+  ====================================================== -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/393457340981"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contatta La Piramide su WhatsApp"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5z"></path>
+      <path d="M9 8.5c.4 2 2 3.6 4 4"></path>
+      <path d="M13.2 12.5l1.3-.7"></path>
+    </svg>
   </a>
 
-  <div class="quote-modal" id="quoteModal">
-    <div class="quote-box">
-      <button class="close-modal" onclick="closeQuoteForm()">×</button>
 
-      <h2 id="formTitle">Richiedi preventivo</h2>
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
 
-      <input id="nome" type="text" placeholder="Nome e cognome">
-      <input id="attivita" type="text" placeholder="Nome attività">
-      <input id="telefono" type="text" placeholder="Numero WhatsApp">
-
-      <div id="formDynamicArea"></div>
-
-      <button class="btn" onclick="sendServiceWhatsapp()">Invia richiesta su WhatsApp</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="js/index.js" defer></script>
 
 </body>
 </html>
